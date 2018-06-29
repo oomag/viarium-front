@@ -3,3 +3,4 @@ APP.roadmapSlide();
 APP.navbarTogglerDesktop();
 APP.bxSlider('.team-slider');
 APP.counter('counter');
+APP.rounded();

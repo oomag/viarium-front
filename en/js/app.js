@@ -7,6 +7,15 @@ var APP = {
         height: $(window).height()
     },
 
+    rounded: function() {
+        var elem = document.getElementById('faq-round');
+
+        if (elem) {
+            elem.style.width = elem.offsetHeight * 1.1 + 'px';
+            elem.style.marginLeft = -(elem.offsetHeight * 1.1 ) / 2 + 'px';
+        }
+    },
+
     counter: (dataElement) => {
         let el = '[data-element="' + dataElement + '"]';
         let endtime = $(el).attr('data-deadline');
@@ -66,20 +75,20 @@ var APP = {
 
             if ($(this).data('event') == 'prev') {
                 console.log(position.left);
-                if (position.left >= 100) {
+                if (position.left >= 90) {
                     return false;
                 } else {
                     $(".roadmap-line").animate({
-                        "left": "+=24%"
+                        "left": "+=15%"
                     }, "slow");
                 }
             } else {
 
-                if (position.left <= -1060) {
+                if (position.left <= -1000) {
                     return false;
                 } else {
                     $(".roadmap-line").animate({
-                        "left": "-=24%"
+                        "left": "-=15%"
                     }, "slow");
                 }
             }
