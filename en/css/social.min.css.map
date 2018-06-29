@@ -1,0 +1,1 @@
+{"version":3,"sources":["social.scss"],"names":[],"mappings":"AAAA;EAEI,gBAAe;EACf,mBAAkB;EAClB,iBAAgB,EAGnB","file":"social.min.css","sourcesContent":[".social-list {\n\n    padding-left: 0;\n    margin-bottom: 0px;\n    list-style: none;\n    \n\n}"]}
