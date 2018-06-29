@@ -8,11 +8,27 @@ var APP = {
     },
 
     rounded: function() {
-        var elem = document.getElementById('faq-round');
+
+        var elem = document.getElementsByClassName('section-round');
+        
+        if (this.window.width >= 576) {
+            var factor = 3;
+        }else {
+            var factor =1.1;
+        }
 
         if (elem) {
-            elem.style.width = elem.offsetHeight * 1.1 + 'px';
-            elem.style.marginLeft = -(elem.offsetHeight * 1.1 ) / 2 + 'px';
+
+            for (var i = 0; i < elem.length; i++) {
+
+                if (elem[i].offsetHeight < 500) {
+                    elem[i].style.height = 1500+'px';
+                }
+
+                elem[i].style.width = elem[i].offsetHeight * factor + 'px';
+                elem[i].style.marginLeft = -(elem[i].offsetHeight * factor ) / 2 + 'px';
+
+            }
         }
     },
 
