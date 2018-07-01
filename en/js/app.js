@@ -194,6 +194,39 @@ var APP = {
 
 
         });
+    },
+
+    caseControl: () => {
+
+        var i = 0;
+
+        $('.cases-control a').click(function(e) {
+            e.preventDefault();
+
+            
+            if ($(this).data('rel') == 'prev') {
+                i--;
+
+                if (i < 0) {
+                    i = 5;
+                }
+            }
+
+            if ($(this).data('rel') == 'next') {
+                i++;
+                if (i >= 5) {
+                    i = 0;
+                }
+            }
+
+            
+            console.log(i);
+
+            $('#case-title').html($('#v-pills-tab-m .nav-link:eq('+i+')').html());
+            $('#v-pills-tab-m .nav-link:eq('+i+')').click();
+
+            return false;
+        });
     }
 
 }
