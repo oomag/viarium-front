@@ -11,7 +11,7 @@ var APP = {
 
         var elem = document.getElementsByClassName('section-round');
         
-        if (this.window.width >= 576) {
+        if ($(window).width() >= 576) {
             var factor = 3;
         }else {
             var factor =1.1;
@@ -115,10 +115,21 @@ var APP = {
 
     bxSlider: (elem) => {
 
-        $(elem).bxSlider({
+        var prefix;
+        var adaptiveHeight;
+
+        if ($(window).width() <= 991) {
+            prefix = '--mobile';
+            adaptiveHeight = true;
+        } else {
+            prefix = '--desctop';
+            adaptiveHeight = false;
+        }
+        $(elem + prefix).bxSlider({
             pager: false,
             prevText: '',
             nextText: '',
+            adaptiveHeight: adaptiveHeight,
         });
 
     },
