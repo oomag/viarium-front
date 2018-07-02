@@ -21,9 +21,7 @@ var APP = {
 
             for (var i = 0; i < elem.length; i++) {
 
-                if (elem[i].offsetHeight < 500) {
-                    elem[i].style.height = 1500+'px';
-                }
+                footer.style.height = 1500+'px';
 
                 elem[i].style.width = elem[i].offsetHeight * factor + 'px';
                 elem[i].style.marginLeft = -(elem[i].offsetHeight * factor ) / 2 + 'px';
@@ -87,33 +85,43 @@ var APP = {
     roadmapSlide: () => {
         $('a.slider-arrow').click(function (e) {
             e.preventDefault();
-            var position = $('.roadmap-line').position();
+            var position = $('.roadmap-block').position();
 
             if ($(this).data('event') == 'prev') {
                 console.log(position.left);
                 if (position.left >= 90) {
                     return false;
                 } else {
-                    $(".roadmap-line").animate({
-                        "left": "+=15%"
+                    $(".roadmap-block").animate({
+                        "left": "+=240px"
                     }, "slow");
                 }
             } else {
 
-                if (position.left <= -1000) {
+                if (position.left <= $(window).width() - 2500) {
                     return false;
                 } else {
-                    $(".roadmap-line").animate({
-                        "left": "-=15%"
+                    $(".roadmap-block").animate({
+                        "left": "-=240px"
                     }, "slow");
                 }
             }
 
             return false;
         });
+
+        if ($(window).width() <= 991) {
+            $('.roadmap-block--mobile').bxSlider({
+                pager: false,
+                prevText: '',
+                nextText: '',
+                adaptiveHeight: true,
+                controls: true
+            });
+        }
     },
 
-    bxSlider: (elem) => {
+    bxSlider: function(elem) {
 
         var prefix;
         var adaptiveHeight;
