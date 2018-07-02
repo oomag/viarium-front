@@ -21,10 +21,13 @@ var APP = {
 
             for (var i = 0; i < elem.length; i++) {
 
-                footer.style.height = 1500+'px';
+                // footer.style.height = 1500+'px';
 
                 elem[i].style.width = elem[i].offsetHeight * factor + 'px';
                 elem[i].style.marginLeft = -(elem[i].offsetHeight * factor ) / 2 + 'px';
+
+                footer.style.width =  '3000px';
+                footer.style.marginLeft =  '-1500px';
 
             }
         }
