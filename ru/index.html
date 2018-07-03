@@ -48,9 +48,9 @@
             </ul>
         </div>
 
-        <a href="" class="btn btn-default btn-sm ml-auto ml-xl-3 d-none d-sm-block">ВХОД</a>
+        <a href="login.html" class="btn btn-default btn-sm ml-auto ml-xl-3 d-none d-sm-block mr-3">ВХОД</a>
 
-        <ul class="navbar-nav mx-sm-3 mx-md-3 ml-auto mr-3">
+        <!-- <ul class="navbar-nav mx-sm-3 mx-md-3 ml-auto mr-3">
             <li class="nav-item dropdown">
                 <a class="nav-link nav-link-circle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     EN
@@ -68,7 +68,7 @@
                     <a class="dropdown-item" href="#">VI</a>
                 </div>
               </li>
-        </ul>
+        </ul> -->
 
         <button class="navbar-toggler d-block navbar-toggler-desktop collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -113,12 +113,12 @@
 
                     <div class="col-lg-3 col-6">
                         <ul class="navbar-inner-list navbar-list-default">
-                            <li>
+                            <!-- <li>
                                 <a href="token.html">Схема распределения токенов</a>
                             </li>
                             <li>
                                 <a href="token.html">Структура расходов</a>
-                            </li>
+                            </li> -->
                             <!-- <li>
                                 <a href="docs.html">Документы</a>
                             </li>
@@ -133,10 +133,10 @@
                             </li>
                             <li>
                                 <a href="team.html">Эдвазеры</a>
-                            </li>
+                            </li>-->
                             <li>
                                 <a href="partners.html">Пратнеры</a>
-                            </li> -->
+                            </li> 
                             <li>
                                 <a href="faq.html">FAQ</a>
                             </li>
@@ -330,13 +330,13 @@
 					</div>
 				</div>
 
-				<div class="header-buttons d-none">
-					<a href="" class="btn btn-default">ПРИСОЕДИНИСЬ В WHITE LIST</a>
+				<div class="header-buttons">
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#whiteListModal">WHITE LIST</button>
 
-					<div class="btn-group" aria-label="Basic example">
+					<!-- <div class="btn-group" aria-label="Basic example">
 						<a href="" class="btn btn-default">One Pager</a>
 						<a href="" class="btn btn-default btn-border-left">White Paper</a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -344,6 +344,59 @@
 	</div>
 
 </header>
+
+<div class="modal fade bd-example-modal-lg" id="whiteListModal" tabindex="-1" role="dialog" aria-labelledby="whiteListModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title title-md" id="whiteListModalLabel">Заявка на регистрацию</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+        	<div class="form-row">
+	          <div class="col-lg-6 form-group">
+	            <label for="recipient-name" class="col-form-label">Ваше Имя:</label>
+	            <input type="text" class="form-control" id="recipient-name">
+	          </div>
+	          <div class="col-lg-6 form-group">
+	            <label for="recipient-name" class="col-form-label">Телефон:</label>
+	            <input type="tel" class="form-control" id="recipient-name">
+	          </div>
+	        </div>
+
+	        <div class="form-row">
+	          <div class="col-lg-6 form-group">
+	            <label for="recipient-name" class="col-form-label">E-mail:</label>
+	            <input type="email" class="form-control" id="recipient-name">
+	          </div>
+	          <div class="col-lg-6 form-group">
+	            <label for="recipient-name" class="col-form-label">Сумма инвестиций:</label>
+	            <input type="number" class="form-control" id="recipient-name">
+	          </div>
+	        </div>
+
+	        <div class="form-row mb-3">
+	        	<div class="custom-control custom-checkbox my-1 mr-sm-2">
+			    <input type="checkbox" class="custom-control-input" id="customControlInline">
+			    <label class="custom-control-label" for="customControlInline">Я согласен на обраьотку моих персональных данных</label>
+			  </div>
+			 </div>
+
+          <div class="btn-group d-flex btn-fluid" aria-label="Basic example">
+	        <button type="button" class="btn btn-fluid btn-secondary" data-dismiss="modal">Отказаться</button>
+	        <button type="submit" class="btn btn-fluid btn-default">Отправить запрос</button>
+        </div>
+
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+</div>
 		<div class="section section-rounded " id="WorkCases">
 	<div class="section-round section-round-full section-what-is-viarium"></div>
 
@@ -474,86 +527,61 @@
 	<div class="hex hex-7-bottom d-block d-lg-none"></div>
 </div>
 
-<section class="section-middle d-block d-lg-none">
+<section class="section-middle d-block d-lg-none cases-slider-section">
 	<div class="section-content ">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<div class="title-xl mb-5"> <span class="mark">Ключевые</span> Функции</div>
+					<div class="title-xl mb-4 text-center"> <span class="mark">Ключевые</span> Функции</div>
 				</div>
 
-				<div class="offset-lg-1 col-lg-3 d-none d-lg-block">
-					<div class="nav flex-column nav-pills" id="v-pills-tab-m" role="tablist" aria-orientation="vertical">
-
-					  <a class="nav-link active" id="v-pills-business-tab-m" data-toggle="pill" href="#v-pills-business-m" role="tab" aria-controls="v-pills-business-m" aria-selected="true">Бизнес</a>
-
-					  <a class="nav-link" id="v-pills-users-tab-m" data-toggle="pill" href="#v-pills-users-m" role="tab" aria-controls="v-pills-users-m" aria-selected="false">Пользователи</a>
-
-					  <a class="nav-link" id="v-pills-developers-tab-m" data-toggle="pill" href="#v-pills-developers-m" role="tab" aria-controls="v-pills-developers-m" aria-selected="false">Разработчики<br>и дизайнеры</a>
-
-					  <a class="nav-link" id="v-pills-servers-tab-m" data-toggle="pill" href="#v-pills-servers-m" role="tab" aria-controls="v-pills-servers-m" aria-selected="false">Держатели серверных<br>мощностей</a>
-
-					  <a class="nav-link" id="v-pills-marketing-tab-m" data-toggle="pill" href="#v-pills-marketing-m" role="tab" aria-controls="v-pills-marketing-m" aria-selected="false">Рекламодатели</a>
-
-					  <a class="nav-link" id="v-pills-worker-tab-m" data-toggle="pill" href="#v-pills-worker-m" role="tab" aria-controls="v-pills-worker-m" aria-selected="false">Работники</a>
-
-					</div>
-				</div>
-
-				<div class="col-12 d-block d-lg-none mb-4">
+				<div class="col-12 d-block d-lg-none">
 					
 					<div class="row">
-						<div class="col-6">
-							<div class="cases-title" id="case-title">Бизнес</div>
-						</div>
-						<div class="col-6">
-							<div class="cases-control d-flex justify-content-end">
-								<a href="" data-rel="prev" class="mr-2">
-									<img src="/en/img/arrow-left.png" alt="" width="60px">
-								</a>
-								<a href="" data-rel="next">
-									<img src="/en/img/arrow-right.png" alt="" width="60px">
-								</a>
+
+						<div class="col-12 mb-4">
+							
+							<div class="cases-slider--mobile" id="cases-slider">
+								<div class="cases-slide">
+
+									<div class="title-md mb-3"><span class="mark">Бизнес</span></div>
+
+									Владельцы бизнеса могут легко создавать и развивать торговые точки в виртуальном пространстве при помощи готового инструментария. Сократить издержки на аренду, зарплаты, логистику, снизить налоговую базу, экономить время при этом увеличивая трафик. Компании или просто пользователи смогут создавать свой мир под собственный торговый центр и сдавать в аренду площади под виртуальные шоурумы. Владельцы бизнеса создав свой шоурум на платформе Viarium смогут выйти на международный рынок, увеличить  продажи, при этом имея минимальные издержки на его содержание.
+								</div>
+								<div class="cases-slide">
+									<div class="title-md mb-3"><span class="mark">Пользователи</span></div>
+
+									Пользователи смогут получить мгновенный доступ к сотням тысяч товаров, посещать виртуальные торговые центры и совершать покупки не выходя из дома. Достаточно будет только зайти на платформу Viarium через браузер на своем компьютере или для полного погружения надеть VR очки. Люди могут удовлетворить интерес к продукту из любой точки на планете, при этом сэкономить собственные деньги и время. Пользователи смогут создавать и посещать выставки, галереи и даже целые города, играть в VR-онлайн игры, организовывать и посещать тематические VR-мероприятия. 
+								</div>
+								<div class="cases-slide">
+									<div class="title-md mb-3"><span class="mark">Разработчики и дизайнеры</span></div>
+
+									Разработчики VR-контента/3D-моделей смогут находить для себя заказы прямо на платформе Viarium. Для этого надо будет всего лишь разместить свои работы в маркетплейсе, где потенциальный заказчик сможет по достоинству оценить качество работ. Либо предложить "в живую" посмотреть реализованные объекты/здания/модели в Genesis Land или других мирах. Так же мы прогнозируем большой спрос на нашей платформе на разработчиков ботов, виртуальных консультантов, VR-виджетов и других сопутствующих сервисов.
+								</div>
+								<div class="cases-slide">
+									<div class="title-md mb-3"><span class="mark">Держатели серверных мощностей</span></div>
+
+									Владельцы серверных/вычислительных мощностей могут зарабатывать предоставляя их платформе Viarium.
+								</div>
+								<div class="cases-slide">
+									<div class="title-md mb-3"><span class="mark">Рекламодатели</span></div>
+
+									Рекламодатели смогут размещать рекламу как визуальную так и аудио в местах с наибольшим трафиком и в специально отведенных для этого местах.
+								</div>
+								<div class="cases-slide">
+									<div class="title-md mb-3"><span class="mark">Работники</span></div>
+
+									Платформа Viarium сможет предоставить возможность устроиться на первую в мире работу в виртуальном мире. Можно будет устроиться инструктором для тех кто первый раз пользуется платформой, консультантом в торговый центр или просто водить экскурсии по мирам Viarium'а. Объявления о поиске сотрудников и предложения своих кандидатур публикуются на внутренней доске объявлений.
+								</div>
 							</div>
+
 						</div>
+						
 					</div>
 
 				</div>
 
-				<div class="offset-lg-1 col-lg-7">
-					<div class="tab-content" id="v-pills-tabContent-m">
-						<div class="tab-pane fade show active" id="v-pills-business-m" role="tabpanel" aria-labelledby="v-pills-business-tab-m">
-							<p>
-							Владельцы бизнеса могут легко создавать и развивать<br>торговые точки в виртуальном пространстве при помощи <br>готового инструментария. Сократить издержки на аренду, <br>зарплаты, логистику, снизить налоговую базу, экономить <br>время при этом увеличивая трафик. 
-							<br><br>
-							Компании или просто пользователи смогут создавать свой <br>мир под собственный торговый центр и сдавать в аренду <br>площади под виртуальные шоурумы. 
-							<br><br>	
-							Владельцы бизнеса создав свой шоурум на платформе Viarium <br>смогут выйти на международный рынок, увеличить  продажи, <br>при этом имея минимальные издержки на его содержание.
-							</p>
-						</div>
-						<div class="tab-pane fade" id="v-pills-users-m" role="tabpanel" aria-labelledby="v-pills-users-tab-m">
-							Пользователи смогут получить мгновенный доступ к сотням <br>тысяч товаров, посещать виртуальные торговые центры <br>и совершать покупки не выходя из дома. Достаточно будет <br>только зайти на платформу Viarium через браузер на своем <br>компьютере или для полного погружения надеть VR очки.
-							<br><br>
-							Люди могут удовлетворить интерес к продукту из любой точки <br>на планете, при этом сэкономить собственные деньги и время.
-							<br><br>
-							Пользователи смогут создавать и посещать выставки, галереи <br>и даже целые города, играть в VR-онлайн игры, организовывать <br>и посещать тематические VR-мероприятия. 
-						</div>
-						<div class="tab-pane fade" id="v-pills-developers-m" role="tabpanel" aria-labelledby="v-pills-developers-tab-m">
-							Разработчики VR-контента/3D-моделей смогут находить<br>для себя заказы прямо на платформе Viarium. Для этого надо <br>будет всего лишь разместить свои работы в маркетплейсе, <br>где потенциальный заказчик сможет по достоинству оценить <br>качество работ. Либо предложить "в живую" посмотреть <br>реализованные объекты/здания/модели в Genesis Land <br>или других мирах.
-							<br><br>
-							Так же мы прогнозируем большой спрос на нашей платформе <br>на разработчиков ботов, виртуальных консультантов, VR-виджетов <br>и других сопутствующих сервисов.
-						</div>
-						<div class="tab-pane fade" id="v-pills-servers-m" role="tabpanel" aria-labelledby="v-pills-servers-tab-m">
-							Владельцы серверных/вычислительных мощностей могут <br>зарабатывать предоставляя их платформе Viarium.
-						</div>
-						<div class="tab-pane fade" id="v-pills-marketing-m" role="tabpanel" aria-labelledby="v-pills-marketing-tab-m">
-							Рекламодатели смогут размещать рекламу как визуальную <br>так и аудио в местах с наибольшим трафиком и в специально <br>отведенных для этого местах.
-						</div>
-						<div class="tab-pane fade" id="v-pills-worker-m" role="tabpanel" aria-labelledby="v-pills-worker-tab-m">
-							Платформа Viarium сможет предоставить возможность <br>устроиться на первую в мире работу в виртуальном мире. <br>Можно будет устроиться инструктором для тех кто первый <br>раз пользуется платформой, консультантом в торговый центр <br>или просто водить экскурсии по мирам Viarium'а. Объявления <br>о поиске сотрудников и предложения своих кандидатур <br>публикуются на внутренней доске объявлений.
-						</div>
-					</div>
-				</div>
+
 			</div>
 		</div>
 	</div>
@@ -677,7 +705,7 @@
 								</div>
 
 								<div class="col-12">
-									<a href="" class="btn mt-xl-4 mt-5 mb-2 btn-default btn-fluid">ПРИСОЕДИНИСЬ В WHITE LIST</a>
+									<a href="" class="btn mt-xl-4 mt-5 mb-2 btn-default btn-fluid">WHITE LIST</a>
 								</div>
 
 							</div>
@@ -749,8 +777,8 @@
 								</p>
 							</div>
 
-							<div class="col-12 pt-4">
-								<a href="" class="btn mt-4 mb-2 btn-default btn-fluid">ПРИСОЕДИНИСЬ В WHITE LIST</a>
+							<div class="col-12 pt-4 text-center">
+								<a href="" class="btn mt-4 mb-2 btn-default btn-fluid">WHITE LIST</a>
 							</div>
 
 						</div>
@@ -859,7 +887,7 @@
 
 		<div class="roadmap-slider text-center">
 			
-			<div class="slider-controls">
+			<div class="slider-controls d-none d-lg-block">
 				<div class="container">
 					<div class="d-flex justify-content-between">
 						<a href="" data-element="slider-arrow" data-event="prev" class="slider-arrow"><img src="/en/img/arrow-left.png" alt=""></a>
@@ -868,12 +896,247 @@
 				</div>
 			</div>
 
-			<div class="roadmap-line">
+			<div class="roadmap-block d-none d-lg-block">
 				
 				<div class="line-row line-top">
-									</div>
+					
+											<div class="line-point line-small">
+							<p class="mb-0">Разработка концепта. Разработка VR.Подготовка и развитие экономики и применение блокчейн технологии в проекте.</p>
+
+							<p class="title-sm pt-3 pb-3">
+								<span class="mark">Разработка концепта<br>2016</span>
+							</p>
+							
+							<div class="line-dot"></div>
+						</div>
+										
+										
+											<div class="line-point line-big">
+							<p class="mb-0">Усовершенствование экономики, бизнес модели и применения блокчейн технологии в проекте. Подготовка White Paper 2.0. Разработка материалов и документации проекта. Разработка VR-шоурумов для наших партнеров. Совершенстование Genesis Land.</p>
+
+							<p class="title-sm pt-3 pb-3">
+								<span class="mark">Подготовка к Token Sale<br>01-03/2018</span>
+							</p>
+							
+							<div class="line-dot"></div>
+						</div>
+										
+										
+											<div class="line-point line-small">
+							<p class="mb-0">Проведение первой VR-конференции Viarium. Создание Foundation. Разработка рекомендательного сервиса в VR для Genesis Land. Airdrop</p>
+
+							<p class="title-sm pt-3 pb-3">
+								<span class="mark">Pre-Sale<br>07-09.18</span>
+							</p>
+							
+							<div class="line-dot"></div>
+						</div>
+										
+										
+											<div class="line-point line-big">
+							<p class="mb-0">Проведение второй VR конференции. Проведение хакатона. Airdrop 2. Проведение второго хакатона. Распределение средств согласно плану (Foundation). Запуск личного кабинета для пользователей. Оцифровка земель. Запуск основного маркетплейса.</p>
+
+							<p class="title-sm pt-3 pb-3">
+								<span class="mark">Запуск Marketplace<br>10-12/2018</span>
+							</p>
+							
+							<div class="line-dot"></div>
+						</div>
+										
+										
+											<div class="line-point line-small">
+							<p class="mb-0">Запуск новой платформы (возможно на EOS). Запуск новой экономики. Новые точки доступа по всему миру. Второй Airdrop.</p>
+
+							<p class="title-sm pt-3 pb-3">
+								<span class="mark">Запуск новой платформы<br>04-06/2019</span>
+							</p>
+							
+							<div class="line-dot"></div>
+						</div>
+														</div>
+
+				<div class="roadmap-line"></div>
 				
 				<div class="line-row line-bottom">
+					
+										
+											<div class="line-point line-small">
+							<div class="line-dot"></div>
+
+							<p class="mb-0">Заключение первых партнерств. Создание Genesis land. Выпуск концепции. Наем команды.</p>
+
+							<p class="title-sm pt-3 pb-3">
+								<span class="mark">Создание Genesis Land<br>2017</span>
+							</p>
+							
+							
+						</div>
+										
+										
+											<div class="line-point line-big">
+							<div class="line-dot"></div>
+
+							<p class="mb-0">Разработка blockchain архитектуры Viarium. Начало blockchain разработки. Расширение партнерской сети. Разработка бота консультанта в VR. Публикация вакансии мечты.</p>
+
+							<p class="title-sm pt-3 pb-3">
+								<span class="mark">Blockchain разработка<br>04-06/2018</span>
+							</p>
+							
+							
+						</div>
+										
+										
+											<div class="line-point line-small">
+							<div class="line-dot"></div>
+
+							<p class="mb-0">Открытие первой VR точки доступа в торговом центре. Описание регламентов работы Foundation. Разработка смарт контрактов.</p>
+
+							<p class="title-sm pt-3 pb-3">
+								<span class="mark">Token Sale<br>09-10.18</span>
+							</p>
+							
+							
+						</div>
+										
+										
+											<div class="line-point line-big">
+							<div class="line-dot"></div>
+
+							<p class="mb-0">Развитие функциональности (создание новых миров). Запуск отдела продаж. Земельный аукцион. Создание строений в VR. Маркетплейс для разработчиков. Размещение на биржах. Открытие точек доступа в Азии и Европе. Развитие экономики и регулирования.</p>
+
+							<p class="title-sm pt-3 pb-3">
+								<span class="mark">Развитие функциональности<br>01-03/2019</span>
+							</p>
+							
+							
+						</div>
+										
+														</div>
+
+			</div>
+
+			<div class="d-block d-lg-none">
+				
+				<!-- <div class="roadmap-line"></div> -->
+				
+				<div class="roadmap-block--mobile">
+					
+					
+					<div class="line-point">
+						<div class="line-dot"></div>
+
+						<p class="title-sm pt-3 pb-3">
+							<span class="mark">2016<br>Разработка концепта</span>
+						</p>
+
+						<p class="mb-0">Разработка концепта. Разработка VR.Подготовка и развитие экономики и применение блокчейн технологии в проекте.</p>
+
+					</div>
+					
+					
+					
+					<div class="line-point">
+						<div class="line-dot"></div>
+
+						<p class="title-sm pt-3 pb-3">
+							<span class="mark">2017<br>Создание Genesis Land</span>
+						</p>
+
+						<p class="mb-0">Заключение первых партнерств. Создание Genesis land. Выпуск концепции. Наем команды.</p>
+
+					</div>
+					
+					
+					
+					<div class="line-point">
+						<div class="line-dot"></div>
+
+						<p class="title-sm pt-3 pb-3">
+							<span class="mark">01-03/2018<br>Подготовка к Token Sale</span>
+						</p>
+
+						<p class="mb-0">Усовершенствование экономики, бизнес модели и применения блокчейн технологии в проекте. Подготовка White Paper 2.0. Разработка материалов и документации проекта. Разработка VR-шоурумов для наших партнеров. Совершенстование Genesis Land.</p>
+
+					</div>
+					
+					
+					
+					<div class="line-point">
+						<div class="line-dot"></div>
+
+						<p class="title-sm pt-3 pb-3">
+							<span class="mark">04-06/2018<br>Blockchain разработка</span>
+						</p>
+
+						<p class="mb-0">Разработка blockchain архитектуры Viarium. Начало blockchain разработки. Расширение партнерской сети. Разработка бота консультанта в VR. Публикация вакансии мечты.</p>
+
+					</div>
+					
+					
+					
+					<div class="line-point">
+						<div class="line-dot"></div>
+
+						<p class="title-sm pt-3 pb-3">
+							<span class="mark">07-09.18<br>Pre-Sale</span>
+						</p>
+
+						<p class="mb-0">Проведение первой VR-конференции Viarium. Создание Foundation. Разработка рекомендательного сервиса в VR для Genesis Land. Airdrop</p>
+
+					</div>
+					
+					
+					
+					<div class="line-point">
+						<div class="line-dot"></div>
+
+						<p class="title-sm pt-3 pb-3">
+							<span class="mark">09-10.18<br>Token Sale</span>
+						</p>
+
+						<p class="mb-0">Открытие первой VR точки доступа в торговом центре. Описание регламентов работы Foundation. Разработка смарт контрактов.</p>
+
+					</div>
+					
+					
+					
+					<div class="line-point">
+						<div class="line-dot"></div>
+
+						<p class="title-sm pt-3 pb-3">
+							<span class="mark">10-12/2018<br>Запуск Marketplace</span>
+						</p>
+
+						<p class="mb-0">Проведение второй VR конференции. Проведение хакатона. Airdrop 2. Проведение второго хакатона. Распределение средств согласно плану (Foundation). Запуск личного кабинета для пользователей. Оцифровка земель. Запуск основного маркетплейса.</p>
+
+					</div>
+					
+					
+					
+					<div class="line-point">
+						<div class="line-dot"></div>
+
+						<p class="title-sm pt-3 pb-3">
+							<span class="mark">01-03/2019<br>Развитие функциональности</span>
+						</p>
+
+						<p class="mb-0">Развитие функциональности (создание новых миров). Запуск отдела продаж. Земельный аукцион. Создание строений в VR. Маркетплейс для разработчиков. Размещение на биржах. Открытие точек доступа в Азии и Европе. Развитие экономики и регулирования.</p>
+
+					</div>
+					
+					
+					
+					<div class="line-point">
+						<div class="line-dot"></div>
+
+						<p class="title-sm pt-3 pb-3">
+							<span class="mark">04-06/2019<br>Запуск новой платформы</span>
+						</p>
+
+						<p class="mb-0">Запуск новой платформы (возможно на EOS). Запуск новой экономики. Новые точки доступа по всему миру. Второй Airdrop.</p>
+
+					</div>
+					
 									</div>
 
 			</div>
@@ -958,7 +1221,7 @@
                                                                                                     </div>
                                             </div>
                                             <div class="member-name">Сергей Симановский</div>
-                                            <div class="member-position">COO</div>
+                                            <div class="member-position">Blockchain consultant</div>
                                             <div class="member-text">Опыт работы в блокчейн проектах более 6 лет, включая успешно проведенные ICO. Руководитель и идейный вдохновитель проекта Golos. Fund (венчурные инвестиции на блокчейн и управление группой проектов Golos).</div>
                                         </div>
                                     </div>
@@ -972,6 +1235,9 @@
                                                     
                                                                                                             <a class="social-1" href="https://www.facebook.com/kolyvanova.art">
                                                                                                                             <img src="/en/img/icons/facebook.png">
+                                                                                                                    </a>
+                                                                                                            <a class="social-2" href="https://www.linkedin.com/in/darya-kolyvanova-91a6a9a2/">
+                                                                                                                            <img src="/en/img/icons/linkedin.png">
                                                                                                                     </a>
                                                                                                     </div>
                                             </div>
@@ -1009,6 +1275,9 @@
                                                                                                             <a class="social-1" href="https://www.facebook.com/gulnaragaleeva">
                                                                                                                             <img src="/en/img/icons/facebook.png">
                                                                                                                     </a>
+                                                                                                            <a class="social-2" href="https://www.linkedin.com/in/gulnaragaleeva">
+                                                                                                                            <img src="/en/img/icons/linkedin.png">
+                                                                                                                    </a>
                                                                                                     </div>
                                             </div>
                                             <div class="member-name">Гульнара Галеева</div>
@@ -1016,7 +1285,7 @@
                                             <div class="member-text">15 лет опыта работы в маркетинге и PR. Опыт в ATL, BTL, PR, Event. Специалист в Digital- маркетинге. Среди главных проектов Citroen, REN TV, Europa plus, Otto group Russia, Osterreichischen Lotterien und Casinos.</div>
                                         </div>
                                     </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
                             </div>
 
                         </div>
@@ -1025,45 +1294,6 @@
                             <div class="row">
                                 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <div class="col-md-4">
-                                        <div class="">
-                                            <div class="member-group mb-3">
-                                                <div class="member-image">
-                                                    <img src="/en/img/team/kyzmina.png" alt="">
-                                                </div>
-                                                <div class="member-social">
-                                                    
-                                                                                                            <a class="social-1" href="https://www.facebook.com/viktoria.kuzmina">
-                                                                                                                            <img src="/en/img/icons/facebook.png">
-                                                                                                                    </a>
-                                                                                                            <a class="social-2" href="https://www.linkedin.com/in/viktoriakuzmina/">
-                                                                                                                            <img src="/en/img/icons/linkedin.png">
-                                                                                                                    </a>
-                                                                                                    </div>
-                                            </div>
-                                            <div class="member-name">Виктория Кузьмина</div>
-                                            <div class="member-position">SMM</div>
-                                            <div class="member-text">Больше 10 лет работы маркетологом, в том числе в компаниях Intel и Nike. Разработка стратегий и ведение соц сетей, стартапов в таких областях, как туризм, мода, gaming, консалтинг, SaaS.</div>
-                                        </div>
-                                    </div>
-                                                                                                                                    <div class="col-md-4">
-                                        <div class="">
-                                            <div class="member-group mb-3">
-                                                <div class="member-image">
-                                                    <img src="/en/img/team/kolesnik.png" alt="">
-                                                </div>
-                                                <div class="member-social">
-                                                    
-                                                                                                            <a class="social-1" href="https://www.facebook.com/james.mccoin.967">
-                                                                                                                            <img src="/en/img/icons/facebook.png">
-                                                                                                                    </a>
-                                                                                                    </div>
-                                            </div>
-                                            <div class="member-name">Богдан Колесник</div>
-                                            <div class="member-position">SMM</div>
-                                            <div class="member-text">Более 7 лет работы SMM, в частности, в таких крупных компаниях как Adidas-group, Калуга Астрал, Old Kitchen, Летний Дворец, Drop, New Balance. Среди крипто-проектов занимался SMM в Sandcoin и Cryogen.</div>
-                                        </div>
-                                    </div>
-                                                                                                                                    <div class="col-md-4">
                                         <div class="">
                                             <div class="member-group mb-3">
                                                 <div class="member-image">
@@ -1131,6 +1361,9 @@
                                                                                                             <a class="social-1" href="https://www.facebook.com/profile.php?id=100001327967173">
                                                                                                                             <img src="/en/img/icons/facebook.png">
                                                                                                                     </a>
+                                                                                                            <a class="social-2" href="https://www.linkedin.com/in/ekaterina-yakovlenkova-157923162/">
+                                                                                                                            <img src="/en/img/icons/linkedin.png">
+                                                                                                                    </a>
                                                                                                     </div>
                                             </div>
                                             <div class="member-name">Екатерина Яковленкова</div>
@@ -1138,15 +1371,7 @@
                                             <div class="member-text">Опыт работы в рекламных агентствах BBDO, SODA на позиции PR-менеджера. В 2017 году присоединилась к команде информационного портала Coinfox.</div>
                                         </div>
                                     </div>
-                                                                                                                                                                                                                                                                
-                            </div>
-
-                        </div>
-
-                        <div class="team-slide">
-                            <div class="row">
-                                
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="col-md-4">
+                                                                                                                                    <div class="col-md-4">
                                         <div class="">
                                             <div class="member-group mb-3">
                                                 <div class="member-image">
@@ -1179,7 +1404,15 @@
                                             <div class="member-text">Анализ децентрализованных бирж на рынке, а также методы обмена BTC/ETH/graphene. Разбор клиента Bitshares для его развития под автотрейдера. В результате собрана команда, занимающаяся реализацией децентрализованной биржи со своим внешнем ключом регистрации. Занимался разработкой автоматической системы расчета профиля полета самолёта с нуля до рабочего варианта.</div>
                                         </div>
                                     </div>
-                                                                                                                                    <div class="col-md-4">
+                                                                                                                                
+                            </div>
+
+                        </div>
+
+                        <div class="team-slide">
+                            <div class="row">
+                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="col-md-4">
                                         <div class="">
                                             <div class="member-group mb-3">
                                                 <div class="member-image">
@@ -1266,7 +1499,7 @@
                                                                                     </div>
                                     </div>
                                     <div class="member-name">Сергей Симановский</div>
-                                    <div class="member-position">COO</div>
+                                    <div class="member-position">Blockchain consultant</div>
                                     <div class="member-text">Опыт работы в блокчейн проектах более 6 лет, включая успешно проведенные ICO. Руководитель и идейный вдохновитель проекта Golos. Fund (венчурные инвестиции на блокчейн и управление группой проектов Golos).</div>
                                 </div>
                             </div>
@@ -1280,6 +1513,9 @@
                                             
                                                                                             <a class="social-1" href="https://www.facebook.com/kolyvanova.art">
                                                                                                             <img src="/en/img/icons/facebook.png">
+                                                                                                    </a>
+                                                                                            <a class="social-2" href="https://www.linkedin.com/in/darya-kolyvanova-91a6a9a2/">
+                                                                                                            <img src="/en/img/icons/linkedin.png">
                                                                                                     </a>
                                                                                     </div>
                                     </div>
@@ -1317,50 +1553,14 @@
                                                                                             <a class="social-1" href="https://www.facebook.com/gulnaragaleeva">
                                                                                                             <img src="/en/img/icons/facebook.png">
                                                                                                     </a>
+                                                                                            <a class="social-2" href="https://www.linkedin.com/in/gulnaragaleeva">
+                                                                                                            <img src="/en/img/icons/linkedin.png">
+                                                                                                    </a>
                                                                                     </div>
                                     </div>
                                     <div class="member-name">Гульнара Галеева</div>
                                     <div class="member-position">Marketing Director</div>
                                     <div class="member-text">15 лет опыта работы в маркетинге и PR. Опыт в ATL, BTL, PR, Event. Специалист в Digital- маркетинге. Среди главных проектов Citroen, REN TV, Europa plus, Otto group Russia, Osterreichischen Lotterien und Casinos.</div>
-                                </div>
-                            </div>
-                                                    <div class="team-slide">
-                                <div class="mb-0">
-                                    <div class="member-group mb-3">
-                                        <div class="member-image">
-                                            <img src="/en/img/team/kyzmina.png" alt="">
-                                        </div>
-                                        <div class="member-social">
-                                            
-                                                                                            <a class="social-1" href="https://www.facebook.com/viktoria.kuzmina">
-                                                                                                            <img src="/en/img/icons/facebook.png">
-                                                                                                    </a>
-                                                                                            <a class="social-2" href="https://www.linkedin.com/in/viktoriakuzmina/">
-                                                                                                            <img src="/en/img/icons/linkedin.png">
-                                                                                                    </a>
-                                                                                    </div>
-                                    </div>
-                                    <div class="member-name">Виктория Кузьмина</div>
-                                    <div class="member-position">SMM</div>
-                                    <div class="member-text">Больше 10 лет работы маркетологом, в том числе в компаниях Intel и Nike. Разработка стратегий и ведение соц сетей, стартапов в таких областях, как туризм, мода, gaming, консалтинг, SaaS.</div>
-                                </div>
-                            </div>
-                                                    <div class="team-slide">
-                                <div class="mb-0">
-                                    <div class="member-group mb-3">
-                                        <div class="member-image">
-                                            <img src="/en/img/team/kolesnik.png" alt="">
-                                        </div>
-                                        <div class="member-social">
-                                            
-                                                                                            <a class="social-1" href="https://www.facebook.com/james.mccoin.967">
-                                                                                                            <img src="/en/img/icons/facebook.png">
-                                                                                                    </a>
-                                                                                    </div>
-                                    </div>
-                                    <div class="member-name">Богдан Колесник</div>
-                                    <div class="member-position">SMM</div>
-                                    <div class="member-text">Более 7 лет работы SMM, в частности, в таких крупных компаниях как Adidas-group, Калуга Астрал, Old Kitchen, Летний Дворец, Drop, New Balance. Среди крипто-проектов занимался SMM в Sandcoin и Cryogen.</div>
                                 </div>
                             </div>
                                                     <div class="team-slide">
@@ -1430,6 +1630,9 @@
                                             
                                                                                             <a class="social-1" href="https://www.facebook.com/profile.php?id=100001327967173">
                                                                                                             <img src="/en/img/icons/facebook.png">
+                                                                                                    </a>
+                                                                                            <a class="social-2" href="https://www.linkedin.com/in/ekaterina-yakovlenkova-157923162/">
+                                                                                                            <img src="/en/img/icons/linkedin.png">
                                                                                                     </a>
                                                                                     </div>
                                     </div>
@@ -1554,8 +1757,8 @@
     <div class="hex hex-7-bottom d-block d-lg-none"></div>
 
 </section> 
-		<footer class="section-rounded section-reverse section-footer">
-    <div class="section-round section-round-top d-none d-lg-block"></div>
+		<footer class="section-rounded section-reverse section-footer" >
+    <div class="section-round section-round--white section-round-top d-none d-lg-block" id="footer"></div>
         <div class="hex hex-7"></div>
         <div class="container">
             <div class="section-content">
