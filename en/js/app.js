@@ -101,7 +101,7 @@ var APP = {
                 }
             } else {
 
-                if (position.left <= $(window).width() - 2500) {
+                if (position.left <= $(window).width() - 3000) {
                     return false;
                 } else {
                     $(".roadmap-block").animate({
