@@ -145,20 +145,48 @@ var APP = {
 
     },
 
+    kycTab: () => {
+        $('.radio-tab-kys').click(function(e) {
+
+            let isLink = $(this).attr('href');
+
+            var attr = $(this).attr('name');
+
+            let target = $(this).data('target');
+
+            if(isLink !== undefined && isLink !== false) {
+                e.preventDefault();
+                $('.step-option').removeClass('d-block').addClass('d-none');
+                $('#'+target).addClass('d-block');
+                $('.radio-tab-kys[data-target="option-2"]').click();
+
+                return false;
+            }else {
+                $('.step-option').removeClass('d-block').addClass('d-none');
+                $('#'+target).addClass('d-block');
+            }
+
+            
+
+            
+
+            
+        });
+    },
+
     anchorScroll: () => {
         $('.anchor').click(function (e) {
             e.preventDefault();
 
             let hash = $(this).attr("data-hash");
-
-            console.log(hash);
+            let corrector = -120;
 
             if ($('.navbar .collapse').hasClass('show')) {
                 $('.navbar-toggler-desktop').click();
             }
 
             $("html, body").animate({
-                scrollTop: $('#' + hash).offset().top + 50
+                scrollTop: $('#' + hash).offset().top + corrector
             }, 1000);
 
             return false;

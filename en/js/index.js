@@ -6,3 +6,4 @@ APP.bxSlider('.cases-slider');
 APP.counter('counter');
 APP.rounded();
 APP.caseControl();
+APP.kycTab();
