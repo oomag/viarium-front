@@ -194,7 +194,7 @@
 
                 <div class="col-12">
 
-                    <div class="title-xl text-center mb-5"><span class="mark">Личный</span> кабинет</div>
+                    <div class="title-xl text-center mb-3 mb-lg-5"><span class="mark">Личный</span> кабинет</div>
 
                     <nav class="account-menu mb-5">
                         
@@ -203,8 +203,8 @@
                             <li class="list-item"><a href="account-balance.html" class="menu-link">Баланс</a></li>
                             <li class="list-item"><a href="account-profile.html" class="menu-link">Профиль</a></li>
                             <li class="list-item active"><a href="account-2fa.html" class="menu-link">2FA</a></li>
-                            <li class="list-item disable"><a href="" class="menu-link">Personal details</a></li>
-                            <li class="list-item disable"><a href="" class="menu-link">Verification</a></li>
+                            <li class="list-item disable list-item--br"><a href="" class="menu-link">Personal details</a></li>
+                            <li class="list-item disable list-item--br"><a href="" class="menu-link">Verification</a></li>
 
                         </ul>
 
@@ -219,90 +219,91 @@
                 
                 <div class="col-12">
                     <form action="" class="form-grey">
-                        <div class="col-12 mb-4">
-                            <div class="text-lg text-center mb-2"><b>Двухфакторная аутентификация</b></div>
-                            <p class="text-center">Дополнительный уровень безопасности личного кабинета</p>
-                        </div>
+                        <div class="row">
+                            <div class="col-12 mb-4">
+                                <div class="text-lg text-center mb-2"><b>Двухфакторная аутентификация</b></div>
+                                <p class="text-center">Дополнительный уровень безопасности личного кабинета</p>
+                            </div>
 
-                        <div class="col-12">
-                            <div class="panel">
-                                <div class="panel-row">
-                                    <div class="row">
-                                        <div class="col-lg-6 d-flex align-items-center">
-                                            <div class="title-md">Аутентификационный секретный код</div>
-                                    
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <input type="text" class="form-control">
+                            <div class="col-12">
+                                <div class="panel">
+                                    <div class="panel-row">
+                                        <div class="row">
+                                            <div class="col-lg-7 col-xl-6 d-flex align-items-center">
+                                                <div class="title-md text-center text-lg-left w-100 mb-3 mb-lg-0">Аутентификационный секретный код</div>
+                                        
+                                            </div>
+                                            <div class="col-lg-5 col-xl-6">
+                                                <input type="text" class="form-control">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="col-12">
-                            
-                            <div class="panel">
+                            <div class="col-12">
                                 
-                                <div class="panel-row">
+                                <div class="panel">
                                     
-                                    <div class="row">
-                                        <div class="col-lg-8">
-                                            <ul class="num-list">
-                                                <li class="list-item mb-5">
-                                                    <div class="list-num">1</div>
-                                                    Запишите сектретный код на лист бумаги и сохраните его в безопасном месте
-                                                </li>
-                                                <li class="list-item mb-5">
-                                                    <div class="list-num">2</div>
-                                                    <div>
-                                                        Установите аутентификационное приложение, если вы не устанавливали его ранее. 
-                                                        Любое приложение, которое поддерживает Time-based One-Time Password (TOTP) протокол,
-                                                        должно работать, включаа следующие:
-                                                        <p class="pl-4 mb-2 mt-2">Google Athenticator (Android | Iphone)</p>
-                                                        <p class="pl-4 pb-3 mb-0">Microsoft Athenticator (Android | Iphone | Windows Phone)</p>
-                                                    </div>
-                                                </li>
-                                                <li class="list-item">
-                                                    <div class="list-num">3</div>
-                                                    Скачайте QR код (или нажмите на QR код, если вы просматриваете страницу с мобильного браузера)
-                                                </li>
-                                            </ul>
+                                    <div class="panel-row">
+                                        
+                                        <div class="row">
+                                            <div class="col-lg-8 mb-3 mb-lg-0">
+                                                <ul class="num-list">
+                                                    <li class="list-item mb-3 mb-lg-5">
+                                                        <div class="list-num">1</div>
+                                                        Запишите сектретный код на лист бумаги и сохраните его в безопасном месте
+                                                    </li>
+                                                    <li class="list-item mb-3 mb-lg-5">
+                                                        <div class="list-num">2</div>
+                                                        <div>
+                                                            Установите аутентификационное приложение, если вы не устанавливали его ранее. 
+                                                            Любое приложение, которое поддерживает Time-based One-Time Password (TOTP) протокол,
+                                                            должно работать, включаа следующие:
+                                                            <p class="pl-4 mb-2 mt-2">Google Athenticator (Android | Iphone)</p>
+                                                            <p class="pl-4 pb-2 pb-lg-3 mb-0">Microsoft Athenticator (Android | Iphone | Windows Phone)</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-item">
+                                                        <div class="list-num">3</div>
+                                                        Скачайте QR код (или нажмите на QR код, если вы просматриваете страницу с мобильного браузера)
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-4 text-center text-lg-left">
+                                                <img src="http://placehold.it/255x255" alt="" class="img-responsive qr-image mb-3 mb-lg-3">
+                                                <p class="text-sm lh-normal text-left">
+                                                    Если вы потеряли телефон, то вам понадобится секретный код
+                                                    для добавления его в новое приложение. Никому не сообщайте секретный код.
+                                                    Наши сотрудники никогда не спрашивают его.
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="col-lg-4">
-                                            <img src="http://placehold.it/255x255" alt="" class="qr-image mb-4">
-                                            <p class="text-sm lh-normal">
-                                                Если вы потеряли телефон, то вам понадобится секретный код
-                                                для добавления его в новое приложение. Никому не сообщайте секретный код.
-                                                Наши сотрудники никогда не спрашивают его.
-                                            </p>
-                                        </div>
+
                                     </div>
 
                                 </div>
 
                             </div>
 
+                            <div class="col-12">
+                                <div class="panel">
+                                    <div class="panel-row">
+                                        <div class="row">
+                                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                                <input type="text" class="form-control" placeholder="Пароль от аккаунта">
+                                            </div>
+                                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                                <input type="text" class="form-control" placeholder="Верефикационный код">
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <button class="btn btn-fluid btn-default">СОХРАНИТЬ</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
                         </div>
-
-                        <div class="col-12">
-                            <div class="panel">
-                                <div class="panel-row">
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <button class="btn btn-fluid btn-default">СОХРАНИТЬ</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-
                     </form>
                 </div>
 

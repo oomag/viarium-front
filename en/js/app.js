@@ -171,6 +171,7 @@ var APP = {
 
             $('.kys-link').removeClass('active');
             $(this).addClass('active');
+            $('#customControlValidation2').prop( "checked", true );
             $('.step-option').removeClass('d-block').addClass('d-none');
             $('#'+target).removeClass('d-none').addClass('d-block');            
 
