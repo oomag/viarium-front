@@ -14,7 +14,7 @@ var APP = {
         if ($(window).width() >= 576) {
             var factor = 3;
         }else {
-            var factor =1.1;
+            var factor =1.5;
         }
 
         if (elem) {
