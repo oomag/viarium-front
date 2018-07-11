@@ -73,7 +73,7 @@ var APP = {
         function updateClock() {
             var t = getTimeRemaining(endtime);
 
-            daysSpan.text(t.days);
+            daysSpan.text(('0' + t.days).slice(-2));
             hoursSpan.text(('0' + t.hours).slice(-2));
             minutesSpan.text(('0' + t.minutes).slice(-2));
             secondsSpan.text(('0' + t.seconds).slice(-2));
