@@ -1,1 +1,1 @@
-{"version":3,"sources":["app_ru.scss"],"names":[],"mappings":"AAEA;EACI,kBAAiB,EACpB;;AAED;EACI,gBAAe,EAClB","file":"app_ru.min.css","sourcesContent":["@import './includes/variables.scss';\n\n.btn {\n    font-size: 1.4rem;\n}\n\n.section__title {\n    font-size: 4rem;\n}"]}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"app_ru.min.css","sourcesContent":[]}
