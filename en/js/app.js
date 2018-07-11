@@ -14,7 +14,7 @@ var APP = {
         if ($(window).width() >= 576) {
             var factor = 3;
         }else {
-            var factor =1.1;
+            var factor =1.5;
         }
 
         if (elem) {
@@ -200,6 +200,22 @@ var APP = {
             return false;
 
         });
+    },
+
+    hashScroll: () => {
+
+        let hash = location.hash;
+        let corrector = -120;
+        if (hash != undefined) {
+           
+
+        $("html, body").animate({
+            scrollTop: $(hash).offset().top + corrector
+        }, 1000);
+
+        return false;
+       }
+
     },
 
     // navbarScrollEvent: () => {
