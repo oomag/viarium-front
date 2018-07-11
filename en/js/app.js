@@ -206,7 +206,8 @@ var APP = {
 
         let hash = location.hash;
         let corrector = -120;
-        if (hash != undefined) {
+
+        if (hash != '') {
            
 
         $("html, body").animate({
