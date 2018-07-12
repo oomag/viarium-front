@@ -73,7 +73,7 @@ var APP = {
         function updateClock() {
             var t = getTimeRemaining(endtime);
 
-            daysSpan.text(t.days);
+            daysSpan.text(('0' + t.days).slice(-2));
             hoursSpan.text(('0' + t.hours).slice(-2));
             minutesSpan.text(('0' + t.minutes).slice(-2));
             secondsSpan.text(('0' + t.seconds).slice(-2));
@@ -200,6 +200,23 @@ var APP = {
             return false;
 
         });
+    },
+
+    hashScroll: () => {
+
+        let hash = location.hash;
+        let corrector = -120;
+
+        if (hash != '') {
+           
+
+        $("html, body").animate({
+            scrollTop: $(hash).offset().top + corrector
+        }, 1000);
+
+        return false;
+       }
+
     },
 
     // navbarScrollEvent: () => {

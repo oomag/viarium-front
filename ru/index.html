@@ -11,7 +11,7 @@
         <meta name="format-detection" content="telephone=no">
         <meta http-equiv="x-rim-auto-match" content="none">
         <link rel="stylesheet" type="text/css" href="/en/css/app.min.css">
-        <!-- <link rel="stylesheet" type="text/css" href="/en/css/app_ru.min.css"> -->
+        <link rel="stylesheet" type="text/css" href="/en/css/app_ru.min.css">
         <link href="/en/img/logo-dark.png" rel="shortcut icon">
         <link href="/en/img/logo-dark.png" rel="shortcut icon" type="image/x-icon">
     </head>
@@ -21,36 +21,36 @@
 	<div class="wrapper">
 		<nav class="navbar navbar-expand-xl navbar-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand mr-2 mr-xl-3" href="index.html">
-            <img src="/en/img/logo-print.png" alt="">
+        <a class="navbar-brand mr-2 mr-xl-3" href="/">
+            <img src="/en/img/logo-print.svg" alt="">
         </a>
 
         <div class="collapse navbar-collapse mx-auto" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 
-                <li class="nav-item">
-                                            <a class="nav-link anchor" data-hash="TokenTitle" href="#">VRX Токен</a>
-                                    </li>
-                    
+                                        <li class="nav-item">
+                                                    <a class="nav-link anchor" data-hash="TokenTitle" href="#">VRX Токен</a>
+                                            </li>
+                                        
                 
-                <li class="nav-item">
-                                            <a class="nav-link anchor" data-hash="RoadmapTitle" href="#">Roadmap</a>
-                                    </li>
-                    
+                                        <li class="nav-item">
+                                                    <a class="nav-link anchor" data-hash="RoadmapTitle" href="#">Roadmap</a>
+                                            </li>
+                                        
                 
-                <li class="nav-item">
-                                            <a class="nav-link anchor" data-hash="TeamTitle" href="#">Команда</a>
-                                    </li>
-                    
+                                        <li class="nav-item">
+                                                    <a class="nav-link anchor" data-hash="TeamTitle" href="#">Команда</a>
+                                            </li>
+                                        
                 
-                <li class="nav-item">
-                                            <a class="nav-link" href="faq.html">FAQ</a>
-                                    </li>
-                    
+                                        <li class="nav-item">
+                                                    <a class="nav-link" href="faq.html">FAQ</a>
+                                            </li>
+                                        
                             </ul>
         </div>
 
-        <a href="login.html" class="btn btn-default btn-sm ml-auto ml-xl-2 d-none d-sm-block">ВХОД</a>
+        <a href="/users/sign_in?lang=ru" class="btn btn-default btn-sm ml-auto ml-xl-2 d-none d-sm-block">ВХОД</a>
 
         <ul class="navbar-nav mx-sm-3 mx-md-3 ml-auto mr-3">
             <li class="nav-item dropdown">
@@ -60,9 +60,6 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <a class="dropdown-item" href="https://en.viarium.io/">EN</a>
                                             <a class="dropdown-item" href="https://ru.viarium.io/">RU</a>
-                                            <a class="dropdown-item" href="https://cn.viarium.io/">CN</a>
-                                            <a class="dropdown-item" href="https://ja.viarium.io/">JA</a>
-                                            <a class="dropdown-item" href="https://ko.viarium.io/">KO</a>
                                     </div>
               </li>
         </ul>
@@ -147,7 +144,7 @@
                     <div class="col-12">
                         
                         <div class="d-block d-sm-none py-5">
-                            <a href="" class="btn btn-default btn-fluid">ВХОД</a>
+                            <a href="/users/sign_in" class="btn btn-default btn-fluid">ВХОД</a>
                         </div>
 
                     </div>
@@ -210,28 +207,28 @@
         
         <ul class="social-list social-list-vertical d-flex d-lg-none">
                             <li>
-                    <a href="">
-                        <img src="/en/img/icons/facebook-b.png" alt="">
+                    <a href="https://www.facebook.com/ViariumProject/" target="_blank">
+                        <img src="/en/img/icons/fb.svg" alt="">
                     </a>
                 </li>
                             <li>
-                    <a href="">
-                        <img src="/en/img/icons/twitter-b.png" alt="">
+                    <a href="https://twitter.com/ViariumProject" target="_blank">
+                        <img src="/en/img/icons/tw.svg" alt="">
                     </a>
                 </li>
                             <li>
-                    <a href="">
-                        <img src="/en/img/icons/linkedin-b.png" alt="">
+                    <a href="https://www.linkedin.com/company/viarium/" target="_blank">
+                        <img src="/en/img/icons/in.svg" alt="">
                     </a>
                 </li>
                             <li>
-                    <a href="">
-                        <img src="/en/img/icons/telegram-b.png" alt="">
+                    <a href="https://t.me/viariumen" target="_blank">
+                        <img src="/en/img/icons/tg.svg" alt="">
                     </a>
                 </li>
                             <li>
-                    <a href="">
-                        <img src="/en/img/icons/reddit-b.png" alt="">
+                    <a href="https://www.reddit.com/user/VIArium/" target="_blank">
+                        <img src="/en/img/icons/reddit.svg" alt="">
                     </a>
                 </li>
                     </ul>
@@ -242,80 +239,63 @@
 	<div class="container">
 		
 		<div class="row">
-			<div class="col-lg-11">
+			<div class="col-lg-7 col-xl-6">
 				<h1 class="title-header mb-3 mb-lg-5">
-					Децентрализованный <br><span class="mark">виртуальный мир</span> <br> для реальной жизни <br> и <span class="mark">бизнеса</span>
+					<span class="title-header--row title-header--row-1">
+						ДЕЦЕНТРАЛИЗОВАННЫЙ
+					</span>
+					<span class="mark title-header--row">
+						<span class="title-header--vr">VR</span><span>МИР</span>
+					</span>
+					<span class="title-header--row title-header--row-2">
+						ДЛЯ РЕАЛЬНОЙ ЖИЗНИ <br>И БИЗНЕСА
+					</span>
 				</h1>
 
-				<div class="title-presale">
-					<span class="mark">Pre-Sale</span> начнется:
+				
+
+				<div class="row mb-4">
+					
+					<div class="col-lg-6 mb-4 mb-lg-0">
+						<div class="title-presale">
+							<span class="mark">Pre-Sale</span> начнется через:
+						</div>
+
+						<div class="counter" data-element="counter" data-deadline="2018-07-16T00:00:00">
+							<div class="counter-path counter-line counter-days">
+								<div class="counter-num">33</div>
+								<div class="counter-text">дней</div>
+							</div>
+							
+							<div class="counter-path counter-line counter-hours">
+								<div class="counter-num">10</div>
+								<div class="counter-text">часов</div>
+							</div>
+							
+							<div class="counter-path counter-line counter-minutes">
+								<div class="counter-num">06</div>
+								<div class="counter-text">минут</div>
+							</div>
+							
+							<div class="counter-path counter-seconds">
+								<div class="counter-num">27</div>
+								<div class="counter-text">секунд</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-6">
+						<div class="header-buttons">
+							<button type="button" class="btn btn-default" data-toggle="modal" data-target="#whiteListModal">JOIN WHITE LIST</button>
+						</div>
+					</div>
+
 				</div>
 
-				<div class="title-presale--date"><span class="mark">16</span> ИЮЛЯ <span class="mark">2018</span></div>
-
-				<!-- <div class="counter mb-4" data-element="counter" data-deadline="2018-07-16T00:00:00">
-					<div class="counter-path counter-line counter-days ml-3 ml-lg-0">
-						<div class="counter-num">33</div>
-						<div class="counter-text">дней</div>
-					</div>
-					
-					<div class="counter-path counter-line counter-hours">
-						<div class="counter-num">10</div>
-						<div class="counter-text">часов</div>
-					</div>
-					
-					<div class="counter-path counter-line counter-minutes">
-						<div class="counter-num">06</div>
-						<div class="counter-text">минут</div>
-					</div>
-					
-					<div class="counter-path counter-seconds">
-						<div class="counter-num">27</div>
-						<div class="counter-text">секунд</div>
-					</div>
-				</div> -->
-
-				<div class="header-buttons">
-					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#whiteListModal">WHITE LIST</button>
-
-					<p class="text-md"><b>Присоединись в WL и получи 50% возврат. <br>Предложение ограничено 100 слотами.</b></p>
-
-					<!-- <div class="btn-group" aria-label="Basic example">
-						<a href="" class="btn btn-default">One Pager</a>
-						<a href="" class="btn btn-default btn-border-left">White Paper</a>
-					</div> -->
-				</div>
+				<p class="text-slot text-slot--1 text-center">Присоединись в WL и получи <span class="mark">50% </span> возврат.</p>
+				<p class="text-slot text-slot--2 text-center">* Предложение ограничено 100 слотами</p>
 			</div>
 
-			<div class="col-lg-1 col-12 ">
-                <ul class="social-list social-list-vertical d-none d-lg-flex align-items-end justify-content-end">
-                    						<li>
-							<a href="">
-								<img src="/en/img/icons/facebook-b.png" alt="">
-							</a>
-						</li>
-    										<li>
-							<a href="">
-								<img src="/en/img/icons/twitter-b.png" alt="">
-							</a>
-						</li>
-    										<li>
-							<a href="">
-								<img src="/en/img/icons/linkedin-b.png" alt="">
-							</a>
-						</li>
-    										<li>
-							<a href="">
-								<img src="/en/img/icons/telegram-b.png" alt="">
-							</a>
-						</li>
-    										<li>
-							<a href="">
-								<img src="/en/img/icons/reddit-b.png" alt="">
-							</a>
-						</li>
-    				                </ul>
-            </div>
 		</div>
 
 	</div>
@@ -340,25 +320,25 @@
 
 																					<li class="mb-3 mb-lg-5 list-item">
 									<p class="list-text order-2 order-lg-1 text-left text-lg-right">
-										Единая виртуальная<br>платформа со своими<br>VR-мирами и VR-архитектурой
+										Единая виртуальная платформа со своими VR-мирами и VR-архитектурой
 									</p>
-									<img src="/en/img/hex-list/2.png" alt="" class="list-image order-1 order-lg-2">
+									<img src="/en/img/hex-list/2.svg" alt="" class="list-image order-1 order-lg-2">
 									
 								</li>
 																				
 								<li class="mb-3 mb-lg-5 list-item list-item-shift">
 									<p class="list-text  ">
-										Инструмент для бизнеса и жизни,<br>полностью заменяющий физическое<br>пространство для широкой аудитории
+										Инструмент для бизнеса и жизни, полностью заменяющий физическое пространство для широкой аудитории
 
 									</p>
-									<img src="/en/img/hex-list/3.png" alt="" class="list-image ">
+									<img src="/en/img/hex-list/3.svg" alt="" class="list-image ">
 									
 								</li>
 																												<li class="mb-3 mb-lg-5 list-item">
 									<p class="list-text order-2 order-lg-1 text-left text-lg-right">
-										Неограниченное<br>количество услуг<br> на одной платформе
+										Неограниченное количество услуг на одной платформе
 									</p>
-									<img src="/en/img/hex-list/1.png" alt="" class="list-image order-1 order-lg-2">
+									<img src="/en/img/hex-list/1.svg" alt="" class="list-image order-1 order-lg-2">
 									
 								</li>
 																		</ul>
@@ -389,7 +369,7 @@
 			<div class="row">
 				<div class="col-12">
 					
-					<div class="title-xl mb-5" id="UseCasesTitle"> </div>
+					<div class="title-xl mb-5" id="UseCasesTitle"> <span class="mark">Ключевые</span> Функции</div>
 				</div>
 
 				<div class="offset-lg-1 col-lg-3">
@@ -432,7 +412,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<div class="title-xl mb-4 text-center" id="UseCasesTitleMobile"> </div>
+					<div class="title-xl mb-4 text-center" id="UseCasesTitleMobile"> <span class="mark">Ключевые</span> Функции</div>
 				</div>
 
 				<div class="col-12 d-block d-lg-none">
@@ -595,7 +575,7 @@
 								</div>
 
 								<div class="col-12">
-									<button type="button" class="btn mt-xl-4 mt-5 mb-2 btn-default btn-fluid" data-toggle="modal" data-target="#whiteListModal">WHITE LIST</button>
+									<button type="button" class="btn mt-xl-4 mt-5 mb-2 btn-default btn-fluid" data-toggle="modal" data-target="#whiteListModal">JOIN WHITE LIST</button>
 								</div>
 
 							</div>
@@ -668,7 +648,7 @@
 							</div>
 
 							<div class="col-12 pt-4 text-center">
-								<button type="button" class="btn btn-default mt-4 mb-2 btn-fluid" data-toggle="modal" data-target="#whiteListModal">WHITE LIST</button>
+								<button type="button" class="btn btn-default mt-4 mb-2 btn-fluid" data-toggle="modal" data-target="#whiteListModal">JOIN WHITE LIST</button>
 							</div>
 
 						</div>
@@ -700,27 +680,27 @@
 					<ul class="hex-list pr-0 pr-lg-4 text-right">
 													<li class=" mb-3 mb-lg-5 list-item ">
 								<p class="list-text order-2 order-lg-1 text-left text-lg-right">
-									Учет прав на недвижимое<br> имущество в распределенном реестре.<br> Защита авторских прав на контент
+									Учет прав на недвижимое имущество в распределенном реестре. Защита авторских прав на контент
 								</p>
-								<img src="/en/img/hex-list/4.png" alt="" class="list-image order-1 order-lg-2">
+								<img src="/en/img/hex-list/4.svg" alt="" class="list-image order-1 order-lg-2">
 							</li>
 													<li class=" mb-3 mb-lg-5 list-item list-item-shift list-pattern">
 								<p class="list-text order-2 order-lg-1 text-left text-lg-right">
-									Прозрачные и честные<br> голосования по различным<br> вопросам сообщества
+									Прозрачные и честныеголосования по различным вопросам сообщества
 								</p>
-								<img src="/en/img/hex-list/5.png" alt="" class="list-image order-1 order-lg-2">
+								<img src="/en/img/hex-list/5.svg" alt="" class="list-image order-1 order-lg-2">
 							</li>
 													<li class=" mb-3 mb-lg-5 list-item ">
 								<p class="list-text order-2 order-lg-1 text-left text-lg-right">
-									Проведение безопасных,<br> прозрачных и быстрых сделок по продаже <br>виртуальной недвижимости с помощью<br> расчетов через смарт- контракт
+									Проведение безопасных, прозрачных и быстрых сделок по продаже виртуальной недвижимости с помощью расчетов через смарт- контракт
 								</p>
-								<img src="/en/img/hex-list/6.png" alt="" class="list-image order-1 order-lg-2">
+								<img src="/en/img/hex-list/6.svg" alt="" class="list-image order-1 order-lg-2">
 							</li>
 													<li class="shift-t--40 shift-l-280   list-item ">
 								<p class="list-text order-2 order-lg-1 text-left text-lg-right">
-									Создание уникальных<br> виртуальных предметов, существующих<br> в VR-пространстве с записью всех особенностей<br> предмета и истории владения
+									Создание уникальных виртуальных предметов, существующих в VR-пространстве с записью всех особенностей предмета и истории владения
 								</p>
-								<img src="/en/img/hex-list/7.png" alt="" class="list-image order-1 order-lg-2">
+								<img src="/en/img/hex-list/7.svg" alt="" class="list-image order-1 order-lg-2">
 							</li>
 											</ul>
 
@@ -1665,27 +1645,27 @@
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://www.facebook.com/ViariumProject/">
-                                    <img src="/en/img/icons/facebook-b.png" alt="">
+                                    <img src="/en/img/icons/fb.svg" alt="">
                                 </a>
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://twitter.com/ViariumProject">
-                                    <img src="/en/img/icons/twitter-b.png" alt="">
+                                    <img src="/en/img/icons/tw.svg" alt="">
                                 </a>
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://www.linkedin.com/company/viarium/">
-                                    <img src="/en/img/icons/linkedin-b.png" alt="">
+                                    <img src="/en/img/icons/in.svg" alt="">
                                 </a>
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://t.me/viariumen">
-                                    <img src="/en/img/icons/telegram-b.png" alt="">
+                                    <img src="/en/img/icons/tg.svg" alt="">
                                 </a>
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://www.youtube.com/channel/UCb9jj2H9Rl3IhK1YVNaSHEg">
-                                    <img src="/en/img/icons/youtube-b.png" alt="">
+                                    <img src="/en/img/icons/youtube.svg" alt="">
                                 </a>
                                                             </li>
                                                     <li>
@@ -1695,22 +1675,22 @@
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://bitcointalk.org/index.php?topic=2858512.msg29340359#msg29340359">
-                                    <img src="/en/img/icons/bitcointalk-b.png" alt="">
+                                    <img src="/en/img/icons/btalk.svg" alt="">
                                 </a>
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://steemit.com/@viarium">
-                                    <img src="/en/img/icons/steemit-b.png" alt="">
+                                    <img src="/en/img/icons/steemit.svg" alt="">
                                 </a>
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://www.reddit.com/user/VIArium/">
-                                    <img src="/en/img/icons/reddit-b.png" alt="">
+                                    <img src="/en/img/icons/reddit.svg" alt="">
                                 </a>
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://medium.com/@viarium.io">
-                                    <img src="/en/img/icons/medium-b.png" alt="">
+                                    <img src="/en/img/icons/medium.svg" alt="">
                                 </a>
                                                             </li>
                                                     <li>
@@ -1853,10 +1833,110 @@
 
     </div>
   </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="modalClipboard" tabindex="-1" role="dialog" aria-labelledby="modalClipboard" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <p class="text-md text-center">Скопировано</p>
+      </div>
+
+
+    </div>
+  </div>
 </div>		
 	</div>
 
 
+        <div class="modal fade bd-example-modal-lg" id="whiteListModal" tabindex="-1" role="dialog" aria-labelledby="whiteListModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title title-md" id="whiteListModalLabel">Заявка на регистрацию</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="GET" >
+            <div class="form-row">
+              <div class="col-lg-6 form-group">
+                <label for="recipient-name" class="col-form-label">Ваше Имя:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="col-lg-6 form-group">
+                <label for="recipient-name" class="col-form-label">Телефон:</label>
+                <input type="tel" class="form-control" id="recipient-name">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-lg-6 form-group">
+                <label for="recipient-name" class="col-form-label">E-mail:</label>
+                <input type="email" class="form-control" id="recipient-name">
+              </div>
+              <div class="col-lg-6 form-group">
+                <label for="recipient-name" class="col-form-label">Сумма инвестиций:</label>
+                <input type="number" class="form-control" id="recipient-name">
+              </div>
+            </div>
+
+            <div class="form-row mb-3">
+                <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                <input type="checkbox" class="custom-control-input" id="customControlInline">
+                <label class="custom-control-label" for="customControlInline">Я согласен на обработку моих персональных данных</label>
+              </div>
+             </div>
+
+          <div class="btn-group d-flex btn-fluid" aria-label="Basic example">
+            <button type="button" class="btn btn-fluid btn-secondary" data-dismiss="modal">Отказаться</button>
+            <button type="submit" class="btn btn-fluid btn-default">Отправить запрос</button>
+        </div>
+
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="wechat" tabindex="-1" role="dialog" aria-labelledby="wecaht" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title title-md" id="wecahtLabel">Wechat ID</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="/en/img/wechat.png" alt="" class="img-responsive">
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="modalClipboard" tabindex="-1" role="dialog" aria-labelledby="modalClipboard" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <p class="text-md text-center">Скопировано</p>
+      </div>
+
+
+    </div>
+  </div>
+</div> 
 
         <script type="text/javascript" src="/en/js/vendor.js"></script>
         <script type="text/javascript" src="/en/js/app.js"></script>

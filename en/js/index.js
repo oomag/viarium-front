@@ -1,4 +1,6 @@
 APP.anchorScroll();
+APP.hashScroll();
+
 APP.roadmapSlide();
 APP.navbarTogglerDesktop();
 APP.bxSlider('.team-slider');
