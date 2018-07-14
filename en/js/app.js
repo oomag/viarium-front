@@ -119,7 +119,8 @@ var APP = {
                 prevText: '',
                 nextText: '',
                 adaptiveHeight: true,
-                controls: true
+                controls: true,
+                startSlide: 4
             });
         }
     },
