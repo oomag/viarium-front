@@ -11,4 +11,5 @@ window.onload = function() {
 }
 APP.caseControl();
 APP.kycTab();
+APP.formSend('whiteListForm');
 

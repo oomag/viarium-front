@@ -292,6 +292,32 @@ var APP = {
 
             return false;
         });
+    },
+
+    formSend: (formId) => {
+
+        $('#'+formId).submit(function(e) {
+
+            e.preventDefault();
+
+            var data = $(this).serializeArray();
+
+
+            $.ajax({
+                type: "POST",
+                url: "/create_request",
+                data: data,
+                success: function(){
+
+                },
+
+                error: function (jqXHR, exception) {
+                    
+                }
+   
+            });
+
+        });
     }
 
 }

@@ -30,7 +30,7 @@
             <ul class="navbar-nav">
                 
                                         <li class="nav-item">
-                                                    <a class="nav-link anchor" data-hash="TokenTitle" href="#">トークン</a>
+                                                    <a class="nav-link anchor" data-hash="TokenTitle" href="#">トークン値段</a>
                                             </li>
                                         
                 
@@ -91,19 +91,25 @@
                                                     
                                 
                                                         <li class="nav-item">
+                                                                    <a class="nav-link anchor" data-hash="TokenTitle" href="#">トークン値段</a>
+                                                            </li>
+                                                        
+                                                    
+                                
+                                                        <li class="nav-item">
                                                                     <a class="nav-link anchor" data-hash="UseCasesTitle" href="#">主要機能</a>
                                                             </li>
                                                         
                                                     
                                 
                                                         <li class="nav-item">
-                                                                    <a class="nav-link anchor" data-hash="TokenTitle" href="#">トークン</a>
+                                                                    <a class="nav-link anchor" data-hash="TokenSchemeTitle" href="#">トークン配布の表</a>
                                                             </li>
                                                         
                                                     
                                 
                                                         <li class="nav-item">
-                                                                    <a class="nav-link anchor" data-hash="WhyBlockchainTitle" href="#">ブロックチェーンは何のためですか？</a>
+                                                                    <a class="nav-link anchor" data-hash="TitleCostStructure" href="#">経費構造</a>
                                                             </li>
                                                         
                                                     
@@ -115,13 +121,19 @@
                                                     
                                 
                                                         <li class="nav-item">
-                                                                    <a class="nav-link" href="partners.html">パートナー</a>
+                                                                    <a class="nav-link anchor" data-hash="WhyBlockchainTitle" href="#">ブロックチェーンは何のためですか？</a>
                                                             </li>
                                                         
                                                     
                                 
                                                         <li class="nav-item">
-                                                                    <a class="nav-link" href="blog.html">ブログ</a>
+                                                                    <a class="nav-link anchor" data-hash="PartnersTitle" href="#">パートナー</a>
+                                                            </li>
+                                                        
+                                                    
+                                
+                                                        <li class="nav-item">
+                                                                    <a class="nav-link anchor" data-hash="BlogTitle" href="#">ブログ</a>
                                                             </li>
                                                         
                                                     
@@ -133,7 +145,7 @@
                                                     
                                 
                                                         <li class="nav-item">
-                                                                    <a class="nav-link" href="faq.html">FAQ</a>
+                                                                    <a class="nav-link anchor" data-hash="FaqTitle" href="#">FAQ</a>
                                                             </li>
                                                         
                                                     
@@ -251,7 +263,7 @@
 
 				<div class="row mb-xl-4">
 					
-					<div class="col-xl-5 mb-3 mb-xl-0">
+					<!-- <div class="col-xl-5 mb-3 mb-xl-0">
 						
 						<div class="title-presale">
 							<span class="mark">Pre-Sale</span>の開始 
@@ -278,16 +290,16 @@
 								<div class="counter-text">секунд</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<div class="col-xl-7 mb-xl-0 mb-3">
-						<button type="button" class="btn btn-default btn-fluid h-100" data-toggle="modal" data-target="#whiteListModal">JOIN WHITE LIST</button>
+						<a href="/users/sign_up" class="btn btn-default btn-fluid">トークン購入</a>
 					</div>
 
 				</div>
 
-				<div class="text-center pt-lgsm-2 mb-xl-5 mb-2">
+				<div class="text-left pt-lgsm-2 mb-xl-5 mb-2">
 					<div class="text-invite mb-2">
-						White Listに参加して<span class="mark">50%</span>をボーナスとして獲得して下さい
+						参加して<span class="mark">50%</span>をボーナスでもらって下さい
 					</div>
 
 					<div class="text-invite--small">
@@ -419,7 +431,16 @@
 
 		</div>
 
-		<div class="section-content d-none d-lg-block">
+		
+	</div> 
+	<div class="hex hex-7-bottom d-block d-lg-none"></div>
+</div>
+
+
+
+		<section class="section-middle d-lg-block d-none cases-slider-section">
+	<div class="section-content d-none d-lg-block">
+		<div class="container">
 			<div class="row">
 				<div class="col-12">
 					
@@ -456,10 +477,7 @@
 			</div>
 		</div>
 	</div>
-
-	<div class="hex hex-3 d-none d-lg-block"></div>
-	<div class="hex hex-7-bottom d-block d-lg-none"></div>
-</div>
+</section>
 
 <section class="section-middle d-block d-lg-none cases-slider-section">
 	<div class="section-content ">
@@ -509,11 +527,9 @@
 			</div>
 		</div>
 	</div>
-</section>
-
-		<section class="section section-middle section-information section-reverse" id="Token">
+</section>		<section class="section section-rounded section-information" id="Token">
 	
-	<div class="section-round section-round-full d-block d-lg-none"></div>
+	<div class="section-round section-round-full"></div>
 
 	<div class="hex hex-7 d-block d-lg-none"></div>
 
@@ -629,7 +645,7 @@
 								</div>
 
 								<div class="col-12">
-									<button type="button" class="btn mt-xl-4 mt-5 mb-2 btn-default btn-fluid" data-toggle="modal" data-target="#whiteListModal">White listに参加してください</button>
+									<a href="/users/sign_up" class="btn mt-xl-4 mt-5 mb-2 btn-default btn-fluid">トークン購入</a>
 								</div>
 
 							</div>
@@ -702,7 +718,7 @@
 							</div>
 
 							<div class="col-12 pt-4 text-center">
-								<button type="button" class="btn btn-default mt-4 mb-2 btn-fluid" data-toggle="modal" data-target="#whiteListModal">White listに参加してください</button>
+								<a href="/users/sign_up" class="btn btn-default mt-4 mb-2 btn-fluid">トークン購入</a>
 							</div>
 
 						</div>
@@ -718,73 +734,172 @@
 
 	<div class="hex hex-7-bottom d-block d-lg-none"></div>
 
-</section>		<div class="section-rounded section-reverse">
-	<div class="section-round section-round-full section-why-blockchain"></div>
+</section>		
+		<div class="section-token section-middle">
+    
+    <div class="section-content text-center mb-2 mb-md-5">
+        <div class="container">
+            <div class="row">
 
-	<div class="hex hex-7 d-block d-lg-none"></div>
+                <div class="col-12">
+                    <div class="d-block d-lg-none">
+                        <div class="token-title mb-2 mb-lg-4" id="TokenSchemeTitle">
+                            <span class="mark">Схема Распределения</span> Токена
+                        </div>
+                        
+                        <p class="token-text mb-2 mb-md-5">
+                            Эмитированные токены (макс. 1 000 000 токенов VRX) будут распределены следующим образом:
+                        </p>
+                    </div>
+                </div>
 
-	<div class="container">
-		<div class="section-content" id="WhyBlockchainTitle">
+                <div class="col-lg-6 col-5 text-left d-flex justify-content-between flex-column" style="z-index: 1;">
 
-			<div class="hex hex-4 d-none d-lg-block"></div>
+                    <div class="d-none d-lg-block">
+                        <div class="token-title mb-2 mb-lg-4" id="TokenSchemeTitle">
+                            <span class="mark">Схема Распределения</span> Токена
+                        </div>
+                        
+                        <p class="token-text">
+                            Эмитированные токены (макс. 1 000 000 токенов VRX) будут распределены следующим образом:
+                        </p>
+                    </div>
 
-			<div class="row">
-				<div class="col-lg-7 order-2 order-lg-1 ">
-					
-					<ul class="hex-list pr-0 pr-lg-4 text-right">
-													<li class=" mb-3 mb-lg-5 list-item ">
-								<p class="list-text order-2 order-lg-1 text-left text-lg-right">
-									分散レジストリに於ける不動産に対する権利の会計処理、コンテンツ著作権保護
-								</p>
-								<img src="/en/img/hex-list/4.svg" alt="" class="list-image order-1 order-lg-2">
-							</li>
-													<li class=" mb-3 mb-lg-5 list-item list-item-shift list-pattern">
-								<p class="list-text order-2 order-lg-1 text-left text-lg-right">
-									コミュニティの様々な問題に対する透明かつ公正な投票
-								</p>
-								<img src="/en/img/hex-list/5.svg" alt="" class="list-image order-1 order-lg-2">
-							</li>
-													<li class=" mb-3 mb-lg-5 list-item ">
-								<p class="list-text order-2 order-lg-1 text-left text-lg-right">
-									スマート契約の計算を通してVR-不動産を売却する安全で透明かつ迅速な取引の実施
-								</p>
-								<img src="/en/img/hex-list/6.svg" alt="" class="list-image order-1 order-lg-2">
-							</li>
-													<li class="shift-t--40 shift-l-280   list-item ">
-								<p class="list-text order-2 order-lg-1 text-left text-lg-right">
-									対象の全ての特徴と所持の履歴を記録して、VR空間内に存在している一意のVR対象の作成
-								</p>
-								<img src="/en/img/hex-list/7.svg" alt="" class="list-image order-1 order-lg-2">
-							</li>
-											</ul>
+                    <div class="h-100 d-flex align-items-end">
+                        <ul class="token-info-list mb-3">
+                            <li class="list-item">Баунти и PR <span class="token-percent">02%</span></li>
+                            <li class="list-item">Команда <span class="token-percent">05%</span></li>
+                            <li class="list-item">Эдвайзеры <span class="token-percent">05%</span></li>
+                            <li class="list-item">VIARIUM фонд <span class="token-percent">36%</span></li>
+                            <li class="list-item">Продажа токенов <span class="token-percent">52%</span></li>
+                        </ul>
+                    </div>
 
-				</div>
+                </div>
+                <div class="col-lg-6 col-7 text-right">
+                    <img src="/en/img/diagram_1.svg" alt="" class="img-responsive">
+                </div>
+            </div>
+        </div>
+        
+    </div>
 
-				<div class="col-lg-5 order-1 order-lg-2 mb-5 mb-lg-0" id="WhyBlockchain">
+    <div class="section-content text-center d-block d-lg-none">
+        <div class="container">
+            <div class="row">
 
-					<div class="shift-t-200">
-						<div class="title-xl mb-4 mb-lg-5 text-center text-lg-left" ><span class="mark">blockchain</span>は何の為ですか。</span></div>
+                <div class="col-12">
+                    <div class="d-block d-lg-none">
+                        <div class="token-title mb-2 mb-lg-4">
+                            <span class="mark">Структура</span> Расходов
+                        </div>
+                        
+                        <p class="token-text mb-3 mb-md-5">
+                             Полученные средства в рамках Pre-Sale и Token Sale будут направлены на развитие проекта в следующих пропорциях:
+                        </p>
+                    </div>
+                </div>
 
-						<p class="text-left mb-3 mb-lg-4">
-							VIARIUMプロジェクトでは、blockchain技術を使用して、次のようなシステム機能を提供します。分散レジストリ内の不動産への権利登録、スマート契約の計算を通してVR-不動産を売却する安全で透明かつ迅速な取引の実施、資金の支出、システム内の他の参加者からの要求に応じて容認できない内容のサイトブロック、新しい領域作成その他の様々な問題について透明で公正な投票の実施
-						</p>
+                <div class="col-7 text-left">
+                    <img src="/en/img/graph-2.png" alt="" class="img-responsive">
+                </div>
 
-						<p class="text-left">
-							将来には、blockchain技術の使用は、ネットワークに参加する複数のノードにネットワーク負荷を分散させることによるサーバ容量のコストを削減することができる。
-						</p>
+                <div class="col-5 text-right d-flex justify-content-between flex-column">
 
-					</div>
-				</div>
-			</div>
+                    <div class="text-left d-none d-lg-block">
+                        <div class="token-title mb-2 mb-lg-4">
+                            <span class="mark">Структура</span> Расходов
+                        </div>
+                        
+                        <p class="token-text">
+                            Полученные средства в рамках Pre-Sale и Token Sale будут направлены на развитие проекта в следующих пропорциях:
+                        </p>
+                    </div>
 
-			<div class="hex hex-5 d-none d-lg-block"></div>
+                    <div class="h-100 d-flex align-items-end">
+                        <ul class="token-info-list list-reverse">
+                            <li class="list-item">
+                                <span class="token-percent d-none d-lg-inline-block">05%</span>
+                                Непредвиденные расходы 
+                                <span class="token-percent">05%</span>
+                            </li>
+                            <li class="list-item">
+                                <span class="token-percent d-none d-lg-inline-block">10%</span>
+                                Резервные фонды 
+                                <span class="token-percent">10%</span>
+                            </li>
+                            <li class="list-item">
+                                <span class="token-percent d-none d-lg-inline-block">15%</span>
+                                Маркетинг и PR 
+                                <span class="token-percent">15%</span>
+                            </li>
+                            <li class="list-item">
+                                <span class="token-percent d-none d-lg-inline-block">30%</span>
+                                Инфраструктура VR 
+                                <span class="token-percent">30%</span>
+                            </li>
+                            <li class="list-item">
+                                <span class="token-percent d-none d-lg-inline-block">40%</span>
+                                Открытие точек доступа 
+                                <span class="token-percent">40%</span>
+                            </li>
+                        </ul>
+                    </div>
 
-		</div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
 
-	</div>
+    
+</div>
 
-	<div class="hex hex-7-bottom d-block d-lg-none"></div>
-</div>		<section class="section-roadmap section-middle section-reverse" id="Roadmap">
+<div class="section-rounded d-none d-lg-block">
+    <div class="section-round section-round-full section-token-reverse"></div>
+    
+    <div class="section-content text-center ">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-6 text-left">
+                    <img src="/en/img/diagram_2.svg" alt="" class="img-responsive">
+                </div>
+
+                <div class="col-6 text-right d-flex justify-content-between flex-column">
+
+                    <div class="text-left" id="TitleCostStructure">
+                        <div class="token-title mb-4">
+                            <span class="mark">Структура</span> Расходов
+                        </div>
+                        
+                        <p class="token-text">
+                            Полученные средства в рамках Pre-Sale и Token Sale будут направлены на развитие проекта в следующих пропорциях:
+                        </p>
+                    </div>
+
+                    <div>
+                        <ul class="token-info-list list-reverse mb-3">
+                            <li class="list-item"><span class="token-percent">05%</span> Непредвиденные расходы </li>
+                            <li class="list-item"><span class="token-percent">10%</span> Резервные фонды </li>
+                            <li class="list-item"><span class="token-percent">15%</span> Маркетинг и PR </li>
+                            <li class="list-item"><span class="token-percent">30%</span> Инфраструктура VR </li>
+                            <li class="list-item"><span class="token-percent">40%</span> Открытие точек доступа </li>
+                        </ul>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="hex hex-7"></div>
+    
+</div>		
+		<section class="section-roadmap section-middle " id="Roadmap">
 	
 	<div class="section-round section-round-full d-block d-lg-none"></div>
 
@@ -1068,13 +1183,291 @@
 
 	<div class="hex hex-7-bottom d-block d-lg-none"></div>
 
-</section>		<div class="section-rounded section-team section-reverse" id="Team">
-	<div class="section-round section-round-full section-team-bg"></div>
+</section>		<div class="section section-rounded">
+	<div class="section-round section-round-full section-why-blockchain"></div>
 
 	<div class="hex hex-7 d-block d-lg-none"></div>
 
+	<div class="container">
+		<div class="section-content" id="WhyBlockchainTitle">
+
+			<div class="hex hex-4 d-none d-lg-block"></div>
+
+			<div class="row">
+				<div class="col-lg-7 order-2 order-lg-1 ">
+					
+					<ul class="hex-list pr-0 pr-lg-4 text-right">
+													<li class=" mb-3 mb-lg-5 list-item ">
+								<p class="list-text order-2 order-lg-1 text-left text-lg-right">
+									分散レジストリに於ける不動産に対する権利の会計処理、コンテンツ著作権保護
+								</p>
+								<img src="/en/img/hex-list/4.svg" alt="" class="list-image order-1 order-lg-2">
+							</li>
+													<li class=" mb-3 mb-lg-5 list-item list-item-shift list-pattern">
+								<p class="list-text order-2 order-lg-1 text-left text-lg-right">
+									コミュニティの様々な問題に対する透明かつ公正な投票
+								</p>
+								<img src="/en/img/hex-list/5.svg" alt="" class="list-image order-1 order-lg-2">
+							</li>
+													<li class=" mb-3 mb-lg-5 list-item ">
+								<p class="list-text order-2 order-lg-1 text-left text-lg-right">
+									スマート契約の計算を通してVR-不動産を売却する安全で透明かつ迅速な取引の実施
+								</p>
+								<img src="/en/img/hex-list/6.svg" alt="" class="list-image order-1 order-lg-2">
+							</li>
+													<li class="shift-t--40 shift-l-280   list-item ">
+								<p class="list-text order-2 order-lg-1 text-left text-lg-right">
+									対象の全ての特徴と所持の履歴を記録して、VR空間内に存在している一意のVR対象の作成
+								</p>
+								<img src="/en/img/hex-list/7.svg" alt="" class="list-image order-1 order-lg-2">
+							</li>
+											</ul>
+
+				</div>
+
+				<div class="col-lg-5 order-1 order-lg-2 mb-5 mb-lg-0" id="WhyBlockchain">
+
+					<div class="shift-t-200">
+						<div class="title-xl mb-4 mb-lg-5 text-center text-lg-left" ><span class="mark">blockchain</span>は何の為ですか。</span></div>
+
+						<p class="text-left mb-3 mb-lg-4">
+							VIARIUMプロジェクトでは、blockchain技術を使用して、次のようなシステム機能を提供します。分散レジストリ内の不動産への権利登録、スマート契約の計算を通してVR-不動産を売却する安全で透明かつ迅速な取引の実施、資金の支出、システム内の他の参加者からの要求に応じて容認できない内容のサイトブロック、新しい領域作成その他の様々な問題について透明で公正な投票の実施
+						</p>
+
+						<p class="text-left">
+							将来には、blockchain技術の使用は、ネットワークに参加する複数のノードにネットワーク負荷を分散させることによるサーバ容量のコストを削減することができる。
+						</p>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="hex hex-5 d-none d-lg-block"></div>
+
+		</div>
+
+	</div>
+
+	<div class="hex hex-7-bottom d-block d-lg-none"></div>
+</div>		<div class="section section-middle">
+    
+    <div class="section-content text-center">
+        <div class="container">
+            <div class="title-xl mb-5 pb-4" id="PartnersTitle"><span class="mark">Партнеры</span></div>
+            <div class="row">
+
+                                    
+                                                                
+                    <div class="col-lg-3 col-6 mb-2 mb-lg-4">
+                        <a class="listing-item " href="https://www.ozon.ru/" target="_blank"><img class="" src="/en/img/partners/ozon.png" alt=""></a>
+                    </div>
+                                    
+                                                                
+                    <div class="col-lg-3 col-6 mb-2 mb-lg-4">
+                        <a class="listing-item " href="https://rb.ru/" target="_blank"><img class="" src="/en/img/partners/rusbase.svg" alt=""></a>
+                    </div>
+                                    
+                                                                
+                    <div class="col-lg-3 col-6 mb-2 mb-lg-4">
+                        <a class="listing-item " href="https://www.open.ru/" target="_blank"><img class="" src="/en/img/partners/open.png" alt=""></a>
+                    </div>
+                                    
+                                                                
+                    <div class="col-lg-3 col-6 mb-2 mb-lg-4">
+                        <a class="listing-item " href="https://commune.digital/" target="_blank"><img class="" src="/en/img/partners/hkibfa.jpg" alt=""></a>
+                    </div>
+                                    
+                                                                
+                    <div class="col-lg-3 col-6 mb-2 mb-lg-4">
+                        <a class="listing-item " href="https://rostec.ru/" target="_blank"><img class="bright" src="/en/img/partners/poctex.png" alt=""></a>
+                    </div>
+                                    
+                                                                
+                    <div class="col-lg-3 col-6 mb-2 mb-lg-4">
+                        <a class="listing-item " href="https://commune.digital/" target="_blank"><img class="" src="/en/img/partners/cbk.png" alt=""></a>
+                    </div>
+                                    
+                                                                
+                    <div class="col-lg-3 col-6 mb-2 mb-lg-4">
+                        <a class="listing-item " href="https://coinsbank.com/dubai/" target="_blank"><img class="bright" src="/en/img/partners/coinsbank.png" alt=""></a>
+                    </div>
+                                    
+                                                                
+                    <div class="col-lg-3 col-6 mb-2 mb-lg-4">
+                        <a class="listing-item " href="http://www.rosatom.ru/" target="_blank"><img class="" src="/en/img/partners/pocatom.png" alt=""></a>
+                    </div>
+                            </div>
+        </div>
+        
+    </div>
+
+    <div class="hex hex-7-bottom"></div>
+    
+</div>		<div class="section section-rounded">
+
+    <div class="section-round section-round-full section-blog"></div>
+    
+    <div class="section-content text-center">
+
+        <div class="container">
+
+            <div class="title-xl mb-5 pb-4" id="BlogTitle">Viarium <span class="mark">Blog</span></div>
+
+            <div class="row">
+
+                <div class="col-lg-6">
+
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div class="blog-item blog-full mb-4">
+                                <a class="blog-link" href="">
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/7Ynv4XmL7bo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="blog-item blog-full mb-4">
+                                <a class="blog-link" href=""><img class="blog-image" src="/en/img/blog/1_oCdYNF_i4VAYI0J4U2AP7Q.jpeg" alt=""></a>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-lg">Viarium — a VR based space led by its community</p>
+                                <p>Very soon, Viarium users will be able to do something that seems impossible today: explore and even create their own virtual worlds for any purposes they might have, including buying and selling goods.</p>
+                                <p class="text-sm">12.12.12</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="blog-item blog-full mb-4">
+                                <a class="blog-link" href="">
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3NJ-HvaMhVQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="blog-item blog-full mb-4">
+                                <a class="blog-link" href=""><img class="blog-image" src="/en/img/blog/1_Ldj-cMovoS34Jrk_q7pUfA.jpeg" alt=""></a>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-lg">Viarium Social Media Channels</p>
+                                <p>We at Viarium value our community members and will walk an extra mile in ensuring the best support to them.</p>
+                                <p class="text-sm">12.12.12</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div> 
+
+            </div>
+
+        </div>
+        
+    </div>
+
+    <!-- <div class="section-content text-center section-pt-100">
+
+        <div class="container">
+
+            <div class="title-xl mb-5 pb-4"><span class="mark">Press</span></div>
+
+            <div class="row">
+                <div class="col-lg-3 mb-4">
+                    <div class="blog-item blog-half mb-4">
+                        <a class="blog-link" href=""><img class="blog-image" src="http://placehold.it/400x400" alt=""></a>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-lg">Lorem ipsum dolor</p>
+                        <p>Lorem ipsum dolor sit amet, consec tetur consectetur adipiscing tetur consectetur adipiscing elit...</p>
+                        <p class="text-sm">12.12.12</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <div class="blog-item blog-half mb-4">
+                        <a class="blog-link" href=""><img class="blog-image" src="http://placehold.it/400x400" alt=""></a>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-lg">Lorem ipsum dolor</p>
+                        <p>Lorem ipsum dolor sit amet, consec tetur consectetur adipiscing tetur consectetur adipiscing elit...</p>
+                        <p class="text-sm">12.12.12</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <div class="blog-item blog-half mb-4">
+                        <a class="blog-link" href=""><img class="blog-image" src="http://placehold.it/400x400" alt=""></a>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-lg">Lorem ipsum dolor</p>
+                        <p>Lorem ipsum dolor sit amet, consec tetur consectetur adipiscing tetur consectetur adipiscing elit...</p>
+                        <p class="text-sm">12.12.12</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <div class="blog-item blog-half mb-4">
+                        <a class="blog-link" href=""><img class="blog-image" src="http://placehold.it/400x400" alt=""></a>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-lg">Lorem ipsum dolor</p>
+                        <p>Lorem ipsum dolor sit amet, consec tetur consectetur adipiscing tetur consectetur adipiscing elit...</p>
+                        <p class="text-sm">12.12.12</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 mb-4">
+                    <div class="blog-item blog-half mb-4">
+                        <a class="blog-link" href=""><img class="blog-image" src="http://placehold.it/400x400" alt=""></a>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-lg">Lorem ipsum dolor</p>
+                        <p>Lorem ipsum dolor sit amet, consec tetur consectetur adipiscing tetur consectetur adipiscing elit...</p>
+                        <p class="text-sm">12.12.12</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <div class="blog-item blog-half mb-4">
+                        <a class="blog-link" href=""><img class="blog-image" src="http://placehold.it/400x400" alt=""></a>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-lg">Lorem ipsum dolor</p>
+                        <p>Lorem ipsum dolor sit amet, consec tetur consectetur adipiscing tetur consectetur adipiscing elit...</p>
+                        <p class="text-sm">12.12.12</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <div class="blog-item blog-half mb-4">
+                        <a class="blog-link" href=""><img class="blog-image" src="http://placehold.it/400x400" alt=""></a>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-lg">Lorem ipsum dolor</p>
+                        <p>Lorem ipsum dolor sit amet, consec tetur consectetur adipiscing tetur consectetur adipiscing elit...</p>
+                        <p class="text-sm">12.12.12</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <p class="text-md text-left mb-4">
+                        View more thrilling<br>and actual news about<br>VR, AR & VIARIUM project
+                    </p>
+                    <a href="" class="btn btn-default btn-fluid">VIEW MORE</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div> -->
+
+    <div class="hex hex-7-bottom"></div>
+    
+</div>		<div class="section section-middle section-team" id="Team">
+
 	<div class="section-content text-center">
-		<div class="hex hex-6 d-none d-lg-block"></div>
 		
 		<div class="container">
 			<div class="row">
@@ -1676,11 +2069,132 @@
 
 	<div class="hex hex-7-bottom"></div>
 	
-</div>		<section class="section-map section-middle section-reverse" id="Contacts">
-    
-    <div class="section-round section-round-full d-block d-lg-none"></div>
+</div>		<div class="section-rounded">
 
-    <div class="hex hex-7 d-block d-lg-none"></div>
+    <div class="section-round section-round-full section-team-bg" id="faq-round"></div>
+    
+    <div class="section-content text-center">
+
+        <div class="container">
+
+            <div class="title-xl pb-4" id="FaqTitle"><span class="mark">F.A.Q.</span></div>
+
+            <div class="row">
+
+                <div class="col-12">
+        
+                    <div class="accordion accordion-faq mb-5" id="accordion">
+                                                                                <div class="card text-left">
+                                <div class="card-header" id="headingOne1_1">
+                                    <button class="btn btn-link " data-toggle="collapse" data-target="#collapseOne1_1" aria-expanded="true" aria-controls="collapseOne0">Viariumとは何ですか？
+                                    </button>
+                                </div>
+
+                                <div id="collapseOne1_1" class="collapse show" aria-labelledby="headingOne1_1" data-parent="#accordion">
+                                    <div class="card-body">Viariumは、ブロックチェーンにおけるビジネスの為に開発された最初の分散型VRプラットフォームです。我モットーは会社と消費者を快適でアクセスしやすい対話環境で結びつけることです。　ブロックェーン技術によりプラットフォーム内のデジタルオブジェクト（土地、商売スペース、VR世界）の所有権を確認することができます。VR技術は、まだ実際にはないアパート、住宅団地、小区域の周りを歩き回り、自宅を離れずに車のテストドライブを行い、新しい次元のデジタルアートの対象を見るプレゼンス効果の作成が出来ます。我々はすでに以下商業プロジェクトを実施しました：ロシア最大銀行の仮想不動産業者、最大のオンライン小売業者のためのVRショップ、天才画家のための現代美術のアニメーションギャラリー等です。</div>
+                                </div>
+                            </div> 
+                                                        <div class="card text-left">
+                                <div class="card-header" id="headingOne1_2">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne1_2" aria-expanded="true" aria-controls="collapseOne1">Token Saleはいつですか？
+                                    </button>
+                                </div>
+
+                                <div id="collapseOne1_2" class="collapse " aria-labelledby="headingOne1_2" data-parent="#accordion">
+                                    <div class="card-body">Pre Saleは、平成３０年7月16日から9月9日まで、メインToken Sale は平成３０年9月24日から10月24日まで行う予定です。また、2019年には、Token Saleの第2段階の計画です。第1段階で集まっ 資金は、プロジェクトアーキテクチャを研究し、プラットフォームのαバージョンの作成に使用する予定です。第2段階で集まった資金は、プロジェクトの開発と規模拡大化に使用する予定です。</div>
+                                </div>
+                            </div> 
+                                                        <div class="card text-left">
+                                <div class="card-header" id="headingOne1_3">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne1_3" aria-expanded="true" aria-controls="collapseOne2">集めようと思う最低金額はありますか？Soft Cap / Hard Cap
+                                    </button>
+                                </div>
+
+                                <div id="collapseOne1_3" class="collapse " aria-labelledby="headingOne1_3" data-parent="#accordion">
+                                    <div class="card-body">Soft Cap: 1 000 000$<br>Hard Cap: 5 000 000$</div>
+                                </div>
+                            </div> 
+                                                        <div class="card text-left">
+                                <div class="card-header" id="headingOne1_4">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne1_4" aria-expanded="true" aria-controls="collapseOne3">現在、プロジェクトはどんな技術的段階にあるのですか？デモンストレーションのためのMVPはありますか？
+                                    </button>
+                                </div>
+
+                                <div id="collapseOne1_4" class="collapse " aria-labelledby="headingOne1_4" data-parent="#accordion">
+                                    <div class="card-body">ビジネスのためのショールームとVR空間を作成する活動ビジネス。会社のリソースに投稿したGenesis Landは作成されました。我団体はアクセスポイントを開きながら、 多くの会議やイベントで製品を発表します。</div>
+                                </div>
+                            </div> 
+                                                        <div class="card text-left">
+                                <div class="card-header" id="headingOne1_5">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne1_5" aria-expanded="true" aria-controls="collapseOne4">あなたにはブロックチェーンが何の為に必要ですか？
+                                    </button>
+                                </div>
+
+                                <div id="collapseOne1_5" class="collapse " aria-labelledby="headingOne1_5" data-parent="#accordion">
+                                    <div class="card-body"><b>主な方向：</b><br><br>1. 製造元にコンテンツの所有権の固定、支払人が見る曖昧でない権利<br> 2. 信号のトランスコード、保管、配信の作業を行う分散型ネットワークの構築。<br> 3. コンテンツの歴史と公表の歴史。<br> 4. ノードパートナーを補償制度。</div>
+                                </div>
+                            </div> 
+                                                        <div class="card text-left">
+                                <div class="card-header" id="headingOne1_6">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne1_6" aria-expanded="true" aria-controls="collapseOne5">バーチャルリアリティープラットフォームに於ける分権化は本当に有用でありますか？
+                                    </button>
+                                </div>
+
+                                <div id="collapseOne1_6" class="collapse " aria-labelledby="headingOne1_6" data-parent="#accordion">
+                                    <div class="card-body">はい、有用です。 <b>分権化によって：</b><br><br>1. 匿名性を保存すること、 <br>2. 信号伝送のコストを削減すること、 <br>3. ほとんどの国と目的地に向かって信号をブロードキャストをすることできます。</div>
+                                </div>
+                            </div> 
+                                                        <div class="card text-left">
+                                <div class="card-header" id="headingOne1_7">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne1_7" aria-expanded="true" aria-controls="collapseOne6">私は、Viariumプラットフォームを利用してどうすれば稼ぐことができますか？
+                                    </button>
+                                </div>
+
+                                <div id="collapseOne1_7" class="collapse " aria-labelledby="headingOne1_7" data-parent="#accordion">
+                                    <div class="card-body">プロジェクトの参加者とユーザーは、販売店やVR世界全体を作成して開発するユニークな機会があります。コストの削減と売上高の伸びの他に、VRXトークンの使用によって追加収益を得ることができます。たとえば、土地を買ってそれを賃貸すること；ビジネス向けのVRコンテンツと3Dモデルを開発しながら儲けること；Viariumプラットフォームは、世界初のVR世界での仕事に就く機会を提供することができます。</div>
+                                </div>
+                            </div> 
+                                                        <div class="card text-left">
+                                <div class="card-header" id="headingOne1_8">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne1_8" aria-expanded="true" aria-controls="collapseOne7">御社の商業的利益は何ですか（どうしたらお金を稼ぐでしょうか）。
+                                    </button>
+                                </div>
+
+                                <div id="collapseOne1_8" class="collapse " aria-labelledby="headingOne1_8" data-parent="#accordion">
+                                    <div class="card-body">Viarium社は： <br><br>- 主要ブランドが世界各地のアクセスポイントで製品を提出できるようにすること、 <br>- VRで自分の財産でプロットを借りて売ること、<br>- 付加サービス：VRオブジェクトのデジタル化、その設計、付加サービスの開発などで収益を上げる予定です。</div>
+                                </div>
+                            </div> 
+                                                        <div class="card text-left">
+                                <div class="card-header" id="headingOne1_9">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne1_9" aria-expanded="true" aria-controls="collapseOne8">御社とその競合他社及び類似のプラットフォームとの主な違いは何ですか？
+                                    </button>
+                                </div>
+
+                                <div id="collapseOne1_9" class="collapse " aria-labelledby="headingOne1_9" data-parent="#accordion">
+                                    <div class="card-body">VRに於けるビジネスとエンターテイメントのための統一無料インフラストラクチャ。1 人の（ 統一） ホスターに依存しないVR世界の分権システム。また、 他のプラットフォームとの主な違いは、 プロジェクトの経済モデルとビジネスモデルの実施。 </div>
+                                </div>
+                            </div> 
+                                                                        </div>
+
+                </div>
+
+                <div class="col-12">
+                    
+                    <a href="faq.html" class="btn btn-default">SHOW MORE</a>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+    </div>
+
+    <div class="hex hex-7"></div>
+    
+</div>		<section class="section section-map section-middle" id="Contacts">
+
+    <div class="hex hex-7"></div>
     
     <div class="section-content">
         
@@ -1720,11 +2234,11 @@
 
     </div>
 
-    <div class="hex hex-7-bottom d-block d-lg-none"></div>
+    <div class="hex hex-7-bottom"></div>
 
 </section> 
-		<footer class="section-rounded section-reverse section-footer" >
-    <div class="section-round section-round--white section-round-top d-none d-lg-block" id="footer"></div>
+		<footer class="section section-rounded section-footer" >
+        <div class="section-round section-round--white section-round-top" id="footer"></div>
         <div class="hex hex-7"></div>
         <div class="container">
             <div class="section-content">
@@ -1870,40 +2384,40 @@
         </button>
       </div>
       <div class="modal-body">
-        <form method="GET" >
+        <form method="POST" id="whiteListForm">
             <div class="form-row">
               <div class="col-lg-6 form-group">
                 <label for="recipient-name" class="col-form-label">お名前:</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <input type="text" class="form-control" name="name" id="recipient-name">
               </div>
               <div class="col-lg-6 form-group">
-                <label for="recipient-name" class="col-form-label">電話番号:</label>
-                <input type="tel" class="form-control" id="recipient-name">
+                <label for="recipient-phone" class="col-form-label">電話番号:</label>
+                <input type="tel" class="form-control" name="phone" id="recipient-phone">
               </div>
             </div>
 
             <div class="form-row">
               <div class="col-lg-6 form-group">
-                <label for="recipient-name" class="col-form-label">電子メール:</label>
-                <input type="email" class="form-control" id="recipient-name">
+                <label for="recipient-email" class="col-form-label">電子メール:</label>
+                <input type="email" class="form-control" name="email" id="recipient-email" required>
               </div>
               <div class="col-lg-6 form-group">
-                <label for="recipient-name" class="col-form-label">投資金額:</label>
-                <input type="number" class="form-control" id="recipient-name">
+                <label for="recipient-amount" class="col-form-label">投資金額:</label>
+                <input type="number" class="form-control" name="amount" id="recipient-amount">
               </div>
             </div>
 
             <div class="form-row mb-3">
                 <div class="custom-control custom-checkbox my-1 mr-sm-2">
-                <input type="checkbox" class="custom-control-input" id="customControlInline">
+                <input type="checkbox" class="custom-control-input" name="agree" required id="customControlInline">
                 <label class="custom-control-label" for="customControlInline">私は個人情報の処理に同意します</label>
               </div>
              </div>
 
           <div class="btn-group d-flex btn-fluid" aria-label="Basic example">
-            <button type="button" class="btn btn-fluid btn-secondary" data-dismiss="modal">断る</button>
-            <button type="submit" class="btn btn-fluid btn-default">リクエストを送信する</button>
-        </div>
+            <button type="button" class="btn btn-fluid btn-secondary" data-dismiss="modal" id="whiteListCancelButton">断る</button>
+            <button type="submit" class="btn btn-fluid btn-default" id="whiteListSubmitButton">リクエストを送信する</button>
+          </div>
 
         </form>
       </div>
@@ -1958,40 +2472,40 @@
         </button>
       </div>
       <div class="modal-body">
-        <form method="GET" >
+        <form method="POST" id="whiteListForm">
             <div class="form-row">
               <div class="col-lg-6 form-group">
                 <label for="recipient-name" class="col-form-label">お名前:</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <input type="text" class="form-control" name="name" id="recipient-name">
               </div>
               <div class="col-lg-6 form-group">
-                <label for="recipient-name" class="col-form-label">電話番号:</label>
-                <input type="tel" class="form-control" id="recipient-name">
+                <label for="recipient-phone" class="col-form-label">電話番号:</label>
+                <input type="tel" class="form-control" name="phone" id="recipient-phone">
               </div>
             </div>
 
             <div class="form-row">
               <div class="col-lg-6 form-group">
-                <label for="recipient-name" class="col-form-label">電子メール:</label>
-                <input type="email" class="form-control" id="recipient-name">
+                <label for="recipient-email" class="col-form-label">電子メール:</label>
+                <input type="email" class="form-control" name="email" id="recipient-email" required>
               </div>
               <div class="col-lg-6 form-group">
-                <label for="recipient-name" class="col-form-label">投資金額:</label>
-                <input type="number" class="form-control" id="recipient-name">
+                <label for="recipient-amount" class="col-form-label">投資金額:</label>
+                <input type="number" class="form-control" name="amount" id="recipient-amount">
               </div>
             </div>
 
             <div class="form-row mb-3">
                 <div class="custom-control custom-checkbox my-1 mr-sm-2">
-                <input type="checkbox" class="custom-control-input" id="customControlInline">
+                <input type="checkbox" class="custom-control-input" name="agree" required id="customControlInline">
                 <label class="custom-control-label" for="customControlInline">私は個人情報の処理に同意します</label>
               </div>
              </div>
 
           <div class="btn-group d-flex btn-fluid" aria-label="Basic example">
-            <button type="button" class="btn btn-fluid btn-secondary" data-dismiss="modal">断る</button>
-            <button type="submit" class="btn btn-fluid btn-default">リクエストを送信する</button>
-        </div>
+            <button type="button" class="btn btn-fluid btn-secondary" data-dismiss="modal" id="whiteListCancelButton">断る</button>
+            <button type="submit" class="btn btn-fluid btn-default" id="whiteListSubmitButton">リクエストを送信する</button>
+          </div>
 
         </form>
       </div>

@@ -30,7 +30,7 @@
             <ul class="navbar-nav">
                 
                                         <li class="nav-item">
-                                                <a class="nav-link" href="/#TokenTitle">トークン</a>
+                                                <a class="nav-link" href="/#TokenTitle">トークン値段</a>
                                             </li>
                                         
                 
@@ -91,19 +91,25 @@
                                                     
                                 
                                                         <li class="nav-item">
+                                                                <a class="nav-link" href="/#TokenTitle">トークン値段</a>
+                                                            </li>
+                                                        
+                                                    
+                                
+                                                        <li class="nav-item">
                                                                 <a class="nav-link" href="/#UseCasesTitle">主要機能</a>
                                                             </li>
                                                         
                                                     
                                 
                                                         <li class="nav-item">
-                                                                <a class="nav-link" href="/#TokenTitle">トークン</a>
+                                                                <a class="nav-link" href="/#TokenSchemeTitle">トークン配布の表</a>
                                                             </li>
                                                         
                                                     
                                 
                                                         <li class="nav-item">
-                                                                <a class="nav-link" href="/#WhyBlockchainTitle">ブロックチェーンは何のためですか？</a>
+                                                                <a class="nav-link" href="/#TitleCostStructure">経費構造</a>
                                                             </li>
                                                         
                                                     
@@ -115,13 +121,19 @@
                                                     
                                 
                                                         <li class="nav-item">
-                                                                <a class="nav-link" href="partners.html">パートナー</a>
+                                                                <a class="nav-link" href="/#WhyBlockchainTitle">ブロックチェーンは何のためですか？</a>
                                                             </li>
                                                         
                                                     
                                 
                                                         <li class="nav-item">
-                                                                <a class="nav-link" href="blog.html">ブログ</a>
+                                                                <a class="nav-link" href="/#PartnersTitle">パートナー</a>
+                                                            </li>
+                                                        
+                                                    
+                                
+                                                        <li class="nav-item">
+                                                                <a class="nav-link" href="/#BlogTitle">ブログ</a>
                                                             </li>
                                                         
                                                     
@@ -133,7 +145,7 @@
                                                     
                                 
                                                         <li class="nav-item">
-                                                                <a class="nav-link" href="faq.html">FAQ</a>
+                                                                <a class="nav-link" href="/#FaqTitle">FAQ</a>
                                                             </li>
                                                         
                                                     
@@ -230,7 +242,7 @@
                     </ul>
 
     </div>
-</nav>        <div class="section-rounded section-reverse section-middle--first">
+</nav>        <div class="section-rounded section-middle--first">
 
     <div class="section-round section-round-bottom section-team-bg" id="faq-round"></div>
     
@@ -651,11 +663,9 @@
 
     <div class="hex hex-7"></div>
     
-</div>        <section class="section-map section-middle section-reverse" id="Contacts">
-    
-    <div class="section-round section-round-full d-block d-lg-none"></div>
+</div>        <section class="section section-map section-middle" id="Contacts">
 
-    <div class="hex hex-7 d-block d-lg-none"></div>
+    <div class="hex hex-7"></div>
     
     <div class="section-content">
         
@@ -695,11 +705,11 @@
 
     </div>
 
-    <div class="hex hex-7-bottom d-block d-lg-none"></div>
+    <div class="hex hex-7-bottom"></div>
 
 </section> 
-        <footer class="section-rounded section-reverse section-footer" >
-    <div class="section-round section-round--white section-round-top d-none d-lg-block" id="footer"></div>
+        <footer class="section section-rounded section-footer" >
+        <div class="section-round section-round--white section-round-top" id="footer"></div>
         <div class="hex hex-7"></div>
         <div class="container">
             <div class="section-content">
@@ -849,40 +859,40 @@
         </button>
       </div>
       <div class="modal-body">
-        <form method="GET" >
+        <form method="POST" id="whiteListForm">
             <div class="form-row">
               <div class="col-lg-6 form-group">
                 <label for="recipient-name" class="col-form-label">お名前:</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <input type="text" class="form-control" name="name" id="recipient-name">
               </div>
               <div class="col-lg-6 form-group">
-                <label for="recipient-name" class="col-form-label">電話番号:</label>
-                <input type="tel" class="form-control" id="recipient-name">
+                <label for="recipient-phone" class="col-form-label">電話番号:</label>
+                <input type="tel" class="form-control" name="phone" id="recipient-phone">
               </div>
             </div>
 
             <div class="form-row">
               <div class="col-lg-6 form-group">
-                <label for="recipient-name" class="col-form-label">電子メール:</label>
-                <input type="email" class="form-control" id="recipient-name">
+                <label for="recipient-email" class="col-form-label">電子メール:</label>
+                <input type="email" class="form-control" name="email" id="recipient-email" required>
               </div>
               <div class="col-lg-6 form-group">
-                <label for="recipient-name" class="col-form-label">投資金額:</label>
-                <input type="number" class="form-control" id="recipient-name">
+                <label for="recipient-amount" class="col-form-label">投資金額:</label>
+                <input type="number" class="form-control" name="amount" id="recipient-amount">
               </div>
             </div>
 
             <div class="form-row mb-3">
                 <div class="custom-control custom-checkbox my-1 mr-sm-2">
-                <input type="checkbox" class="custom-control-input" id="customControlInline">
+                <input type="checkbox" class="custom-control-input" name="agree" required id="customControlInline">
                 <label class="custom-control-label" for="customControlInline">私は個人情報の処理に同意します</label>
               </div>
              </div>
 
           <div class="btn-group d-flex btn-fluid" aria-label="Basic example">
-            <button type="button" class="btn btn-fluid btn-secondary" data-dismiss="modal">断る</button>
-            <button type="submit" class="btn btn-fluid btn-default">リクエストを送信する</button>
-        </div>
+            <button type="button" class="btn btn-fluid btn-secondary" data-dismiss="modal" id="whiteListCancelButton">断る</button>
+            <button type="submit" class="btn btn-fluid btn-default" id="whiteListSubmitButton">リクエストを送信する</button>
+          </div>
 
         </form>
       </div>

@@ -91,19 +91,25 @@
                                                     
                                 
                                                         <li class="nav-item">
-                                                                <a class="nav-link" href="/#UseCasesTitle">重要功能</a>
-                                                            </li>
-                                                        
-                                                    
-                                
-                                                        <li class="nav-item">
                                                                 <a class="nav-link" href="/#TokenTitle">代币</a>
                                                             </li>
                                                         
                                                     
                                 
                                                         <li class="nav-item">
-                                                                <a class="nav-link" href="/#WhyBlockchainTitle">为什么是区块链</a>
+                                                                <a class="nav-link" href="/#UseCasesTitle">重要功能</a>
+                                                            </li>
+                                                        
+                                                    
+                                
+                                                        <li class="nav-item">
+                                                                <a class="nav-link" href="/#TokenSchemeTitle">代币分配图</a>
+                                                            </li>
+                                                        
+                                                    
+                                
+                                                        <li class="nav-item">
+                                                                <a class="nav-link" href="/#TitleCostStructure">支出结构</a>
                                                             </li>
                                                         
                                                     
@@ -115,13 +121,19 @@
                                                     
                                 
                                                         <li class="nav-item">
-                                                                <a class="nav-link" href="partners.html">伙伴</a>
+                                                                <a class="nav-link" href="/#WhyBlockchainTitle">为什么是区块链</a>
                                                             </li>
                                                         
                                                     
                                 
                                                         <li class="nav-item">
-                                                                <a class="nav-link" href="blog.html">博客</a>
+                                                                <a class="nav-link" href="/#PartnersTitle">伙伴</a>
+                                                            </li>
+                                                        
+                                                    
+                                
+                                                        <li class="nav-item">
+                                                                <a class="nav-link" href="/#BlogTitle">博客</a>
                                                             </li>
                                                         
                                                     
@@ -133,7 +145,7 @@
                                                     
                                 
                                                         <li class="nav-item">
-                                                                <a class="nav-link" href="faq.html">常见问题</a>
+                                                                <a class="nav-link" href="/#FaqTitle">FAQ</a>
                                                             </li>
                                                         
                                                     
@@ -345,8 +357,8 @@
     });
   }, false);
 })();
-</script>        <footer class="section-rounded section-reverse section-footer" >
-    <div class="section-round section-round--dark section-round-top d-none d-lg-block" id="footer"></div>
+</script>        <footer class="section section-rounded section-footer" >
+        <div class="section-round section-round--white section-round-top" id="footer"></div>
         <div class="hex hex-7"></div>
         <div class="container">
             <div class="section-content">
@@ -496,40 +508,40 @@
         </button>
       </div>
       <div class="modal-body">
-        <form method="GET" >
+        <form method="POST" id="whiteListForm">
             <div class="form-row">
               <div class="col-lg-6 form-group">
                 <label for="recipient-name" class="col-form-label">您的名字:</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <input type="text" class="form-control" name="name" id="recipient-name">
               </div>
               <div class="col-lg-6 form-group">
-                <label for="recipient-name" class="col-form-label">电话:</label>
-                <input type="tel" class="form-control" id="recipient-name">
+                <label for="recipient-phone" class="col-form-label">电话:</label>
+                <input type="tel" class="form-control" name="phone" id="recipient-phone">
               </div>
             </div>
 
             <div class="form-row">
               <div class="col-lg-6 form-group">
-                <label for="recipient-name" class="col-form-label">电子邮箱:</label>
-                <input type="email" class="form-control" id="recipient-name">
+                <label for="recipient-email" class="col-form-label">电子邮箱:</label>
+                <input type="email" class="form-control" name="email" id="recipient-email" required>
               </div>
               <div class="col-lg-6 form-group">
-                <label for="recipient-name" class="col-form-label">投资金额:</label>
-                <input type="number" class="form-control" id="recipient-name">
+                <label for="recipient-amount" class="col-form-label">投资金额:</label>
+                <input type="number" class="form-control" name="amount" id="recipient-amount">
               </div>
             </div>
 
             <div class="form-row mb-3">
                 <div class="custom-control custom-checkbox my-1 mr-sm-2">
-                <input type="checkbox" class="custom-control-input" id="customControlInline">
+                <input type="checkbox" class="custom-control-input" name="agree" required id="customControlInline">
                 <label class="custom-control-label" for="customControlInline">我同意处理我的个人信息</label>
               </div>
              </div>
 
           <div class="btn-group d-flex btn-fluid" aria-label="Basic example">
-            <button type="button" class="btn btn-fluid btn-secondary" data-dismiss="modal">拒绝</button>
-            <button type="submit" class="btn btn-fluid btn-default">发送请求</button>
-        </div>
+            <button type="button" class="btn btn-fluid btn-secondary" data-dismiss="modal" id="whiteListCancelButton">拒绝</button>
+            <button type="submit" class="btn btn-fluid btn-default" id="whiteListSubmitButton">发送请求</button>
+          </div>
 
         </form>
       </div>

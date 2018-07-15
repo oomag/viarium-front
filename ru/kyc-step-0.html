@@ -91,19 +91,25 @@
                                                     
                                 
                                                         <li class="nav-item">
-                                                                <a class="nav-link" href="/#UseCasesTitle">КЛЮЧЕВЫЕ ФУНКЦИИ</a>
-                                                            </li>
-                                                        
-                                                    
-                                
-                                                        <li class="nav-item">
                                                                 <a class="nav-link" href="/#TokenTitle">VRX ТОКЕН</a>
                                                             </li>
                                                         
                                                     
                                 
                                                         <li class="nav-item">
-                                                                <a class="nav-link" href="/#WhyBlockchainTitle">ЗАЧЕМ БЛОКЧЕЙН</a>
+                                                                <a class="nav-link" href="/#UseCasesTitle">КЛЮЧЕВЫЕ ФУНКЦИИ</a>
+                                                            </li>
+                                                        
+                                                    
+                                
+                                                        <li class="nav-item">
+                                                                <a class="nav-link" href="/#TokenSchemeTitle">СХЕМА РАСПРЕДЕЛЕНИЯ ТОКЕНОВ</a>
+                                                            </li>
+                                                        
+                                                    
+                                
+                                                        <li class="nav-item">
+                                                                <a class="nav-link" href="/#TitleCostStructure">СТРУКТУРА РАСХОДОВ</a>
                                                             </li>
                                                         
                                                     
@@ -115,25 +121,19 @@
                                                     
                                 
                                                         <li class="nav-item">
-                                                                <a class="nav-link" href="token.html">СХЕМА РАСПРЕДЕЛЕНИЯ ТОКЕНОВ</a>
+                                                                <a class="nav-link" href="/#WhyBlockchainTitle">ЗАЧЕМ БЛОКЧЕЙН</a>
                                                             </li>
                                                         
                                                     
                                 
                                                         <li class="nav-item">
-                                                                <a class="nav-link" href="token.html#TitleCostStructure">СТРУКТУРА РАСХОДОВ</a>
+                                                                <a class="nav-link" href="/#PartnersTitle">ПАРТНЕРЫ</a>
                                                             </li>
                                                         
                                                     
                                 
                                                         <li class="nav-item">
-                                                                <a class="nav-link" href="partners.html">ПАРТНЕРЫ</a>
-                                                            </li>
-                                                        
-                                                    
-                                
-                                                        <li class="nav-item">
-                                                                <a class="nav-link" href="blog.html">БЛОГ</a>
+                                                                <a class="nav-link" href="/#BlogTitle">БЛОГ</a>
                                                             </li>
                                                         
                                                     
@@ -145,7 +145,7 @@
                                                     
                                 
                                                         <li class="nav-item">
-                                                                <a class="nav-link" href="faq.html">FAQ</a>
+                                                                <a class="nav-link" href="/#FaqTitle">FAQ</a>
                                                             </li>
                                                         
                                                     
@@ -301,8 +301,8 @@
         </div>
     </div>
 </section>
-        <footer class="section-rounded section-reverse section-footer" >
-    <div class="section-round section-round--dark section-round-top d-none d-lg-block" id="footer"></div>
+        <footer class="section section-rounded section-footer" >
+        <div class="section-round section-round--white section-round-top" id="footer"></div>
         <div class="hex hex-7"></div>
         <div class="container">
             <div class="section-content">
@@ -451,40 +451,40 @@
         </button>
       </div>
       <div class="modal-body">
-        <form method="GET" >
+        <form method="POST" id="whiteListForm">
             <div class="form-row">
               <div class="col-lg-6 form-group">
                 <label for="recipient-name" class="col-form-label">Ваше Имя:</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <input type="text" class="form-control" name="name" id="recipient-name">
               </div>
               <div class="col-lg-6 form-group">
-                <label for="recipient-name" class="col-form-label">Телефон:</label>
-                <input type="tel" class="form-control" id="recipient-name">
+                <label for="recipient-phone" class="col-form-label">Телефон:</label>
+                <input type="tel" class="form-control" name="phone" id="recipient-phone">
               </div>
             </div>
 
             <div class="form-row">
               <div class="col-lg-6 form-group">
-                <label for="recipient-name" class="col-form-label">E-mail:</label>
-                <input type="email" class="form-control" id="recipient-name">
+                <label for="recipient-email" class="col-form-label">E-mail:</label>
+                <input type="email" class="form-control" name="email" id="recipient-email" required>
               </div>
               <div class="col-lg-6 form-group">
-                <label for="recipient-name" class="col-form-label">Сумма инвестиций:</label>
-                <input type="number" class="form-control" id="recipient-name">
+                <label for="recipient-amount" class="col-form-label">Сумма инвестиций:</label>
+                <input type="number" class="form-control" name="amount" id="recipient-amount">
               </div>
             </div>
 
             <div class="form-row mb-3">
                 <div class="custom-control custom-checkbox my-1 mr-sm-2">
-                <input type="checkbox" class="custom-control-input" id="customControlInline">
+                <input type="checkbox" class="custom-control-input" name="agree" required id="customControlInline">
                 <label class="custom-control-label" for="customControlInline">Я согласен на обработку моих персональных данных</label>
               </div>
              </div>
 
           <div class="btn-group d-flex btn-fluid" aria-label="Basic example">
-            <button type="button" class="btn btn-fluid btn-secondary" data-dismiss="modal">Отказаться</button>
-            <button type="submit" class="btn btn-fluid btn-default">Отправить запрос</button>
-        </div>
+            <button type="button" class="btn btn-fluid btn-secondary" data-dismiss="modal" id="whiteListCancelButton">Отказаться</button>
+            <button type="submit" class="btn btn-fluid btn-default" id="whiteListSubmitButton">Отправить запрос</button>
+          </div>
 
         </form>
       </div>
