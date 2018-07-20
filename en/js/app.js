@@ -314,6 +314,77 @@ var APP = {
         });
     },
 
+    headMove: () => {
+
+        // document.addEventListener("mousemove", function() 
+        // { 
+        // var mouseX = (event.clientX / 50)+'px';
+        // var mouseY = (event.clientY / 50)+'px';
+
+        // $('.header-image img').css({
+        //     left: mouseX,
+        //     top: mouseY,
+        //     transform: "rotateY("+event.clientX / 80+"deg) rotateX("+event.clientY / 80+"deg)",
+        // });
+        // });
+
+        setTimeout(function() {
+            $('#head_SVG').animate({
+                right: 0
+            },3000);
+        },500);
+
+        setTimeout(function() {
+            $('.svg_dot--1').animate({
+                opacity: 1
+            });
+        },1000);
+
+        setTimeout(function() {
+            $('.svg_dot--2').animate({
+                opacity: 1
+            });
+        },1200);
+
+        setTimeout(function() {
+            $('.svg_dot--3').animate({
+                opacity: 1
+            });
+        },1400);
+
+        setTimeout(function() {
+            $('.svg_dot--4').animate({
+                opacity: 1
+            });
+        },1600);
+
+        setTimeout(function() {
+            $('.svg_lines--1').animate({
+                opacity: 1
+            });
+        },1800);
+
+        setTimeout(function() {
+            $('.svg_lines--2').animate({
+                opacity: 1
+            });
+        },2000);
+
+
+        setTimeout(function() {
+            $('.svg_shadow--1').animate({
+                opacity: .2
+            });
+        },2200);
+
+        setTimeout(function() {
+            $('.svg_shadow--2').animate({
+                opacity: .4
+            });
+        },2400);
+
+    },
+
     formSend: (formId) => {
 
         $('#'+formId).submit(function(e) {
