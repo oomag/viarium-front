@@ -290,15 +290,17 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
+
+                    <div class="invalid-feedback d-block text-center py-4">Вы ввели неверный email или пароль. Пожалуйста, повторите попытку <br> или воспользуйтесь формой сброса пароля</div>
                     
-                    <form action="account-balance.html" class="needs-validation" novalidate >
+                    <form action="account-balance.html" >
 
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="E-mail" required>
+                            <input type="email" class="form-control" placeholder="E-mail">
                         </div>
                        
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Пароль" required>
+                            <input type="password" class="form-control" placeholder="Пароль">
                         </div>
 
                         <div class="form-row flex-md-row flex-column">
@@ -311,8 +313,6 @@
                             </div>
 
                         </div>
-
-                        <div class="invalid-feedback text-center pt-4">Вы ввели неверный email или пароль. Пожалуйста, повторите попытку <br> или воспользуйтесь формой сброса пароля</div>
                         
                     </form>
 
@@ -332,28 +332,7 @@
             </div>
         </div>
     </div>
-</section>
-
-<script>
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
-</script>        <footer class="section section-rounded section-footer" >
+</section>        <footer class="section section-rounded section-footer" >
         <div class="section-round section-round--white section-round-top" id="footer"></div>
         <div class="hex hex-7"></div>
         <div class="container">
