@@ -27,11 +27,27 @@
         </script>
 
         <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        <script>
+
+        var GTM_PROD = 'GTM-5RFJHRV';
+        var GTM_STAGING = 'GTM-TZCKDP9';
+        var GTM;
+
+        if (window.location.hostname.slice(3) == 'viarium.io') {
+            GTM = GTM_PROD;
+        }else {
+            GTM = GTM_STAGING;
+        }
+
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-5RFJHRV');</script>
+        })(window,document,'script','dataLayer',GTM);
+
+        console.log(GTM);
+
+        </script>
         <!-- End Google Tag Manager -->
 
     </head>
@@ -359,7 +375,7 @@
 			<div class="col-lg-6">
 				
 				<div class="header-image d-none d-lg-block">
-					<img src="/en/img/VR_Glass.svg" alt="">
+					<img src="/en/img/VR_Glass.svg" alt="" class="position-relative">
 				</div>
 
 				<div class="row">
