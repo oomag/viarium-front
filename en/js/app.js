@@ -20,7 +20,7 @@ var APP = {
             });
         }else {
             $('.dynamic_lang_switecher').each(function(index, element) {
-                $(this).attr('href', 'https://'+ $(this).data('lang') + '.' + host.slice(2) + search);
+                $(this).attr('href', 'https://'+ $(this).data('lang') + '.' + host.slice(3) + search);
             });
         }
 
