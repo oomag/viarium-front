@@ -7,6 +7,29 @@ var APP = {
         height: $(window).height()
     },
 
+    DLS: function() {
+
+        var host = window.location.hostname;
+        var search = window.location.search;
+        var link;
+
+        // if (host == 'localhost') {
+        //     link = 'http://localhost:3000/';
+        //     $('.dynamic_lang_switecher').each(function(index, element) {
+        //         $(this).attr('href', link + $(this).data('lang'));
+        //     });
+        // }else {
+        //     $('.dynamic_lang_switecher').each(function(index, element) {
+        //         $(this).attr('href', 'https://'+ $(this).data('lang') + '/' +host);
+        //     });
+        // }
+
+        $('.dynamic_lang_switecher').each(function(index, element) {
+                $(this).attr('href', 'https://'+ $(this).data('lang') + '.' + host + search);
+            });
+        
+    },
+
     rounded: function() {
 
         var elem = document.getElementsByClassName('section-round');

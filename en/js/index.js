@@ -1,5 +1,6 @@
 APP.anchorScroll();
 APP.hashScroll();
+APP.DLS();
 
 APP.roadmapSlide();
 APP.navbarTogglerDesktop();
