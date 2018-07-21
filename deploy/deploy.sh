@@ -2,11 +2,11 @@
 set -e  # Exit with non-zero if anything fails
 
 MASTER_BRANCH="master"
-BUILD_BRANCH="master"
+BUILD_BRANCH="staging"
 
 # Do not build a new version if it is a pull-request or commit not to BUILD_BRANCH
 if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
-    echo "Not $BUILD_BRANCH, skipping deploy;"
+    echo "Pull-request found, skipping deploy;"
     exit 0
 fi
 
