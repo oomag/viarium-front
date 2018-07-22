@@ -2,7 +2,7 @@
 set -e  # Exit with non-zero if anything fails
 
 MASTER_BRANCH="master"
-BUILD_BRANCH="staging"
+STAGING_BRANCH="staging"
 
 # Do not build a new version if it is a pull-request or commit not to BUILD_BRANCH
 if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
@@ -10,8 +10,8 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
     exit 0
 fi
 
-if [ "$TRAVIS_BRANCH" != "$MASTER_BRANCH" ]; then
-    echo "Not master branch but $TRAVIS_BRANCH, skipping deploy;"
+if [ "$TRAVIS_BRANCH" != "$MASTER_BRANCH" ] && [ "$TRAVIS_BRANCH" != "$STAGING_BRANCH" ]; then
+    echo "Not needed branch but $TRAVIS_BRANCH, skipping deploy;"
     exit 0
 fi
 
@@ -35,6 +35,12 @@ pushd ..
 git clone $BACKEND_REPO $BACKEND_NAME
 echo "Return back to the original repo"
 popd
+
+if [ "$TRAVIS_BRANCH" == "$MASTER_BRANCH" ]; then
+  BUILD_BRANCH="master"
+else
+  BUILD_BRANCH="staging"
+fi
 
 echo "Checkout to $BUILD_BRANCH branch in backend repo"
 pushd ../$BACKEND_NAME
