@@ -15,7 +15,7 @@ APP.caseControl();
 APP.kycTab();
 APP.formSend('whiteListForm');
 
-particlesJS.load('particles-js', '/en/particles.json', function() {
-  console.log('callback - particles.js config loaded');
-});
+// particlesJS.load('particles-js', '/en/particles.json', function() {
+//   console.log('callback - particles.js config loaded');
+// });
 
