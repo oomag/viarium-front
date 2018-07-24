@@ -409,6 +409,22 @@ var APP = {
             });
 
         });
+    },
+
+    iframePlay: (target) => {
+
+        $('.video-play').click(function(e) {
+
+            e.preventDefault();
+
+            $(this).fadeOut(100);
+
+            $('.iframe#'+$(this).data('target')+'').attr('src', $(this).data('video'));
+
+            return false;
+
+        });
+
     }
 
 }

@@ -14,6 +14,7 @@ window.onload = function() {
 APP.caseControl();
 APP.kycTab();
 APP.formSend('whiteListForm');
+APP.iframePlay('mainVideo');
 
 // particlesJS.load('particles-js', '/en/particles.json', function() {
 //   console.log('callback - particles.js config loaded');
