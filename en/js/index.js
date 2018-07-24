@@ -3,6 +3,8 @@ APP.hashScroll();
 APP.DLS();
 APP.headMove();
 
+// APP.initYoutubeAPI();
+
 APP.roadmapSlide();
 APP.navbarTogglerDesktop();
 APP.bxSlider('.team-slider');

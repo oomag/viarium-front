@@ -419,7 +419,19 @@ var APP = {
 
             $(this).fadeOut(100);
 
-            $('.iframe#'+target+'').attr('src', $(this).data('video'));
+            var player = new YT.Player('mainVideo', {
+                  height: '100%',
+                  width: '100%',
+                  videoId: 'hbuU0j75o7c',
+                  events: {
+                    'onReady': onPlayerReady,
+                  }
+                });
+
+            function onPlayerReady(event) {
+                event.target.playVideo();
+            }
+              
 
             return false;
 
