@@ -419,7 +419,7 @@ var APP = {
 
             $(this).fadeOut(100);
 
-            $('.iframe#'+$(this).data('target')+'').attr('src', $(this).data('video'));
+            $('.iframe#'+target+'').attr('src', $(this).data('video'));
 
             return false;
 
