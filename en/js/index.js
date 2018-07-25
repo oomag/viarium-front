@@ -9,6 +9,7 @@ APP.roadmapSlide();
 APP.navbarTogglerDesktop();
 APP.bxSlider('.team-slider');
 APP.bxSlider('.cases-slider');
+APP.bxSlider('.docSlider');
 APP.counter('counter');
 window.onload = function() {
     APP.rounded();
