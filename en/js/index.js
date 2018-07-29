@@ -1,26 +1,21 @@
-APP.anchorScroll();
-APP.hashScroll();
-APP.DLS();
-APP.headMove();
-
-// APP.initYoutubeAPI();
-
-APP.roadmapSlide();
-APP.navbarTogglerDesktop();
-APP.bxSlider('.team-slider');
-APP.bxSlider('.cases-slider');
-APP.bxSlider('.docSlider');
-APP.counter('counter');
 window.onload = function() {
+	APP.preloader();
+	APP.counterElSwitcher('2018-07-29T23:59:59','2018-08-05T23:59:59');
+	APP.anchorScroll();
+	APP.hashScroll();
+	APP.DLS();
+	APP.headMove();
+	APP.roadmapSlide();
+	APP.navbarTogglerDesktop();
+	APP.bxSlider('.team-slider');
+	APP.bxSlider('.cases-slider');
+	APP.bxSlider('.docSlider');
+	APP.counter('counter');
     APP.rounded();
+    APP.caseControl();
+	APP.kycTab();
+	APP.formWhiteList();
+	APP.formSubscribe();
+	APP.iframePlay('mainVideo');
+
 }
-APP.caseControl();
-APP.kycTab();
-APP.formWhiteList();
-APP.formSubscribe();
-APP.iframePlay('mainVideo');
-
-// particlesJS.load('particles-js', '/en/particles.json', function() {
-//   console.log('callback - particles.js config loaded');
-// });
-

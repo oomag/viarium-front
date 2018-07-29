@@ -52,12 +52,16 @@
 
     </head>
     <body>
+        <div id="preloader" class="preloader px-2 py-2">
+	
+	<img src="/en/img/logo-preload.png" alt="" >
 
+</div> 
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RFJHRV"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
-
+        
         
 	<div class="wrapper">
 		<nav class="navbar navbar-expand-xl navbar-dark fixed-top">
@@ -318,15 +322,12 @@
 				<div class="row mb-xl-4">
 
 					<div class="col-12">
-						<div class="title-presale mb-2">
-							第1ラウンドが終わるまで...
-						</div>
+						<div class="title-presale mb-2 timerElHide">第1ラウンドが終わるまで...</div>
+						<div class="title-presale mb-2 d-none timerElShow">Pre-Saleの第2ラウンドが・・・・たって始まります</div>
 					</div>
 					
 					<div class="col-xl-5 mb-3 mb-xl-0">
 						
-						
-
 						<div class="counter" data-element="counter" data-deadline="2018-07-29T23:59:59">
 							<div class="counter-path counter-line counter-days ">
 								<div class="counter-num">05</div>
@@ -350,20 +351,16 @@
 						</div>
 					</div>
 					<div class="col-xl-7 mb-xl-0 mb-3">
-						<!-- <a href="/users/sign_up" class="btn btn-fluid btn-buy">トークン購入</a> -->
-						<button type="button" class="btn btn-fluid btn-buy" data-toggle="modal" data-target="#whiteListModal">トークン購入</button>
+						<a href="/users/sign_up" class="btn btn-fluid btn-buy timerElHide">トークン購入</a>
+						<button type="button" class="btn btn-fluid btn-buy d-none timerElShow" data-toggle="modal" data-target="#whiteListModal">White listに参加してください</button>
 					</div>
 
 				</div>
 
-				<div class="text-left pt-lgsm-2 mb-xl-5 mb-2">
-					<div class="text-invite mb-2">
-						参加して<span class="mark">50%</span>をボーナスでもらって下さい
-					</div>
-
-					<div class="text-invite--small">
-						このオファーは<span class="mark">100</span>人のみに限られています。
-					</div>
+				<div class="text-md-left text-center mb-xl-5 mb-2">
+					<div class="text-invite mb-2 timerElHide">参加して<span class="mark">50%</span>をボーナスでもらって下さい</div>
+					<div class="text-invite mb-2 d-none timerElShow">WLに参加して、第2ラウンドで<span class="mark">４０％</span>のボーナスをもらってください 。</div>
+					<div class="text-invite--small">このオファーは<span class="mark">100</span>人のみに限られています。</div>
 				</div>
 
 				<div class="row">
@@ -715,7 +712,8 @@
 								</div>
 
 								<div class="col-12">
-									<a href="/users/sign_up" class="btn mt-xl-4 mt-5 mb-2 btn-fluid btn-buy">トークン購入</a>
+									<a href="/users/sign_up" class="btn mt-xl-4 mt-5 mb-2 btn-fluid btn-buy timerElHide">トークン購入</a>
+									<button type="button" class="btn mt-xl-4 mt-5 mb-2 btn-fluid btn-buy d-none timerElShow" data-toggle="modal" data-target="#whiteListModal">White listに参加してください</button>
 								</div>
 
 							</div>
@@ -788,7 +786,8 @@
 							</div>
 
 							<div class="col-12 pt-4 text-center">
-								<a href="/users/sign_up" class="btn btn-buy mt-4 mb-2 btn-fluid">トークン購入</a>
+								<a href="/users/sign_up" class="btn btn-buy mt-4 mb-2 btn-fluid timerElHide">トークン購入</a>
+								<button type="button" class="btn btn-buy mt-4 mb-2 btn-fluid d-none timerElShow" data-toggle="modal" data-target="#whiteListModal">White listに参加してください</button>
 							</div>
 
 						</div>
@@ -2540,6 +2539,7 @@
     </div>
   </div>
 </div> 
+        
         
         <script src="https://www.youtube.com/iframe_api"></script>
         <script type="text/javascript" src="/en/js/vendor.js?v=1.0.9d"></script>

@@ -7,6 +7,12 @@ var APP = {
         height: $(window).height()
     },
 
+    preloader: function() {
+        setTimeout(function(){
+            $('#preloader').fadeOut(400);
+        },500);
+    },
+
     DLS: function() {
 
         var host = window.location.hostname;
@@ -103,6 +109,21 @@ var APP = {
         }
         updateClock();
         var timeinterval = setInterval(updateClock, 1000);
+    },
+
+    counterElSwitcher: (date, deadline) => {
+
+        var dateNow = new Date();
+        let el = $('[data-element="counter"]');
+
+        console.log(new Date(date) - dateNow);
+
+        if (new Date(date) - dateNow<=0) {
+            $('.timerElHide').addClass('d-none');
+            $('.timerElShow').removeClass('d-none');
+            el.attr('data-deadline', deadline);
+        }
+
     },
 
     roadmapSlide: () => {

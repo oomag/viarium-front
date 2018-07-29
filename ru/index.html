@@ -52,12 +52,16 @@
 
     </head>
     <body>
+        <div id="preloader" class="preloader px-2 py-2">
+	
+	<img src="/en/img/logo-preload.png" alt="" >
 
+</div> 
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RFJHRV"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
-
+        
         
 	<div class="wrapper">
 		<nav class="navbar navbar-expand-xl navbar-dark fixed-top">
@@ -316,15 +320,12 @@
 				<div class="row mb-xl-4">
 
 					<div class="col-12">
-						<div class="title-presale mb-2">
-							до окончания <span class="mark">1 раунда</span> осталось
-						</div>
+						<div class="title-presale mb-2 timerElHide">до окончания <span class="mark">1 раунда</span> осталось</div>
+						<div class="title-presale mb-2 d-none timerElShow"><span class="mark">2 раунд</span> Pre-Sale начнется через</div>
 					</div>
 					
 					<div class="col-xl-5 mb-3 mb-xl-0">
 						
-						
-
 						<div class="counter" data-element="counter" data-deadline="2018-07-29T23:59:59">
 							<div class="counter-path counter-line counter-days ">
 								<div class="counter-num">05</div>
@@ -348,20 +349,16 @@
 						</div>
 					</div>
 					<div class="col-xl-7 mb-xl-0 mb-3">
-						<!-- <a href="/users/sign_up" class="btn btn-fluid btn-buy">КУПИТЬ ТОКЕНЫ</a> -->
-						<button type="button" class="btn btn-fluid btn-buy" data-toggle="modal" data-target="#whiteListModal">КУПИТЬ ТОКЕНЫ</button>
+						<a href="/users/sign_up" class="btn btn-fluid btn-buy timerElHide">КУПИТЬ ТОКЕНЫ</a>
+						<button type="button" class="btn btn-fluid btn-buy d-none timerElShow" data-toggle="modal" data-target="#whiteListModal">JOIN WHITE LIST</button>
 					</div>
 
 				</div>
 
-				<div class="text-left pt-lgsm-2 mb-xl-5 mb-2">
-					<div class="text-invite mb-2">
-						Участвуй и Получи <span class="mark">50%</span> бонусом 
-					</div>
-
-					<div class="text-invite--small">
-						* Предложение ограничено <span class="mark">100</span> слотами
-					</div>
+				<div class="text-md-left text-center mb-xl-5 mb-2">
+					<div class="text-invite mb-2 timerElHide">Участвуй и Получи <span class="mark">50%</span> бонусом </div>
+					<div class="text-invite mb-2 d-none timerElShow">Присоединись в WL и получи бонус <span class="mark">40%</span> на втором раунде</div>
+					<div class="text-invite--small">* Предложение ограничено <span class="mark">100</span> слотами</div>
 				</div>
 
 				<div class="row">
@@ -713,7 +710,8 @@
 								</div>
 
 								<div class="col-12">
-									<a href="/users/sign_up" class="btn mt-xl-4 mt-5 mb-2 btn-fluid btn-buy">КУПИТЬ ТОКЕНЫ</a>
+									<a href="/users/sign_up" class="btn mt-xl-4 mt-5 mb-2 btn-fluid btn-buy timerElHide">КУПИТЬ ТОКЕНЫ</a>
+									<button type="button" class="btn mt-xl-4 mt-5 mb-2 btn-fluid btn-buy d-none timerElShow" data-toggle="modal" data-target="#whiteListModal">JOIN WHITE LIST</button>
 								</div>
 
 							</div>
@@ -786,7 +784,8 @@
 							</div>
 
 							<div class="col-12 pt-4 text-center">
-								<a href="/users/sign_up" class="btn btn-buy mt-4 mb-2 btn-fluid">КУПИТЬ ТОКЕНЫ</a>
+								<a href="/users/sign_up" class="btn btn-buy mt-4 mb-2 btn-fluid timerElHide">КУПИТЬ ТОКЕНЫ</a>
+								<button type="button" class="btn btn-buy mt-4 mb-2 btn-fluid d-none timerElShow" data-toggle="modal" data-target="#whiteListModal">JOIN WHITE LIST</button>
 							</div>
 
 						</div>
@@ -2536,6 +2535,7 @@
     </div>
   </div>
 </div> 
+        
         
         <script src="https://www.youtube.com/iframe_api"></script>
         <script type="text/javascript" src="/en/js/vendor.js?v=1.0.9d"></script>
