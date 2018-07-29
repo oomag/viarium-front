@@ -411,7 +411,7 @@ var APP = {
         });
     },
 
-    subscriptionForm: (formId) => {
+    formSubscribe: (formId) => {
 
         $('#'+formId).submit(function(e) {
 
