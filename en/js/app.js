@@ -573,29 +573,37 @@ var APP = {
 
     iframePlay: (target) => {
 
-        $('.video-play').click(function(e) {
+        var player = new YT.Player(target, {
+              height: '100%',
+              width: '100%',
+              videoId: 'hbuU0j75o7c',
+              events: {
+                'onReady': onPlayerReady,
+              }
+            });
 
-            e.preventDefault();
+        function onPlayerReady(event) {
+            iframe = document.getElementById(target);
 
-            $(this).fadeOut(100);
+            $('.video-play').click(function(e) {
 
-            var player = new YT.Player('mainVideo', {
-                  height: '100%',
-                  width: '100%',
-                  videoId: 'hbuU0j75o7c',
-                  events: {
-                    'onReady': onPlayerReady,
-                  }
-                });
+                e.preventDefault();
 
-            function onPlayerReady(event) {
+                $(this).fadeOut(100);
                 event.target.playVideo();
-            }
-              
 
-            return false;
+                var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+                if (requestFullScreen) {
+                    requestFullScreen.bind(iframe)();
+                }
 
-        });
+                return false;
+
+            });
+                
+        }
+
+        
 
     }
 
