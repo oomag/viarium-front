@@ -573,36 +573,57 @@ var APP = {
 
     iframePlay: (target) => {
 
-        var player = new YT.Player(target, {
-              height: '100%',
-              width: '100%',
-              videoId: 'hbuU0j75o7c',
-              events: {
-                'onReady': onPlayerReady,
-              }
-            });
+        iframe = document.getElementById(target);
 
-        function onPlayerReady(event) {
-            iframe = document.getElementById(target);
+        if ($('html').attr('lang') != 'cn') {
+        
+            var player = new YT.Player(target, {
+                  height: '100%',
+                  width: '100%',
+                  videoId: 'hbuU0j75o7c',
+                  events: {
+                    'onReady': onPlayerReady,
+                  }
+                });
 
+            function onPlayerReady(event) {
+                
+
+                $('.video-play').click(function(e) {
+
+                    e.preventDefault();
+
+                    $(this).fadeOut(100);
+                    event.target.playVideo();
+
+                    var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+                    if (requestFullScreen) {
+                        requestFullScreen.bind(iframe)();
+                    }
+
+                    return false;
+
+                });
+                    
+            }
+        }else {
             $('.video-play').click(function(e) {
 
-                e.preventDefault();
+                    e.preventDefault();
 
-                $(this).fadeOut(100);
-                event.target.playVideo();
+                    $(this).fadeOut(100);
 
-                var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
-                if (requestFullScreen) {
-                    requestFullScreen.bind(iframe)();
-                }
+                    $('#'+target)[0].src += "?autoplay=1";
 
-                return false;
+                    var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+                    if (requestFullScreen) {
+                        requestFullScreen.bind(iframe)();
+                    }
 
-            });
-                
+                    return false;
+
+                });
         }
-
         
 
     }
