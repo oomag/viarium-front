@@ -573,7 +573,7 @@ var APP = {
 
     iframePlay: (target) => {
 
-        iframe = document.getElementById(target);
+        
 
         if ($('html').attr('lang') != 'cn') {
         
@@ -588,7 +588,7 @@ var APP = {
 
             function onPlayerReady(event) {
                 
-
+                var iframe = document.getElementById(target);
                 $('.video-play').click(function(e) {
 
                     e.preventDefault();
@@ -615,7 +615,10 @@ var APP = {
 
                     $('#'+target)[0].src += "?autoplay=1";
 
+                    var iframe = document.getElementById(target);
+
                     var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+                    
                     if (requestFullScreen) {
                         requestFullScreen.bind(iframe)();
                     }
