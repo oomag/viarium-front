@@ -385,101 +385,80 @@ var APP = {
 
     },
 
-    formWhiteList: (formId) => {
+    formWhiteList: () => {
 
-        $('#'+formId).submit(function(e) {
-
-            e.preventDefault();
-
-            var data = $(this).serializeArray();
-
-
-            $.ajax({
-                type: "POST",
-                url: "/create_request",
-                data: data,
-                success: function(){
-
-                },
-
-                error: function (jqXHR, exception) {
-                    
-                }
-   
-            });
-
-        });
+        
     },
 
     formSubscribe: () => {
 
-        // SUBSCRIBE FORM
-    var subscription_form = $("#subscriptionForm");
-    var subscription_email = $("#subscription-email")  
+        var subscription_form = $("#subscriptionForm");
+        var subscription_email = $("#subscription-email")  
+        var subscription_status = $("#subscription-status");  
 
-    var subscription_status = $("#subscription-status");  
+        subscription_email.keyup(function(e){
+            var code = e.which;
+            if(code != 13) subscription_status.hide();
+        });
 
-    subscription_email.keyup(function(e){
-      var code = e.which;
-      if(code != 13) subscription_status.hide();
-    });
-    var sending_in_progress = false;
-    subscription_form.submit(function(){
-      if (sending_in_progress) return false;
+        var sending_in_progress = false;
 
-      var sendInfo= { email: subscription_email.val() };
-     
-      sending_in_progress = true;
-      subscription_status.html("<span>Sending...</span>");
-      subscription_status.show();
+        subscription_form.submit(function(){
 
+        if (sending_in_progress) return false;
 
-      $.ajax({
-        type: "POST",
-        url: "/create_subscribe_request",
-        data: sendInfo,
-        success: function(){
-          subscription_status.html("<span>Success</span>");
-          $('#subscription_form').hide();
-          subscription_email.val("");
+        var sendInfo= { email: subscription_email.val() };
 
-          subscription_status.show();
-          sending_in_progress = false;
+        sending_in_progress = true;
+        subscription_status.html("<span>Sending...</span>");
+        subscription_status.show();
 
-        },
-        error: function (jqXHR, exception) {
-            console.log('----------------error-------------------------');
-            var msg = '';
-            if (jqXHR.status === 0) {
-                msg = 'Not connect.\n Verify Network.';
-            } else if (jqXHR.status == 404) {
-                msg = 'Requested page not found. [404]';
-            } else if (jqXHR.status == 500) {
-                msg = 'Internal Server Error [500].';
-            } else if (exception === 'parsererror') {
-                msg = 'Requested JSON parse failed.';
-            } else if (exception === 'timeout') {
-                msg = 'Time out error.';
-            } else if (exception === 'abort') {
-                msg = 'Ajax request aborted.';
-            } else if (jqXHR.status == 400) { 
-                if (jqXHR.responseJSON && jqXHR.responseJSON.error) {
-                    msg = jqXHR.responseJSON.error;
+          $.ajax({
+            type: "POST",
+            url: "/create_subscribe_request",
+            data: sendInfo,
+            success: function(){
+              subscription_status.html("<span>Success</span>");
+              $('#subscription_form').hide();
+              subscription_email.val("");
+
+              subscription_status.show();
+              sending_in_progress = false;
+
+            },
+            error: function (jqXHR, exception) {
+                console.log('----------------error-------------------------');
+                var msg = '';
+                if (jqXHR.status === 0) {
+                    msg = 'Not connect.\n Verify Network.';
+                } else if (jqXHR.status == 404) {
+                    msg = 'Requested page not found. [404]';
+                } else if (jqXHR.status == 500) {
+                    msg = 'Internal Server Error [500].';
+                } else if (exception === 'parsererror') {
+                    msg = 'Requested JSON parse failed.';
+                } else if (exception === 'timeout') {
+                    msg = 'Time out error.';
+                } else if (exception === 'abort') {
+                    msg = 'Ajax request aborted.';
+                } else if (jqXHR.status == 400) { 
+                    if (jqXHR.responseJSON && jqXHR.responseJSON.error) {
+                        msg = jqXHR.responseJSON.error;
+                    } else {
+                      msg = 'Unknown Error!';
+                    }                
                 } else {
-                  msg = 'Unknown Error!';
-                }                
-            } else {
-                
-                msg = 'Uncaught Error.\n' + jqXHR.responseText;
-            }     
-          subscription_status.html(msg);
-          subscription_status.show();
-          sending_in_progress = false;
-        }
+                    
+                    msg = 'Uncaught Error.\n' + jqXHR.responseText;
+                }     
+              subscription_status.html(msg);
+              subscription_status.show();
+              sending_in_progress = false;
+            }
 
-      });
-      return false;
-    });
+          });
+          return false;
+        });
 
     },
 
