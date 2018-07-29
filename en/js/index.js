@@ -16,7 +16,8 @@ window.onload = function() {
 }
 APP.caseControl();
 APP.kycTab();
-APP.formSend('whiteListForm');
+APP.formWhiteList('whiteListForm');
+APP.formSubscribe('subscriptionForm');
 APP.iframePlay('mainVideo');
 
 // particlesJS.load('particles-js', '/en/particles.json', function() {

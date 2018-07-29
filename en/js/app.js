@@ -385,7 +385,7 @@ var APP = {
 
     },
 
-    formSend: (formId) => {
+    formWhiteList: (formId) => {
 
         $('#'+formId).submit(function(e) {
 
@@ -404,6 +404,31 @@ var APP = {
 
                 error: function (jqXHR, exception) {
                     
+                }
+   
+            });
+
+        });
+    },
+
+    subscriptionForm: (formId) => {
+
+        $('#'+formId).submit(function(e) {
+
+            e.preventDefault();
+
+            var data = $(this).serializeArray();
+
+            $.ajax({
+                type: "POST",
+                url: "/create_subscribe_request",
+                data: data,
+                success: function(response){
+                    console.log(response);
+                },
+
+                error: function (jqXHR, exception) {
+                    console.log(response);
                 }
    
             });
