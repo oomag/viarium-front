@@ -419,6 +419,8 @@ var APP = {
 
             var data = $(this).serializeArray();
 
+            console.log(data);
+
             $.ajax({
                 type: "POST",
                 url: "/create_subscribe_request",
