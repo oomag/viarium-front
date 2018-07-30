@@ -178,7 +178,10 @@ var APP = {
             prefix = '--desctop';
             adaptiveHeight = false;
         }
-        $(elem + prefix).bxSlider({
+
+        var El = elem + prefix;
+        
+        $(El).bxSlider({
             pager: false,
             prevText: '',
             nextText: '',
