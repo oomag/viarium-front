@@ -141,7 +141,7 @@ var APP = {
                     }, "slow");
                 }
             } else {
-
+                console.log(position.left);
                 if (position.left <= $(window).width() - 3000) {
                     return false;
                 } else {
@@ -180,7 +180,7 @@ var APP = {
         }
 
         var El = elem + prefix;
-        
+
         $(El).bxSlider({
             pager: false,
             prevText: '',
