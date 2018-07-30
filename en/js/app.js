@@ -613,9 +613,12 @@ var APP = {
 
                     $(this).fadeOut(100);
 
-                    $('#'+target)[0].src += "?autoplay=1";
-
                     var iframe = document.getElementById(target);
+
+                    iframe.contentWindow.postMessage(JSON.stringify({
+                        type: 'player:play',
+                        data: {}
+                    }), '*');
 
                     var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
                     
