@@ -166,7 +166,7 @@ var APP = {
         }
     },
 
-    bxSlider: function(elem) {
+    slider: function(elem) {
 
         var prefix;
         var adaptiveHeight;

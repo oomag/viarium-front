@@ -7,9 +7,9 @@ window.onload = function() {
 	APP.headMove();
 	APP.roadmapSlide();
 	APP.navbarTogglerDesktop();
-	APP.bxSlider('.team-slider');
-	APP.bxSlider('.cases-slider');
-	APP.bxSlider('.docSlider');
+	APP.slider('.team-slider');
+	APP.slider('.cases-slider');
+	APP.slider('.docSlider');
 	APP.counter('counter');
     APP.rounded();
     APP.caseControl();
