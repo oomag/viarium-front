@@ -632,6 +632,18 @@ var APP = {
         }
         
 
+    },
+
+    countrySelect:() =>  {
+        $('#countrySelect').on('change', function() {
+
+            if ($(this).val() == 'US') {
+                $('.alert').addClass('show');
+                $(this).prop('disabled', true);
+                $('.btn[type="submit"]').prop('disabled', true);
+                $('input').prop('disabled', true);
+            }
+        });
     }
 
 }

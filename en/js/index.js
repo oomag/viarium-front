@@ -17,5 +17,6 @@ window.onload = function() {
 	APP.formWhiteList();
 	APP.formSubscribe();
 	APP.iframePlay('mainVideo');
+	APP.countrySelect();
 
 }

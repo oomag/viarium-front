@@ -308,16 +308,27 @@
 
                 <div class="offset-lg-2-5 col-lg-3-5">
 
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <div class="alert alert-danger alert-dismissible fade" role="alert">
                         UNFORTUNATELY WE SHOULD CLOSE THIS SALE FOR US CITIZENS.
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
 
-                    <div class="invalid-feedback d-block text-center py-4">Заполните обязательные поля</div>
+                    <div class="invalid-feedback text-center py-4">Заполните обязательные поля</div>
 
                     <form action="">
+
+                        <div class="form-row mb-4">
+                            <div class="col-lg-12">
+                                <select class="custom-select" id="countrySelect" required>
+                                    <option selected disabled>Country</option>
+                                    <option value="US" >United States of America (USA)</option>
+                                    <option value="2" >Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
 
                         <div class="form-row mb-4">
                             <div class="col-lg-6 mb-4 mb-lg-0">
@@ -328,6 +339,8 @@
                             </div>
                             
                         </div>
+
+                        
 
                         <div class="form-row mb-4">
                             <div class="col-lg-6">
