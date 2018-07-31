@@ -587,14 +587,8 @@ var APP = {
         
 
         if ($('html').attr('lang') != 'cn') {
-
-            $('.video-play').click(function(e) {
-
-                e.preventDefault();
-
-                $(this).fadeOut(100);
-
-                var player = new YT.Player(target, {
+        
+            var player = new YT.Player(target, {
                   height: '100%',
                   width: '100%',
                   videoId: 'hbuU0j75o7c',
@@ -603,26 +597,24 @@ var APP = {
                   }
                 });
 
-                return false;
-
-            });
-        
-            
-
             function onPlayerReady(event) {
                 
                 var iframe = document.getElementById(target);
+                $('.video-play').click(function(e) {
 
+                    e.preventDefault();
 
-                
-                event.target.playVideo();
+                    $(this).fadeOut(100);
+                    event.target.playVideo();
 
-                var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
-                if (requestFullScreen) {
-                    requestFullScreen.bind(iframe)();
-                }
+                    var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+                    if (requestFullScreen) {
+                        requestFullScreen.bind(iframe)();
+                    }
 
-                return false;
+                    return false;
+
+                });
                     
             }
         }else {
