@@ -116,8 +116,6 @@ var APP = {
         var dateNow = new Date();
         let el = $('[data-element="counter"]');
 
-        console.log(new Date(date) - dateNow);
-
         if (new Date(date) - dateNow<=0) {
             $('.timerElHide').addClass('d-none');
             $('.timerElShow').removeClass('d-none');
@@ -130,8 +128,6 @@ var APP = {
 
         var zeroWidth = 4600;
         var step = 2800 / 16;
-
-        console.log((zeroWidth - $(window).width()) / 2 );
 
 
         $('.slider-arrow[data-event="prev"]').click(function (e) {
@@ -347,9 +343,6 @@ var APP = {
                     i = 0;
                 }
             }
-
-            
-            console.log(i);
 
             $('#case-title').html($('#v-pills-tab-m .nav-link:eq('+i+')').html());
             $('#v-pills-tab-m .nav-link:eq('+i+')').click();
