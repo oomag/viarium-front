@@ -582,40 +582,48 @@ var APP = {
 
     },
 
-    iframePlay: (target) => {
+    iframePlay: () => {
 
         
 
         if ($('html').attr('lang') != 'cn') {
-        
-            var player = new YT.Player(target, {
+
+            $('.video-play').click(function(e) {
+
+                var target = $(this).attr('data-target');
+                var videoId = $(this).attr('data-videoId');
+
+                e.preventDefault();
+
+                $(this).fadeOut(100);
+
+                var player = new YT.Player(target, {
                   height: '100%',
                   width: '100%',
-                  videoId: 'hbuU0j75o7c',
+                  videoId: videoId,
                   events: {
                     'onReady': onPlayerReady,
                   }
                 });
 
+                var iframe = document.getElementById(target);
+
+                var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+                if (requestFullScreen) {
+                    requestFullScreen.bind(iframe)();
+                }
+                        
+
+                return false;
+
+            });
+        
+            
+
             function onPlayerReady(event) {
                 
-                var iframe = document.getElementById(target);
-                $('.video-play').click(function(e) {
-
-                    e.preventDefault();
-
-                    $(this).fadeOut(100);
-                    event.target.playVideo();
-
-                    var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
-                    if (requestFullScreen) {
-                        requestFullScreen.bind(iframe)();
-                    }
-
-                    return false;
-
-                });
-                    
+                event.target.playVideo();
+   
             }
         }else {
             $('.video-play').click(function(e) {

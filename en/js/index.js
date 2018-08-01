@@ -16,7 +16,18 @@ window.onload = function() {
 	APP.kycTab();
 	APP.formWhiteList();
 	APP.formSubscribe();
-	// APP.iframePlay('mainVideo');
 	APP.countrySelect();
 
+}
+
+var watch = true;
+window.onscroll = function() {
+	if (watch) {
+		console.log('watch');
+	}
+	if (window.pageYOffset > 100 && watch) {
+		APP.iframePlay();
+		watch = false;
+	}
+	
 }
