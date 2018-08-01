@@ -16,7 +16,7 @@ window.onload = function() {
 	APP.kycTab();
 	APP.formWhiteList();
 	APP.formSubscribe();
-	APP.iframePlay('mainVideo');
+	// APP.iframePlay('mainVideo');
 	APP.countrySelect();
 
 }
