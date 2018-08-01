@@ -127,6 +127,13 @@ var APP = {
     },
 
     roadmapSlide: () => {
+
+        var zeroWidth = 4600;
+        var step = 2800 / 16;
+
+        console.log((zeroWidth - $(window).width()) / 2 );
+
+
         $('.slider-arrow[data-event="prev"]').click(function (e) {
             e.preventDefault();
             var position = $('.roadmap-block').position();
@@ -136,7 +143,7 @@ var APP = {
             } else {
                 $(this).prop('disabled', true);
                 $(".roadmap-block").animate({
-                    "left": "+=240px"
+                    "left": "+="+step+"px"
                 }, 1000, function() {
                     $('.slider-arrow[data-event="prev"]').prop('disabled', false);
                 });
@@ -147,13 +154,18 @@ var APP = {
 
         $('.slider-arrow[data-event="next"]').click(function (e) {
             e.preventDefault();
+
+
             var position = $('.roadmap-block').position();
-            if (position.left <= $(window).width() - 3000) {
+
+
+            if (position.left <= -((zeroWidth - $(window).width()) / 2 ) + 100 ) {
                 return false;
             } else {
+
                 $(this).prop('disabled', true);
                 $(".roadmap-block").animate({
-                    "left": "-=240px"
+                    "left": "-="+step+"px"
                 }, 1000, function() {
                     $('.slider-arrow[data-event="next"]').prop('disabled', false);
                 });
