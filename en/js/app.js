@@ -134,7 +134,7 @@ var APP = {
             e.preventDefault();
             var position = $('.roadmap-block').position();
 
-            if (position.left >= 90) {
+            if (position.left >= 0) {
                 return false;
             } else {
                 $(this).prop('disabled', true);
@@ -155,7 +155,7 @@ var APP = {
             var position = $('.roadmap-block').position();
 
 
-            if (position.left <= -((zeroWidth - $(window).width()) / 2 ) + 100 ) {
+            if (position.left <= -((zeroWidth - $(window).width()) / 2 ) + 300 ) {
                 return false;
             } else {
 
@@ -502,7 +502,6 @@ var APP = {
                         msg = 'Uncaught Error.\n' + jqXHR.responseText;
                     }
 
-
                     subscription_status.html(msg);
                     subscription_status.show();
                     sending_in_progress = false;
@@ -637,7 +636,7 @@ var APP = {
 
                     $(this).fadeOut(100);
 
-                    var iframe = document.getElementById(target);
+                    var iframe = document.getElementById($(this).data('target'));
 
                     iframe.contentWindow.postMessage(JSON.stringify({
                         type: 'player:play',
