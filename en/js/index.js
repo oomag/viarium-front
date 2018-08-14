@@ -17,6 +17,8 @@ window.onload = function() {
 	APP.formWhiteList();
 	APP.formSubscribe();
 	APP.countrySelect();
+	APP.toggleBlock();
+	
 
 }
 

@@ -667,6 +667,17 @@ var APP = {
                 $('input').prop('disabled', true);
             }
         });
+    },
+
+    toggleBlock:() =>  {
+        $('.btn-toggler').click(function(e) {
+            e.preventDefault();
+
+            $('#' + $(this).data('target')).slideToggle();
+            $(this).fadeOut();
+
+            return false;
+        });
     }
 
 }
