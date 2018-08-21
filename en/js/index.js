@@ -1,6 +1,8 @@
-window.onload = function() {
+'use strict';
+
+window.onload = function () {
 	// APP.preloader();
-	APP.counterElSwitcher('2018-08-05T23:59:59','2018-08-12T23:59:59');
+	APP.counterElSwitcher('2018-08-05T23:59:59', '2018-08-12T23:59:59');
 	APP.anchorScroll();
 	APP.hashScroll();
 	APP.DLS();
@@ -11,19 +13,17 @@ window.onload = function() {
 	APP.slider('.cases-slider');
 	APP.slider('.docSlider');
 	APP.counter('counter');
-    APP.rounded();
-    APP.caseControl();
+	APP.rounded();
+	APP.caseControl();
 	APP.kycTab();
 	APP.formWhiteList();
 	APP.formSubscribe();
 	APP.countrySelect();
 	APP.toggleBlock();
-	
-
-}
+};
 
 var watch = true;
-window.onscroll = function() {
+window.onscroll = function () {
 	if (watch) {
 		console.log('watch');
 	}
@@ -31,5 +31,4 @@ window.onscroll = function() {
 		APP.iframePlay();
 		watch = false;
 	}
-	
-}
+};

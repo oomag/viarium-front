@@ -1,3 +1,5 @@
+'use strict';
+
 var APP = {
 
     SB: $('.section-round'),
@@ -7,13 +9,13 @@ var APP = {
         height: $(window).height()
     },
 
-    preloader: function() {
-        setTimeout(function(){
+    preloader: function preloader() {
+        setTimeout(function () {
             $('#preloader').fadeOut(400);
-        },500);
+        }, 500);
     },
 
-    DLS: function() {
+    DLS: function DLS() {
 
         var host = window.location.hostname;
         var search = window.location.search;
@@ -21,26 +23,24 @@ var APP = {
 
         if (host == 'localhost') {
             link = 'http://localhost:3000/';
-            $('.dynamic_lang_switecher').each(function(index, element) {
+            $('.dynamic_lang_switecher').each(function (index, element) {
                 $(this).attr('href', link + $(this).data('lang'));
             });
-        }else {
-            $('.dynamic_lang_switecher').each(function(index, element) {
-                $(this).attr('href', 'https://'+ $(this).data('lang') + '.' + host.slice(3) + search);
+        } else {
+            $('.dynamic_lang_switecher').each(function (index, element) {
+                $(this).attr('href', 'https://' + $(this).data('lang') + '.' + host.slice(3) + search);
             });
         }
-
-        
     },
 
-    rounded: function() {
+    rounded: function rounded() {
 
         var elem = document.getElementsByClassName('section-round');
-        
+
         if ($(window).width() >= 576) {
             var factor = 3;
-        }else {
-            var factor =1.5;
+        } else {
+            var factor = 1.5;
         }
 
         if (elem) {
@@ -50,18 +50,17 @@ var APP = {
                 // footer.style.height = 1500+'px';
 
                 elem[i].style.width = elem[i].offsetHeight * factor + 'px';
-                elem[i].style.marginLeft = -(elem[i].offsetHeight * factor ) / 2 + 'px';
+                elem[i].style.marginLeft = -(elem[i].offsetHeight * factor) / 2 + 'px';
 
-                footer.style.width =  '3000px';
-                footer.style.marginLeft =  '-1500px';
-
+                footer.style.width = '3000px';
+                footer.style.marginLeft = '-1500px';
             }
         }
     },
 
-    counter: (dataElement) => {
-        let el = '[data-element="' + dataElement + '"]';
-        let endtime = $(el).attr('data-deadline');
+    counter: function counter(dataElement) {
+        var el = '[data-element="' + dataElement + '"]';
+        var endtime = $(el).attr('data-deadline');
 
         var daysSpan = $(el + ' .clock__days');
         var hoursSpan = $(el + ' .clock__hours');
@@ -74,7 +73,7 @@ var APP = {
 
         function getTimeRemaining(endtime) {
             var dt = new Date();
-            var t = (Date.parse(endtime)) - Date.parse(dt);
+            var t = Date.parse(endtime) - Date.parse(dt);
             var seconds = Math.floor(t / 1000 % 60);
             var minutes = Math.floor(t / 1000 / 60 % 60);
             var hours = Math.floor(t / (1000 * 60 * 60) % 24);
@@ -111,24 +110,22 @@ var APP = {
         var timeinterval = setInterval(updateClock, 1000);
     },
 
-    counterElSwitcher: (date, deadline) => {
+    counterElSwitcher: function counterElSwitcher(date, deadline) {
 
         var dateNow = new Date();
-        let el = $('[data-element="counter"]');
+        var el = $('[data-element="counter"]');
 
-        if (new Date(date) - dateNow<=0) {
+        if (new Date(date) - dateNow <= 0) {
             $('.timerElHide').addClass('d-none');
             $('.timerElShow').removeClass('d-none');
             el.attr('data-deadline', deadline);
         }
-
     },
 
-    roadmapSlide: () => {
+    roadmapSlide: function roadmapSlide() {
 
         var zeroWidth = 4600;
         var step = 2800 / 16;
-
 
         $('.slider-arrow[data-event="prev"]').click(function (e) {
             e.preventDefault();
@@ -139,34 +136,32 @@ var APP = {
             } else {
                 $(this).prop('disabled', true);
                 $(".roadmap-block").animate({
-                    "left": "+="+step+"px"
-                }, 1000, function() {
+                    "left": "+=" + step + "px"
+                }, 1000, function () {
                     $('.slider-arrow[data-event="prev"]').prop('disabled', false);
                 });
             }
-            
+
             return false;
         });
 
         $('.slider-arrow[data-event="next"]').click(function (e) {
             e.preventDefault();
 
-
             var position = $('.roadmap-block').position();
 
-
-            if (position.left <= -((zeroWidth - $(window).width()) / 2 ) + 300 ) {
+            if (position.left <= -((zeroWidth - $(window).width()) / 2) + 300) {
                 return false;
             } else {
 
                 $(this).prop('disabled', true);
                 $(".roadmap-block").animate({
-                    "left": "-="+step+"px"
-                }, 1000, function() {
+                    "left": "-=" + step + "px"
+                }, 1000, function () {
                     $('.slider-arrow[data-event="next"]').prop('disabled', false);
                 });
             }
-            
+
             return false;
         });
 
@@ -182,7 +177,7 @@ var APP = {
         }
     },
 
-    slider: function(elem) {
+    slider: function slider(elem) {
 
         var prefix;
         var adaptiveHeight;
@@ -201,54 +196,48 @@ var APP = {
             pager: false,
             prevText: '',
             nextText: '',
-            adaptiveHeight: adaptiveHeight,
+            adaptiveHeight: adaptiveHeight
         });
-
     },
 
-    kycTab: () => {
+    kycTab: function kycTab() {
 
-        $('.radio-tab-kys').click(function(e) {
+        $('.radio-tab-kys').click(function (e) {
 
-            let target = $(this).data('target');
-            
+            var target = $(this).data('target');
+
             $('.step-option').removeClass('d-block').addClass('d-none');
-            $('#'+target).removeClass('d-none').addClass('d-block');
+            $('#' + target).removeClass('d-none').addClass('d-block');
 
             $('.kys-link').removeClass('active');
 
             if ($(this).data('target') == 'option-2') {
                 $('.kys-link:eq(0)').addClass('active');
             }
-
-            
         });
 
-        $('.kys-link').click(function(e) {
+        $('.kys-link').click(function (e) {
 
             e.preventDefault();
 
-            let target = $(this).data('target');
+            var target = $(this).data('target');
 
             $('.kys-link').removeClass('active');
             $(this).addClass('active');
-            $('#customControlValidation2').prop( "checked", true );
+            $('#customControlValidation2').prop("checked", true);
             $('.step-option').removeClass('d-block').addClass('d-none');
-            $('#'+target).removeClass('d-none').addClass('d-block');            
+            $('#' + target).removeClass('d-none').addClass('d-block');
 
             return false;
-
-            
         });
-        
     },
 
-    anchorScroll: () => {
+    anchorScroll: function anchorScroll() {
         $('.anchor').click(function (e) {
             e.preventDefault();
 
-            let hash = $(this).attr("data-hash");
-            let corrector = -120;
+            var hash = $(this).attr("data-hash");
+            var corrector = -120;
 
             if ($('.navbar .collapse').hasClass('show')) {
                 $('.navbar-toggler-desktop').click();
@@ -259,25 +248,22 @@ var APP = {
             }, 1000);
 
             return false;
-
         });
     },
 
-    hashScroll: () => {
+    hashScroll: function hashScroll() {
 
-        let hash = location.hash;
-        let corrector = -120;
+        var hash = location.hash;
+        var corrector = -120;
 
         if (hash != '') {
-           
 
-        $("html, body").animate({
-            scrollTop: $(hash).offset().top + corrector
-        }, 1000);
+            $("html, body").animate({
+                scrollTop: $(hash).offset().top + corrector
+            }, 1000);
 
-        return false;
-       }
-
+            return false;
+        }
     },
 
     // navbarScrollEvent: () => {
@@ -296,12 +282,11 @@ var APP = {
     //     });
     // },
 
-    navbarTogglerDesktop: () => {
+    navbarTogglerDesktop: function navbarTogglerDesktop() {
         $('.navbar-toggler-desktop').click(function () {
 
             var startPosition = $(window).scrollTop() <= 100 ? true : false;
             var mainNavbar = $('.navbar').hasClass('mainNavbar');
-
 
             if ($(this).hasClass('collapsed')) {
                 if (startPosition && mainNavbar) {
@@ -316,19 +301,16 @@ var APP = {
                 $('.navbar-toggler-icon').removeClass('open');
                 document.body.style.overflow = 'initial';
             }
-
-
         });
     },
 
-    caseControl: () => {
+    caseControl: function caseControl() {
 
         var i = 0;
 
-        $('.cases-control a').click(function(e) {
+        $('.cases-control a').click(function (e) {
             e.preventDefault();
 
-            
             if ($(this).data('rel') == 'prev') {
                 i--;
 
@@ -344,14 +326,14 @@ var APP = {
                 }
             }
 
-            $('#case-title').html($('#v-pills-tab-m .nav-link:eq('+i+')').html());
-            $('#v-pills-tab-m .nav-link:eq('+i+')').click();
+            $('#case-title').html($('#v-pills-tab-m .nav-link:eq(' + i + ')').html());
+            $('#v-pills-tab-m .nav-link:eq(' + i + ')').click();
 
             return false;
         });
     },
 
-    headMove: () => {
+    headMove: function headMove() {
 
         // document.addEventListener("mousemove", function() 
         // { 
@@ -365,96 +347,94 @@ var APP = {
         // });
         // });
 
-        setTimeout(function() {
+        setTimeout(function () {
             $('#head_SVG').animate({
                 right: 0
-            },3000);
-        },500);
+            }, 3000);
+        }, 500);
 
-        setTimeout(function() {
+        setTimeout(function () {
             $('.svg_dot--1').animate({
                 opacity: 1
             });
-        },1000);
+        }, 1000);
 
-        setTimeout(function() {
+        setTimeout(function () {
             $('.svg_dot--2').animate({
                 opacity: 1
             });
-        },1200);
+        }, 1200);
 
-        setTimeout(function() {
+        setTimeout(function () {
             $('.svg_dot--3').animate({
                 opacity: 1
             });
-        },1400);
+        }, 1400);
 
-        setTimeout(function() {
+        setTimeout(function () {
             $('.svg_dot--4').animate({
                 opacity: 1
             });
-        },1600);
+        }, 1600);
 
-        setTimeout(function() {
+        setTimeout(function () {
             $('.svg_lines--1').animate({
                 opacity: 1
             });
-        },1800);
+        }, 1800);
 
-        setTimeout(function() {
+        setTimeout(function () {
             $('.svg_lines--2').animate({
                 opacity: 1
             });
-        },2000);
+        }, 2000);
 
-
-        setTimeout(function() {
+        setTimeout(function () {
             $('.svg_shadow--1').animate({
                 opacity: .2
             });
-        },2200);
+        }, 2200);
 
-        setTimeout(function() {
+        setTimeout(function () {
             $('.svg_shadow--2').animate({
                 opacity: .4
             });
-        },2400);
-
+        }, 2400);
     },
 
-    formWhiteList: () => {
+    formWhiteList: function formWhiteList() {
         // SUBSCRIBE FORM
         var subscription_form = $("#whiteListForm");
         var submit_button = $("#whiteListSubmitButton");
         var cancel_button = $("#whiteListCancelButton");
-        var subscription_email = $("#recipient-email")  
+        var subscription_email = $("#recipient-email");
         var subscription_name = $("#recipient-name");
-        var subscription_phone = $("#recipient-phone");    
+        var subscription_phone = $("#recipient-phone");
         var subscription_amount = $("#recipient-amount");
         var subscription_checkbox = $("#customControlInline");
-        var subscription_status = $("#recipient-status");  
+        var subscription_status = $("#recipient-status");
 
-        subscription_email.keyup(function(e){
+        subscription_email.keyup(function (e) {
             var code = e.which;
-            if(code != 13) subscription_status.hide();
+            if (code != 13) subscription_status.hide();
         });
 
         var sending_in_progress = false;
 
-        subscription_form.submit(function(){
+        subscription_form.submit(function () {
 
             if (sending_in_progress) return false;
 
-            var sendInfo = { 
-                request: { 
-                    name: subscription_name.val(), 
-                    email: subscription_email.val(), 
-                    phone: subscription_phone.val(), 
-                    amount: subscription_amount.val() 
+            var sendInfo = {
+                request: {
+                    name: subscription_name.val(),
+                    email: subscription_email.val(),
+                    phone: subscription_phone.val(),
+                    amount: subscription_amount.val()
                 }
             };
 
-            console.log(sendInfo);      
+            console.log(sendInfo);
             sending_in_progress = true;
             subscription_status.html("<span>Sending...</span>");
             subscription_status.show();
@@ -463,7 +443,7 @@ var APP = {
                 type: "POST",
                 url: "/create_request",
                 data: sendInfo,
-                success: function(){
+                success: function success() {
                     subscription_status.html("<span>Success</span>");
                     $('#subscription_form').hide();
                     subscription_email.val("");
@@ -477,7 +457,7 @@ var APP = {
                     submit_button.remove();
                     cancel_button[0].innerText = "Закрыть";
                 },
-                error: function (jqXHR, exception) {
+                error: function error(jqXHR, exception) {
                     console.log('----------------error-------------------------');
                     var msg = '';
                     if (jqXHR.status === 0) {
@@ -492,12 +472,12 @@ var APP = {
                         msg = 'Time out error.';
                     } else if (exception === 'abort') {
                         msg = 'Ajax request aborted.';
-                    } else if (jqXHR.status == 400) { 
+                    } else if (jqXHR.status == 400) {
                         if (jqXHR.responseJSON && jqXHR.responseJSON.errors) {
                             msg = jqXHR.responseJSON.errors;
                         } else {
                             msg = 'Unknown Error!';
-                        }                
+                        }
                     } else {
                         msg = 'Uncaught Error.\n' + jqXHR.responseText;
                     }
@@ -510,27 +490,26 @@ var APP = {
             });
             return false;
         });
-        
     },
 
-    formSubscribe: () => {
+    formSubscribe: function formSubscribe() {
 
         var subscription_form = $("#subscriptionForm");
-        var subscription_email = $("#subscription-email")  
-        var subscription_status = $("#subscription-status");  
+        var subscription_email = $("#subscription-email");
+        var subscription_status = $("#subscription-status");
 
-        subscription_email.keyup(function(e){
+        subscription_email.keyup(function (e) {
             var code = e.which;
-            if(code != 13) subscription_status.hide();
+            if (code != 13) subscription_status.hide();
         });
 
         var sending_in_progress = false;
 
-        subscription_form.submit(function(){
+        subscription_form.submit(function () {
 
             if (sending_in_progress) return false;
 
-            var sendInfo= { email: subscription_email.val() };
+            var sendInfo = { email: subscription_email.val() };
 
             sending_in_progress = true;
             subscription_status.html("<span>Sending...</span>");
@@ -540,16 +519,15 @@ var APP = {
                 type: "POST",
                 url: "/create_subscribe_request",
                 data: sendInfo,
-                success: function(){
+                success: function success() {
                     subscription_status.html("<span>Success</span>");
                     $('#subscription_form').hide();
                     subscription_email.val("");
 
                     subscription_status.show();
                     sending_in_progress = false;
-
                 },
-                error: function (jqXHR, exception) {
+                error: function error(jqXHR, exception) {
                     console.log('----------------error-------------------------');
                     var msg = '';
                     if (jqXHR.status === 0) {
@@ -564,35 +542,35 @@ var APP = {
                         msg = 'Time out error.';
                     } else if (exception === 'abort') {
                         msg = 'Ajax request aborted.';
-                    } else if (jqXHR.status == 400) { 
+                    } else if (jqXHR.status == 400) {
                         if (jqXHR.responseJSON && jqXHR.responseJSON.error) {
                             msg = jqXHR.responseJSON.error;
                         } else {
                             msg = 'Unknown Error!';
-                        }                
+                        }
                     } else {
                         msg = 'Uncaught Error.\n' + jqXHR.responseText;
-                    }   
+                    }
 
                     subscription_status.html(msg);
                     subscription_status.show();
                     sending_in_progress = false;
-
                 }
 
             });
             return false;
         });
-
     },
 
-    iframePlay: () => {
-
-        
+    iframePlay: function iframePlay() {
 
         if ($('html').attr('lang') != 'cn') {
+            var onPlayerReady = function onPlayerReady(event) {
 
-            $('.video-play').click(function(e) {
+                event.target.playVideo();
+            };
+
+            $('.video-play').click(function (e) {
 
                 var target = $(this).attr('data-target');
                 var videoId = $(this).attr('data-videoId');
@@ -602,12 +580,12 @@ var APP = {
                 $(this).fadeOut(100);
 
                 var player = new YT.Player(target, {
-                  height: '100%',
-                  width: '100%',
-                  videoId: videoId,
-                  events: {
-                    'onReady': onPlayerReady,
-                  }
+                    height: '100%',
+                    width: '100%',
+                    videoId: videoId,
+                    events: {
+                        'onReady': onPlayerReady
+                    }
                 });
 
                 var iframe = document.getElementById(target);
@@ -616,49 +594,36 @@ var APP = {
                 if (requestFullScreen) {
                     requestFullScreen.bind(iframe)();
                 }
-                        
 
                 return false;
-
             });
-        
-            
+        } else {
+            $('.video-play').click(function (e) {
 
-            function onPlayerReady(event) {
-                
-                event.target.playVideo();
-   
-            }
-        }else {
-            $('.video-play').click(function(e) {
+                e.preventDefault();
 
-                    e.preventDefault();
+                $(this).fadeOut(100);
 
-                    $(this).fadeOut(100);
+                var iframe = document.getElementById($(this).data('target'));
 
-                    var iframe = document.getElementById($(this).data('target'));
+                iframe.contentWindow.postMessage(JSON.stringify({
+                    type: 'player:play',
+                    data: {}
+                }), '*');
 
-                    iframe.contentWindow.postMessage(JSON.stringify({
-                        type: 'player:play',
-                        data: {}
-                    }), '*');
+                var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
 
-                    var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
-                    
-                    if (requestFullScreen) {
-                        requestFullScreen.bind(iframe)();
-                    }
+                if (requestFullScreen) {
+                    requestFullScreen.bind(iframe)();
+                }
 
-                    return false;
-
-                });
+                return false;
+            });
         }
-        
-
     },
 
-    countrySelect:() =>  {
-        $('#countrySelect').on('change', function() {
+    countrySelect: function countrySelect() {
+        $('#countrySelect').on('change', function () {
 
             if ($(this).val() == 'US') {
                 $('.alert').removeClass('d-none');
@@ -669,8 +634,8 @@ var APP = {
         });
     },
 
-    toggleBlock:() =>  {
-        $('.btn-toggler').click(function(e) {
+    toggleBlock: function toggleBlock() {
+        $('.btn-toggler').click(function (e) {
             e.preventDefault();
 
             $('#' + $(this).data('target')).slideToggle();
@@ -680,4 +645,4 @@ var APP = {
         });
     }
 
-}
+};
