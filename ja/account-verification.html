@@ -2,20 +2,19 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>Viarium</title>
-        <meta http-equiv="Cache-Control" content="public" />
-        <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" />
+        <title>分権 VR WORLD リアルライフ のために ビジネスのために</title>
+        <meta http-equiv="Cache-Control" content="public">
+        <meta http-equiv="Cache-Control" content="max-age=15000, must-revalidate">
         <meta name="Robots" content="INDEX, FOLLOW">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
         <meta name="format-detection" content="telephone=no">
         <meta http-equiv="x-rim-auto-match" content="none">
-        <link rel="stylesheet" type="text/css" href="/en/css/app.min.css?v=1.0.8">
-        <link rel="stylesheet" type="text/css" href="/en/css/app_ja.min.css?v=1.0.8">
-        <link href="/en/img/logo-dark.png" rel="shortcut icon">
-        <link href="/en/img/logo-dark.png" rel="shortcut icon" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="/en/css/app.min.css?v=1.1.36">
+        <link href="/en/img/logo-dark.png?v=1.1.36" rel="shortcut icon">
+        <link href="/en/img/logo-dark.png?v=1.1.36" rel="shortcut icon" type="image/x-icon">
 
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href="/manifest.json">
         <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
         <script>
           var OneSignal = window.OneSignal || [];
@@ -26,7 +25,7 @@
           });
         </script>
 
-        <!-- Google Tag Manager -->
+        
         <script>
 
         var GTM_PROD = 'GTM-5RFJHRV';
@@ -48,23 +47,22 @@
         console.log(GTM);
 
         </script>
-        <!-- End Google Tag Manager -->
+        
 
     </head>
     <body>
-
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RFJHRV"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-
+        
+        
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RFJHRV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        
+        
         
     <div class="wrapper">
         <nav class="navbar navbar-expand-xl navbar-dark fixed-top">
     <div class="container">
         <a class="navbar-brand mr-2 mr-xl-3" href="/">
-            <img src="/en/img/logo-print.svg" class="d-none d-sm-inline-block" alt="">
-            <img src="/en/img/logo-icon.png" class="d-sm-none d-inline-block" alt="">
+            <img src="/en/img/logo-print.svg?v=1.1.36" class="d-none d-sm-inline-block" alt="">
+            <img src="/en/img/logo-icon.png?v=1.1.36" class="d-sm-none d-inline-block" alt="">
         </a>
 
         <div class="collapse navbar-collapse mx-auto" id="navbarSupportedContent">
@@ -115,7 +113,7 @@
 
     </div>
 
-    <div class="collapse" id="navbarSupportedContent1" style="width: 100%;">
+    <div class="collapse" id="navbarSupportedContent1" style="width: 100%">
         <div class="container">
             <div class="navbar-inner">
                 <div class="row">
@@ -175,6 +173,12 @@
                                 
                                                         <li class="nav-item">
                                                                 <a class="nav-link" href="/#BlogTitle">ブログ</a>
+                                                            </li>
+                                                        
+                                                    
+                                
+                                                        <li class="nav-item">
+                                                                <a class="nav-link" href="/#PressTitle">ニュースリリース</a>
                                                             </li>
                                                         
                                                     
@@ -309,8 +313,7 @@
                             <li class="list-item"><a href="account-balance.html" class="menu-link">Баланс</a></li>
                             <li class="list-item"><a href="account-profile.html" class="menu-link">Профиль</a></li>
                             <li class="list-item"><a href="account-2fa.html" class="menu-link">2FA</a></li>
-                            <li class="list-item list-item--br"><a href="account-personal.html" class="menu-link">Персональные данные</a></li>
-                            <li class="list-item active list-item--br"><a href="account-verification.html" class="menu-link">Верификация</a></li>
+                            
 
                         </ul>
 
@@ -345,25 +348,32 @@
             </div>
         </div>
     </div>
-</section>        <footer class="section section-rounded section-footer" >
+</section>        <footer class="section section-rounded section-footer">
         <div class="section-round section-round--white section-round-top" id="footer"></div>
         <div class="hex hex-7"></div>
         <div class="container">
             <div class="section-content">
             <div class="row">
 
-                <div class="col-lg-6 offset-lg-3 d-none">
+                <div class="col-lg-6 offset-lg-3">
                     <div class="text-center">
                         <div class="text-xl mb-1"><span class="mark">ニュースをご確認下さい</span></div>
                         <div class="text-md mb-3">ニュースを購読し、新しいプラットフォームの非公開テストに参加する機会を得て下さい！</div>
-                        <form>
+
+                        <form id="subscriptionForm">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Enter Your E-mail">
-                                <button type="submit" class="btn btn-default">
-                                    <img src="/en/img/arrow-right-w.png" alt="">
+                                <input type="email" class="form-control" placeholder="Enter Your E-mail" id="subscription-email">
+                                <button type="submit" class="btn btn-default btn-nowrap">
+                                    <img src="/en/img/arrow-right-w.png?v=1.1.36" alt="">
                                 </button>
                             </div>
+
+                            <p class="text-center text-md mt-3">
+                                <span class="mark" id="subscription-status"></span>
+                            </p>
                         </form>
+
+
                     </div>
                 </div>
 
@@ -375,62 +385,62 @@
                         
                                                     <li>
                                                                 <a target="_blank" href="" data-toggle="modal" data-target="#wechat">
-                                    <img src="/en/img/icons/wechat-b.png" alt="">
+                                    <img src="/en/img/icons/wechat-b.png?v=1.1.36" alt="">
                                 </a>
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://www.facebook.com/ViariumProject/">
-                                    <img src="/en/img/icons/fb.svg" alt="">
+                                    <img src="/en/img/icons/fb.svg?v=1.1.36" alt="">
                                 </a>
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://twitter.com/ViariumProject">
-                                    <img src="/en/img/icons/tw.svg" alt="">
+                                    <img src="/en/img/icons/tw.svg?v=1.1.36" alt="">
                                 </a>
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://www.linkedin.com/company/viarium/">
-                                    <img src="/en/img/icons/in.svg" alt="">
+                                    <img src="/en/img/icons/in.svg?v=1.1.36" alt="">
                                 </a>
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://t.me/viariumen">
-                                    <img src="/en/img/icons/tg.svg" alt="">
+                                    <img src="/en/img/icons/tg.svg?v=1.1.36" alt="">
                                 </a>
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://www.youtube.com/channel/UCb9jj2H9Rl3IhK1YVNaSHEg">
-                                    <img src="/en/img/icons/youtube.svg" alt="">
+                                    <img src="/en/img/icons/youtube.svg?v=1.1.36" alt="">
                                 </a>
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://www.instagram.com/viarium_project">
-                                    <img src="/en/img/icons/instagram-b.png" alt="">
+                                    <img src="/en/img/icons/instagram-b.png?v=1.1.36" alt="">
                                 </a>
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://bitcointalk.org/index.php?topic=2858512.msg29340359#msg29340359">
-                                    <img src="/en/img/icons/btalk.svg" alt="">
+                                    <img src="/en/img/icons/btalk.svg?v=1.1.36" alt="">
                                 </a>
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://steemit.com/@viarium">
-                                    <img src="/en/img/icons/steemit.svg" alt="">
+                                    <img src="/en/img/icons/steemit.svg?v=1.1.36" alt="">
                                 </a>
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://www.reddit.com/user/VIArium/">
-                                    <img src="/en/img/icons/reddit.svg" alt="">
+                                    <img src="/en/img/icons/reddit.svg?v=1.1.36" alt="">
                                 </a>
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://medium.com/@viarium.io">
-                                    <img src="/en/img/icons/medium.svg" alt="">
+                                    <img src="/en/img/icons/medium.svg?v=1.1.36" alt="">
                                 </a>
                                                             </li>
                                                     <li>
                                                                 <a target="_blank" href="https://golos.io/@viariumio">
-                                    <img src="/en/img/icons/golos-b.png" alt="">
+                                    <img src="/en/img/icons/golos-b.png?v=1.1.36" alt="">
                                 </a>
                                                             </li>
                         
@@ -503,56 +513,70 @@
     </div>
 
         <div class="modal fade bd-example-modal-lg" id="whiteListModal" tabindex="-1" role="dialog" aria-labelledby="whiteListModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title title-md" id="whiteListModalLabel">登録申請</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form method="POST" id="whiteListForm">
-            <div class="form-row">
-              <div class="col-lg-6 form-group">
-                <label for="recipient-name" class="col-form-label">お名前:</label>
-                <input type="text" class="form-control" name="name" id="recipient-name">
-              </div>
-              <div class="col-lg-6 form-group">
-                <label for="recipient-phone" class="col-form-label">電話番号:</label>
-                <input type="tel" class="form-control" name="phone" id="recipient-phone">
-              </div>
+
+    <div class="modal-dialog modal-lg" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title title-md" id="whiteListModalLabel">登録申請</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
 
-            <div class="form-row">
-              <div class="col-lg-6 form-group">
-                <label for="recipient-email" class="col-form-label">電子メール:</label>
-                <input type="email" class="form-control" name="email" id="recipient-email" required>
-              </div>
-              <div class="col-lg-6 form-group">
-                <label for="recipient-amount" class="col-form-label">投資金額:</label>
-                <input type="number" class="form-control" name="amount" id="recipient-amount">
-              </div>
+            <div class="modal-body">
+
+                <form method="POST" id="whiteListForm">
+
+                    <div class="form-row">
+                        <div class="col-lg-6 form-group">
+                        <label for="recipient-name" class="col-form-label">お名前:</label>
+                        <input type="text" class="form-control" name="name" id="recipient-name">
+                        </div>
+                        <div class="col-lg-6 form-group">
+                        <label for="recipient-phone" class="col-form-label">電話番号:</label>
+                        <input type="tel" class="form-control" name="phone" id="recipient-phone">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="col-lg-6 form-group">
+                            <label for="recipient-email" class="col-form-label">電子メール:</label>
+                            <input type="email" class="form-control" name="email" id="recipient-email" required>
+                        </div>
+
+                        <div class="col-lg-6 form-group">
+                            <label for="recipient-amount" class="col-form-label">投資金額:</label>
+                            <input type="number" class="form-control" name="amount" id="recipient-amount">
+                        </div>
+
+                    </div>
+
+                    <div class="form-row mb-3">
+                        <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                            <input type="checkbox" class="custom-control-input" name="agree" required id="customControlInline">
+                            <label class="custom-control-label" for="customControlInline">私は個人情報の処理に同意します</label>
+                        </div>
+                    </div>
+
+                    <p class="text-center text-md mb-3">
+                        <span class="mark" id="recipient-status"></span>
+                    </p>
+
+                    <div class="btn-group d-flex btn-fluid" aria-label="Basic example">
+                        <button type="button" class="btn btn-fluid btn-secondary" data-dismiss="modal" id="whiteListCancelButton">断る</button>
+                        <button type="submit" class="btn btn-fluid btn-default" id="whiteListSubmitButton">リクエストを送信する</button>
+                    </div>
+
+                </form>
             </div>
 
-            <div class="form-row mb-3">
-                <div class="custom-control custom-checkbox my-1 mr-sm-2">
-                <input type="checkbox" class="custom-control-input" name="agree" required id="customControlInline">
-                <label class="custom-control-label" for="customControlInline">私は個人情報の処理に同意します</label>
-              </div>
-             </div>
-
-          <div class="btn-group d-flex btn-fluid" aria-label="Basic example">
-            <button type="button" class="btn btn-fluid btn-secondary" data-dismiss="modal" id="whiteListCancelButton">断る</button>
-            <button type="submit" class="btn btn-fluid btn-default" id="whiteListSubmitButton">リクエストを送信する</button>
-          </div>
-
-        </form>
-      </div>
-
+        </div>
 
     </div>
-  </div>
+
 </div>
 
 <div class="modal fade bd-example-modal-lg" id="wechat" tabindex="-1" role="dialog" aria-labelledby="wecaht" aria-hidden="true">
@@ -565,7 +589,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <img src="/en/img/wechat.png" alt="" class="img-responsive">
+        <img src="/en/img/wechat.png?v=1.1.36" alt="" class="img-responsive">
       </div>
 
 
@@ -588,9 +612,11 @@
   </div>
 </div> 
         
+        
+        
         <script src="https://www.youtube.com/iframe_api"></script>
-        <script type="text/javascript" src="/en/js/vendor.js?v=1.0.8"></script>
-        <script type="text/javascript" src="/en/js/app.js?v=1.0.8"></script>
-            <script type="text/javascript" src="/en/js/index.js?v=1.0.8"></script>
+        <script type="text/javascript" src="/en/js/vendor.js?v=1.1.36"></script>
+        <script type="text/javascript" src="/en/js/app.js?v=1.1.36"></script>
+            <script type="text/javascript" src="/en/js/index.js?v=1.1.36"></script>
     </body>
 </html>

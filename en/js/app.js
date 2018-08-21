@@ -7,6 +7,12 @@ var APP = {
         height: $(window).height()
     },
 
+    preloader: function() {
+        setTimeout(function(){
+            $('#preloader').fadeOut(400);
+        },500);
+    },
+
     DLS: function() {
 
         var host = window.location.hostname;
@@ -105,31 +111,62 @@ var APP = {
         var timeinterval = setInterval(updateClock, 1000);
     },
 
+    counterElSwitcher: (date, deadline) => {
+
+        var dateNow = new Date();
+        let el = $('[data-element="counter"]');
+
+        if (new Date(date) - dateNow<=0) {
+            $('.timerElHide').addClass('d-none');
+            $('.timerElShow').removeClass('d-none');
+            el.attr('data-deadline', deadline);
+        }
+
+    },
+
     roadmapSlide: () => {
-        $('a.slider-arrow').click(function (e) {
+
+        var zeroWidth = 4600;
+        var step = 2800 / 16;
+
+
+        $('.slider-arrow[data-event="prev"]').click(function (e) {
             e.preventDefault();
             var position = $('.roadmap-block').position();
 
-            if ($(this).data('event') == 'prev') {
-                console.log(position.left);
-                if (position.left >= 90) {
-                    return false;
-                } else {
-                    $(".roadmap-block").animate({
-                        "left": "+=240px"
-                    }, "slow");
-                }
+            if (position.left >= 0) {
+                return false;
+            } else {
+                $(this).prop('disabled', true);
+                $(".roadmap-block").animate({
+                    "left": "+="+step+"px"
+                }, 1000, function() {
+                    $('.slider-arrow[data-event="prev"]').prop('disabled', false);
+                });
+            }
+            
+            return false;
+        });
+
+        $('.slider-arrow[data-event="next"]').click(function (e) {
+            e.preventDefault();
+
+
+            var position = $('.roadmap-block').position();
+
+
+            if (position.left <= -((zeroWidth - $(window).width()) / 2 ) + 300 ) {
+                return false;
             } else {
 
-                if (position.left <= $(window).width() - 3000) {
-                    return false;
-                } else {
-                    $(".roadmap-block").animate({
-                        "left": "-=240px"
-                    }, "slow");
-                }
+                $(this).prop('disabled', true);
+                $(".roadmap-block").animate({
+                    "left": "-="+step+"px"
+                }, 1000, function() {
+                    $('.slider-arrow[data-event="next"]').prop('disabled', false);
+                });
             }
-
+            
             return false;
         });
 
@@ -145,7 +182,7 @@ var APP = {
         }
     },
 
-    bxSlider: function(elem) {
+    slider: function(elem) {
 
         var prefix;
         var adaptiveHeight;
@@ -157,7 +194,10 @@ var APP = {
             prefix = '--desctop';
             adaptiveHeight = false;
         }
-        $(elem + prefix).bxSlider({
+
+        var El = elem + prefix;
+
+        $(El).bxSlider({
             pager: false,
             prevText: '',
             nextText: '',
@@ -304,9 +344,6 @@ var APP = {
                 }
             }
 
-            
-            console.log(i);
-
             $('#case-title').html($('#v-pills-tab-m .nav-link:eq('+i+')').html());
             $('#v-pills-tab-m .nav-link:eq('+i+')').click();
 
@@ -385,58 +422,262 @@ var APP = {
 
     },
 
-    formSend: (formId) => {
+    formWhiteList: () => {
+        // SUBSCRIBE FORM
+        var subscription_form = $("#whiteListForm");
+        var submit_button = $("#whiteListSubmitButton");
+        var cancel_button = $("#whiteListCancelButton");
+        var subscription_email = $("#recipient-email")  
+        var subscription_name = $("#recipient-name");
+        var subscription_phone = $("#recipient-phone");    
+        var subscription_amount = $("#recipient-amount");
+        var subscription_checkbox = $("#customControlInline");
+        var subscription_status = $("#recipient-status");  
 
-        $('#'+formId).submit(function(e) {
+        subscription_email.keyup(function(e){
+            var code = e.which;
+            if(code != 13) subscription_status.hide();
+        });
 
-            e.preventDefault();
+        var sending_in_progress = false;
 
-            var data = $(this).serializeArray();
+        subscription_form.submit(function(){
 
+            if (sending_in_progress) return false;
+
+            var sendInfo = { 
+                request: { 
+                    name: subscription_name.val(), 
+                    email: subscription_email.val(), 
+                    phone: subscription_phone.val(), 
+                    amount: subscription_amount.val() 
+                }
+            };
+
+            console.log(sendInfo);      
+            sending_in_progress = true;
+            subscription_status.html("<span>Sending...</span>");
+            subscription_status.show();
 
             $.ajax({
                 type: "POST",
                 url: "/create_request",
-                data: data,
+                data: sendInfo,
                 success: function(){
+                    subscription_status.html("<span>Success</span>");
+                    $('#subscription_form').hide();
+                    subscription_email.val("");
+                    subscription_name.val('');
+                    subscription_phone.val('');
+                    subscription_amount.val('');
+                    subscription_checkbox.prop("checked", false);
 
+                    subscription_status.show();
+                    sending_in_progress = false;
+                    submit_button.remove();
+                    cancel_button[0].innerText = "Закрыть";
                 },
-
                 error: function (jqXHR, exception) {
-                    
-                }
-   
-            });
+                    console.log('----------------error-------------------------');
+                    var msg = '';
+                    if (jqXHR.status === 0) {
+                        msg = 'Not connect.\n Verify Network.';
+                    } else if (jqXHR.status == 404) {
+                        msg = 'Requested page not found. [404]';
+                    } else if (jqXHR.status == 500) {
+                        msg = 'Internal Server Error [500].';
+                    } else if (exception === 'parsererror') {
+                        msg = 'Requested JSON parse failed.';
+                    } else if (exception === 'timeout') {
+                        msg = 'Time out error.';
+                    } else if (exception === 'abort') {
+                        msg = 'Ajax request aborted.';
+                    } else if (jqXHR.status == 400) { 
+                        if (jqXHR.responseJSON && jqXHR.responseJSON.errors) {
+                            msg = jqXHR.responseJSON.errors;
+                        } else {
+                            msg = 'Unknown Error!';
+                        }                
+                    } else {
+                        msg = 'Uncaught Error.\n' + jqXHR.responseText;
+                    }
 
+                    subscription_status.html(msg);
+                    subscription_status.show();
+                    sending_in_progress = false;
+                }
+
+            });
+            return false;
         });
+        
     },
 
-    iframePlay: (target) => {
+    formSubscribe: () => {
 
-        $('.video-play').click(function(e) {
+        var subscription_form = $("#subscriptionForm");
+        var subscription_email = $("#subscription-email")  
+        var subscription_status = $("#subscription-status");  
 
-            e.preventDefault();
+        subscription_email.keyup(function(e){
+            var code = e.which;
+            if(code != 13) subscription_status.hide();
+        });
 
-            $(this).fadeOut(100);
+        var sending_in_progress = false;
 
-            var player = new YT.Player('mainVideo', {
+        subscription_form.submit(function(){
+
+            if (sending_in_progress) return false;
+
+            var sendInfo= { email: subscription_email.val() };
+
+            sending_in_progress = true;
+            subscription_status.html("<span>Sending...</span>");
+            subscription_status.show();
+
+            $.ajax({
+                type: "POST",
+                url: "/create_subscribe_request",
+                data: sendInfo,
+                success: function(){
+                    subscription_status.html("<span>Success</span>");
+                    $('#subscription_form').hide();
+                    subscription_email.val("");
+
+                    subscription_status.show();
+                    sending_in_progress = false;
+
+                },
+                error: function (jqXHR, exception) {
+                    console.log('----------------error-------------------------');
+                    var msg = '';
+                    if (jqXHR.status === 0) {
+                        msg = 'Not connect.\n Verify Network.';
+                    } else if (jqXHR.status == 404) {
+                        msg = 'Requested page not found. [404]';
+                    } else if (jqXHR.status == 500) {
+                        msg = 'Internal Server Error [500].';
+                    } else if (exception === 'parsererror') {
+                        msg = 'Requested JSON parse failed.';
+                    } else if (exception === 'timeout') {
+                        msg = 'Time out error.';
+                    } else if (exception === 'abort') {
+                        msg = 'Ajax request aborted.';
+                    } else if (jqXHR.status == 400) { 
+                        if (jqXHR.responseJSON && jqXHR.responseJSON.error) {
+                            msg = jqXHR.responseJSON.error;
+                        } else {
+                            msg = 'Unknown Error!';
+                        }                
+                    } else {
+                        msg = 'Uncaught Error.\n' + jqXHR.responseText;
+                    }   
+
+                    subscription_status.html(msg);
+                    subscription_status.show();
+                    sending_in_progress = false;
+
+                }
+
+            });
+            return false;
+        });
+
+    },
+
+    iframePlay: () => {
+
+        
+
+        if ($('html').attr('lang') != 'cn') {
+
+            $('.video-play').click(function(e) {
+
+                var target = $(this).attr('data-target');
+                var videoId = $(this).attr('data-videoId');
+
+                e.preventDefault();
+
+                $(this).fadeOut(100);
+
+                var player = new YT.Player(target, {
                   height: '100%',
                   width: '100%',
-                  videoId: 'hbuU0j75o7c',
+                  videoId: videoId,
                   events: {
                     'onReady': onPlayerReady,
                   }
                 });
 
+                var iframe = document.getElementById(target);
+
+                var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+                if (requestFullScreen) {
+                    requestFullScreen.bind(iframe)();
+                }
+                        
+
+                return false;
+
+            });
+        
+            
+
             function onPlayerReady(event) {
+                
                 event.target.playVideo();
+   
             }
-              
+        }else {
+            $('.video-play').click(function(e) {
+
+                    e.preventDefault();
+
+                    $(this).fadeOut(100);
+
+                    var iframe = document.getElementById($(this).data('target'));
+
+                    iframe.contentWindow.postMessage(JSON.stringify({
+                        type: 'player:play',
+                        data: {}
+                    }), '*');
+
+                    var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+                    
+                    if (requestFullScreen) {
+                        requestFullScreen.bind(iframe)();
+                    }
+
+                    return false;
+
+                });
+        }
+        
+
+    },
+
+    countrySelect:() =>  {
+        $('#countrySelect').on('change', function() {
+
+            if ($(this).val() == 'US') {
+                $('.alert').removeClass('d-none');
+                $(this).prop('disabled', true);
+                $('.btn[type="submit"]').prop('disabled', true);
+                $('input').prop('disabled', true);
+            }
+        });
+    },
+
+    toggleBlock:() =>  {
+        $('.btn-toggler').click(function(e) {
+            e.preventDefault();
+
+            $('#' + $(this).data('target')).slideToggle();
+            $(this).fadeOut();
 
             return false;
-
         });
-
     }
 
 }
