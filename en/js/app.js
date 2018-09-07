@@ -1,5 +1,3 @@
-'use strict';
-
 var APP = {
 
     SB: $('.section-round'),
@@ -9,13 +7,13 @@ var APP = {
         height: $(window).height()
     },
 
-    preloader: function preloader() {
+    preloader: function () {
         setTimeout(function () {
             $('#preloader').fadeOut(400);
         }, 500);
     },
 
-    DLS: function DLS() {
+    DLS: function () {
 
         var host = window.location.hostname;
         var search = window.location.search;
@@ -33,7 +31,7 @@ var APP = {
         }
     },
 
-    rounded: function rounded() {
+    rounded: function () {
 
         var elem = document.getElementsByClassName('section-round');
 
@@ -58,9 +56,9 @@ var APP = {
         }
     },
 
-    counter: function counter(dataElement) {
-        var el = '[data-element="' + dataElement + '"]';
-        var endtime = $(el).attr('data-deadline');
+    counter: dataElement => {
+        let el = '[data-element="' + dataElement + '"]';
+        let endtime = $(el).attr('data-deadline');
 
         var daysSpan = $(el + ' .clock__days');
         var hoursSpan = $(el + ' .clock__hours');
@@ -110,10 +108,10 @@ var APP = {
         var timeinterval = setInterval(updateClock, 1000);
     },
 
-    counterElSwitcher: function counterElSwitcher(date, deadline) {
+    counterElSwitcher: (date, deadline) => {
 
         var dateNow = new Date();
-        var el = $('[data-element="counter"]');
+        let el = $('[data-element="counter"]');
 
         if (new Date(date) - dateNow <= 0) {
             $('.timerElHide').addClass('d-none');
@@ -122,7 +120,7 @@ var APP = {
         }
     },
 
-    roadmapSlide: function roadmapSlide() {
+    roadmapSlide: () => {
 
         var zeroWidth = 4600;
         var step = 2800 / 16;
@@ -177,7 +175,7 @@ var APP = {
         }
     },
 
-    slider: function slider(elem) {
+    slider: function (elem) {
 
         var prefix;
         var adaptiveHeight;
@@ -200,11 +198,11 @@ var APP = {
         });
     },
 
-    kycTab: function kycTab() {
+    kycTab: () => {
 
         $('.radio-tab-kys').click(function (e) {
 
-            var target = $(this).data('target');
+            let target = $(this).data('target');
 
             $('.step-option').removeClass('d-block').addClass('d-none');
             $('#' + target).removeClass('d-none').addClass('d-block');
@@ -220,7 +218,7 @@ var APP = {
 
             e.preventDefault();
 
-            var target = $(this).data('target');
+            let target = $(this).data('target');
 
             $('.kys-link').removeClass('active');
             $(this).addClass('active');
@@ -232,12 +230,12 @@ var APP = {
         });
     },
 
-    anchorScroll: function anchorScroll() {
+    anchorScroll: () => {
         $('.anchor').click(function (e) {
             e.preventDefault();
 
-            var hash = $(this).attr("data-hash");
-            var corrector = -120;
+            let hash = $(this).attr("data-hash");
+            let corrector = -120;
 
             if ($('.navbar .collapse').hasClass('show')) {
                 $('.navbar-toggler-desktop').click();
@@ -251,10 +249,10 @@ var APP = {
         });
     },
 
-    hashScroll: function hashScroll() {
+    hashScroll: () => {
 
-        var hash = location.hash;
-        var corrector = -120;
+        let hash = location.hash;
+        let corrector = -120;
 
         if (hash != '') {
 
@@ -282,7 +280,7 @@ var APP = {
     //     });
     // },
 
-    navbarTogglerDesktop: function navbarTogglerDesktop() {
+    navbarTogglerDesktop: () => {
         $('.navbar-toggler-desktop').click(function () {
 
             var startPosition = $(window).scrollTop() <= 100 ? true : false;
@@ -304,7 +302,7 @@ var APP = {
         });
     },
 
-    caseControl: function caseControl() {
+    caseControl: () => {
 
         var i = 0;
 
@@ -333,7 +331,7 @@ var APP = {
         });
     },
 
-    headMove: function headMove() {
+    headMove: () => {
 
         // document.addEventListener("mousemove", function() 
         // { 
@@ -402,7 +400,7 @@ var APP = {
         }, 2400);
     },
 
-    formWhiteList: function formWhiteList() {
+    formWhiteList: () => {
         // SUBSCRIBE FORM
         var subscription_form = $("#whiteListForm");
         var submit_button = $("#whiteListSubmitButton");
@@ -443,7 +441,7 @@ var APP = {
                 type: "POST",
                 url: "/create_request",
                 data: sendInfo,
-                success: function success() {
+                success: function () {
                     subscription_status.html("<span>Success</span>");
                     $('#subscription_form').hide();
                     subscription_email.val("");
@@ -457,7 +455,7 @@ var APP = {
                     submit_button.remove();
                     cancel_button[0].innerText = "Закрыть";
                 },
-                error: function error(jqXHR, exception) {
+                error: function (jqXHR, exception) {
                     console.log('----------------error-------------------------');
                     var msg = '';
                     if (jqXHR.status === 0) {
@@ -492,7 +490,7 @@ var APP = {
         });
     },
 
-    formSubscribe: function formSubscribe() {
+    formSubscribe: () => {
 
         var subscription_form = $("#subscriptionForm");
         var subscription_email = $("#subscription-email");
@@ -519,7 +517,7 @@ var APP = {
                 type: "POST",
                 url: "/create_subscribe_request",
                 data: sendInfo,
-                success: function success() {
+                success: function () {
                     subscription_status.html("<span>Success</span>");
                     $('#subscription_form').hide();
                     subscription_email.val("");
@@ -527,7 +525,7 @@ var APP = {
                     subscription_status.show();
                     sending_in_progress = false;
                 },
-                error: function error(jqXHR, exception) {
+                error: function (jqXHR, exception) {
                     console.log('----------------error-------------------------');
                     var msg = '';
                     if (jqXHR.status === 0) {
@@ -562,13 +560,9 @@ var APP = {
         });
     },
 
-    iframePlay: function iframePlay() {
+    iframePlay: () => {
 
         if ($('html').attr('lang') != 'cn') {
-            var onPlayerReady = function onPlayerReady(event) {
-
-                event.target.playVideo();
-            };
 
             $('.video-play').click(function (e) {
 
@@ -597,6 +591,11 @@ var APP = {
 
                 return false;
             });
+
+            function onPlayerReady(event) {
+
+                event.target.playVideo();
+            }
         } else {
             $('.video-play').click(function (e) {
 
@@ -622,7 +621,7 @@ var APP = {
         }
     },
 
-    countrySelect: function countrySelect() {
+    countrySelect: () => {
         $('#countrySelect').on('change', function () {
 
             if ($(this).val() == 'US') {
@@ -634,7 +633,7 @@ var APP = {
         });
     },
 
-    toggleBlock: function toggleBlock() {
+    toggleBlock: () => {
         $('.btn-toggler').click(function (e) {
             e.preventDefault();
 
