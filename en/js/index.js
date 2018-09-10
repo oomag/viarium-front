@@ -1,3 +1,5 @@
+'use strict';
+
 window.onload = function () {
 	// APP.preloader();
 	APP.counterElSwitcher('2018-08-05T23:59:59', '2018-08-12T23:59:59');
