@@ -517,8 +517,9 @@ var APP = {
                 type: "POST",
                 url: "/create_subscribe_request",
                 data: sendInfo,
-                success: function () {
-                    subscription_status.html("<span>Success</span>");
+                success: function (data) {
+                    var msg = data.text;
+                    subscription_status.html("<span>" + msg + "</span>");
                     $('#subscription_form').hide();
                     subscription_email.val("");
 
