@@ -148,7 +148,7 @@ var APP = {
 
             var position = $('.roadmap-block').position();
 
-            if (position.left <= -((zeroWidth - $(window).width()) / 2) + 300) {
+            if (position.left <= -(zeroWidth - $(window).width()) / 2) {
                 return false;
             } else {
 
