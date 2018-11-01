@@ -644,6 +644,17 @@ var APP = {
 
             return false;
         });
+    },
+
+    showMore: function showMore() {
+        $('.trigger').click(function (e) {
+            e.preventDefault();
+            $($(this).attr('href')).slideToggle(200);
+
+            var text = $(this).text();
+
+            $(this).text(text == trans.readMore ? trans.hideText : trans.readMore);
+        });
     }
 
 };

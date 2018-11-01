@@ -1,6 +1,4 @@
-'use strict';
-
-var trans = {
+const trans = {
     readMore: 'далее',
     hideText: 'скрыть'
-};
+}
