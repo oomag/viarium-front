@@ -20,6 +20,7 @@ window.onload = function () {
 	APP.formSubscribe();
 	APP.countrySelect();
 	APP.toggleBlock();
+	APP.showMore();
 };
 
 var watch = true;
