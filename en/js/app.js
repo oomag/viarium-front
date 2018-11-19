@@ -626,7 +626,7 @@ var APP = {
     countrySelect: function countrySelect() {
         $('#countrySelect').on('change', function () {
 
-            if ($(this).val() == 'US') {
+            if ($(this).val() == 'US' || $(this).val() == 'CA' || $(this).val() == 'CN' || $(this).val() == 'SG') {
                 $('.alert').removeClass('d-none');
                 $(this).prop('disabled', true);
                 $('.btn[type="submit"]').prop('disabled', true);
