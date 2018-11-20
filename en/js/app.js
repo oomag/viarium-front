@@ -676,9 +676,9 @@ var APP = {
     //                    $('.scale-line').text('$ ' + now.toLocaleString());
     //                }
     //
-    //                if ((parseInt(now) / parseInt(hard)) * 100 <= 38) {
+    //                if ((parseInt(now) / parseInt(hard)) * 100 <= 31) {
     //                    $('.scale-line').css({
-    //                        width: '38%'
+    //                        width: '31%'
     //                    });
     //                } else {
     //                    $('.scale-line').css({
