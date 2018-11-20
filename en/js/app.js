@@ -655,6 +655,38 @@ var APP = {
 
             $(this).text(text == trans.readMore ? trans.hideText : trans.readMore);
         });
+    },
+
+    getScale: function getScale() {
+        $.ajax({
+            url: "http://viarium.co/api/read.php",
+            type: "GET",
+            cache: false,
+            beforeSend: function beforeSend() {},
+            success: function success(response) {
+                // console.log(+response.usd + 5182790.9);
+                var hard = '5000000';
+                var usd = Number(response.usd);
+                // var now = +usd.toFixed() + 5182810;
+                var now = +usd.toFixed();
+
+                if ($('html').attr('lang') == 'ru') {
+                    $('.scale-line').text(now.toLocaleString() + ' $');
+                } else {
+                    $('.scale-line').text('$ ' + now.toLocaleString());
+                }
+
+                if (parseInt(now) / parseInt(hard) * 100 <= 38) {
+                    $('.scale-line').css({
+                        width: '38%'
+                    });
+                } else {
+                    $('.scale-line').css({
+                        width: parseInt(now) / parseInt(hard) * 100 + '%'
+                    });
+                }
+            }
+        });
     }
 
 };
