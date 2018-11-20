@@ -21,6 +21,7 @@ window.onload = function () {
 	APP.countrySelect();
 	APP.toggleBlock();
 	APP.showMore();
+	//	APP.getScale();
 };
 
 var watch = true;
