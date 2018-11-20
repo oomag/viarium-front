@@ -659,7 +659,7 @@ var APP = {
 
     getScale: function getScale() {
         $.ajax({
-            url: "http://viarium.co/api/read.php",
+            url: "https://viarium.co/api/read.php",
             type: "GET",
             cache: false,
             beforeSend: function beforeSend() {},
@@ -676,9 +676,9 @@ var APP = {
                     $('.scale-line').text('$ ' + now.toLocaleString());
                 }
 
-                if (parseInt(now) / parseInt(hard) * 100 <= 38) {
+                if (parseInt(now) / parseInt(hard) * 100 <= 31) {
                     $('.scale-line').css({
-                        width: '38%'
+                        width: '31%'
                     });
                 } else {
                     $('.scale-line').css({
