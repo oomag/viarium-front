@@ -172,7 +172,7 @@ var APP = {
                 nextText: '',
                 adaptiveHeight: true,
                 controls: true,
-                startSlide: 4
+                startSlide: 7
             });
         }
     },
