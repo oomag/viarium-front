@@ -115,10 +115,19 @@ var APP = {
         var dateNow = new Date();
         var el = $('[data-element="counter"]');
 
+        // if (new Date(date) - dateNow<=0) {
+        //     $('.timerElHide').addClass('d-none');
+        //     $('.timerElShow').removeClass('d-none');
+        //     el.attr('data-deadline', deadline);
+        // }
+
+        var el1 = $('.mySwitcherEl1');
+        var el2 = $('.mySwitcherEl2');
+
         if (new Date(date) - dateNow <= 0) {
-            $('.timerElHide').addClass('d-none');
-            $('.timerElShow').removeClass('d-none');
-            el.attr('data-deadline', deadline);
+            el2.removeClass('d-none');
+        } else {
+            el1.removeClass('d-none');
         }
     },
 
