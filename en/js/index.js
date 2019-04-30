@@ -2,7 +2,7 @@
 
 window.onload = function () {
 	// APP.preloader();
-	APP.counterElSwitcher('2018-08-05T23:59:59', '2018-08-12T23:59:59');
+	APP.counterElSwitcher('2019-04-30T23:59:59', '2019-04-30T23:59:59');
 	APP.anchorScroll();
 	APP.hashScroll();
 	APP.DLS();
