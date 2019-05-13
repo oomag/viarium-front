@@ -205,7 +205,8 @@ var APP = {
             pager: false,
             prevText: '',
             nextText: '',
-            adaptiveHeight: adaptiveHeight
+            adaptiveHeight: adaptiveHeight,
+            touchEnabled: false
         });
     },
 
