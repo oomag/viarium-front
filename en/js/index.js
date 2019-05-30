@@ -3,8 +3,6 @@
 window.onload = function () {
 	// APP.preloader();
 	APP.counterElSwitcher('2019-04-30T23:59:59', '2019-04-30T23:59:59');
-	APP.anchorScroll();
-	APP.hashScroll();
 	APP.DLS();
 	APP.headMove();
 	APP.roadmapSlide();
@@ -22,6 +20,8 @@ window.onload = function () {
 	APP.toggleBlock();
 	APP.showMore();
 	//	APP.getScale();
+	APP.anchorScroll();
+	APP.hashScroll();
 };
 
 var watch = true;
