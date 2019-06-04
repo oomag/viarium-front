@@ -2,6 +2,17 @@
 
 window.onload = function () {
 	// APP.preloader();
+
+	$('.header-slider').bxSlider({
+		auto: true,
+		startSlide: 0,
+		speed: 500,
+		prevText: '',
+		nextText: '',
+		controls: false
+	});
+
+	APP.counterElSwitcher('2019-04-30T23:59:59', '2019-04-30T23:59:59');
 	APP.counterElSwitcher('2019-04-30T23:59:59', '2019-04-30T23:59:59');
 	APP.DLS();
 	APP.headMove();
