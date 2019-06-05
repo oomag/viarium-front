@@ -9,7 +9,8 @@ window.onload = function () {
 		speed: 500,
 		prevText: '',
 		nextText: '',
-		controls: false
+		touchEnabled: false,
+		controls: true
 	});
 
 	APP.counterElSwitcher('2019-04-30T23:59:59', '2019-04-30T23:59:59');
