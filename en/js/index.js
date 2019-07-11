@@ -3,15 +3,26 @@
 window.onload = function () {
 	// APP.preloader();
 
-	$('.header-slider').bxSlider({
-		auto: true,
-		startSlide: 0,
-		speed: 500,
-		prevText: '',
-		nextText: '',
-		touchEnabled: false,
-		controls: true
-	});
+
+	var ImagePauses = [6000, 3000, 3000, 3000];
+	var slider = $('.header-slider').bxSlider();
+	modifyDelay(0);
+
+	function modifyDelay(startSlide) {
+		slider.reloadSlider({
+			auto: true,
+			pause: ImagePauses[startSlide],
+			speed: 500,
+			prevText: '',
+			nextText: '',
+			touchEnabled: false,
+			controls: true,
+			startSlide: startSlide,
+			onSlideAfter: function onSlideAfter($el, oldIndex, newIndex) {
+				modifyDelay(newIndex);
+			}
+		});
+	};
 
 	APP.counterElSwitcher('2019-04-30T23:59:59', '2019-04-30T23:59:59');
 	APP.counterElSwitcher('2019-04-30T23:59:59', '2019-04-30T23:59:59');
