@@ -4,7 +4,7 @@ window.onload = function () {
 	// APP.preloader();
 
 
-	var ImagePauses = [6000, 3000, 3000, 3000];
+	var ImagePauses = [9000, 6000, 6000, 6000];
 	var slider = $('.header-slider').bxSlider();
 	modifyDelay(0);
 
