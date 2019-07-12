@@ -56,4 +56,12 @@ window.onscroll = function () {
 		APP.iframePlay();
 		watch = false;
 	}
+
+	console.log();
+
+	if (window.pageYOffset > $('.header').innerHeight()) {
+		$('.plashka-scroll').css('display', 'flex');
+	} else {
+		$('.plashka-scroll').css('display', 'none');
+	}
 };
